@@ -1,7 +1,5 @@
 using glacial_inferno.Buffs;
-using Microsoft.Xna.Framework;
 using Terraria;
-using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -9,13 +7,13 @@ using Terraria.ModLoader;
 //Back Attack Bonus
 //Make exploding attack at full charge
 
-namespace glacial_inferno.Items.Weapons.Melee 
+namespace glacial_inferno.Items.Weapons.Melee
 {
     public class SpyCicle : ModItem
     {
         public override void SetDefaults()
         {
-            Item.damage = 10;
+            Item.damage = 6;
             Item.DamageType = DamageClass.Melee;
             Item.width = 40;
             Item.height = 40;
@@ -39,7 +37,10 @@ namespace glacial_inferno.Items.Weapons.Melee
         //does slow debuff on hit
         public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
         {
-            target.AddBuff(BuffID.Slow, 100);
+            if(counter >= counter_max)
+            {
+                target.AddBuff(BuffID.Slow, 200);
+            }
             counter = 0;
             base.OnHitNPC(player, target, hit, damageDone);
         }
@@ -59,21 +60,22 @@ namespace glacial_inferno.Items.Weapons.Melee
                 player.onFire = false;
                 player.onFire2 = false;
                 player.onFire3 = false;
-                
+
                 player.AddBuff(BuffID.ObsidianSkin, 600);
                 player.AddBuff(ModContent.BuffType<MeltedIce>(), 600);
                 counter = 0;
             }
-            
+
             base.HoldItem(player);
         }
 
-       //damage increases over time to a set amount
+
+        //damage increases over time to a set amount
         public override void ModifyWeaponDamage(Player player, ref StatModifier damage)
-        { 
-            if(player.HeldItem.Name == Item.Name && player.HasBuff(ModContent.BuffType<MeltedIce>()) == false)
+        {
+            if (player.HeldItem.Name == Item.Name && player.HasBuff(ModContent.BuffType<MeltedIce>()) == false)
             {
-                if(counter <= counter_max)
+                if (counter <= counter_max)
                 {
                     damage.Base += (counter / 15);
                     counter += 1;
@@ -82,8 +84,12 @@ namespace glacial_inferno.Items.Weapons.Melee
                 {
                     damage.Base = counter / 15;
                 }
-               
 
+
+            }
+            else
+            {
+                counter -= 1;
             }
             base.ModifyWeaponDamage(player, ref damage);
         }
@@ -91,7 +97,7 @@ namespace glacial_inferno.Items.Weapons.Melee
         //checks to see if you have the MeltedIce debuff, if you do, you cannot use the weapon.
         public override bool CanUseItem(Player player)
         {
-            if(player.HasBuff(ModContent.BuffType<MeltedIce>()) == true)
+            if (player.HasBuff(ModContent.BuffType<MeltedIce>()) == true)
             {
                 return false;
             }
