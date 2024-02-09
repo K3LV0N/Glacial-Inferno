@@ -5,4 +5,21 @@ Items: {
 		DisplayName: yuh
 		Tooltip: ""
 	}
-} 
+
+	basicSword: {
+		DisplayName: basic Sword
+		Tooltip: ""
+	}
+
+	SpyCicle: {
+		DisplayName: Spy Cicle
+		Tooltip: ""
+	}
+}
+
+Buffs: {
+	MeltedIce: {
+		DisplayName: Melted Ice
+		Description: Mods.glacial_inferno.Buffs.MeltedIce.Description
+	}
+}
