@@ -13,7 +13,7 @@ namespace glacial_inferno.Items.Weapons.Melee
     {
         public override void SetDefaults()
         {
-            Item.damage = 6;
+            Item.damage = 10;
             Item.DamageType = DamageClass.Melee;
             Item.width = 40;
             Item.height = 40;
@@ -23,7 +23,7 @@ namespace glacial_inferno.Items.Weapons.Melee
             Item.useStyle = ItemUseStyleID.Swing;
             Item.UseSound = SoundID.Item1;
             Item.rare = ItemRarityID.Green;
-            Item.autoReuse = false;
+            Item.autoReuse = true;
         }
         public override void AddRecipes()
         {
@@ -41,7 +41,7 @@ namespace glacial_inferno.Items.Weapons.Melee
             {
                 target.AddBuff(BuffID.Slow, 200);
             }
-            counter = 0;
+            counter /= 2;
             base.OnHitNPC(player, target, hit, damageDone);
         }
 
@@ -77,12 +77,12 @@ namespace glacial_inferno.Items.Weapons.Melee
             {
                 if (counter <= counter_max)
                 {
-                    damage.Base += (counter / 15);
+                    damage.Base += (counter / 60);
                     counter += 1;
                 }
                 else
                 {
-                    damage.Base = counter / 15;
+                    damage.Base = counter / 60;
                 }
 
 
