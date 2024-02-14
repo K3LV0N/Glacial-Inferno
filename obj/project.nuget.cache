@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "cX046OmBgcoS5UEookkefoKYKeWaHukwZqyDuFvIte/+zmpyDop9X96OfPfhG2y7TEQPEoDbP/xHDP/heyWKMA==",
+  "dgSpecHash": "FEsApP5xbzkEPS+YTXCmqIKBUvMtrYaGrQ3yTrfzNc6XtpwLY9MSBXppJX7ggewlW5Til61bvIOGwPrhbqaxlQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Kyle\\Dropbox\\My PC (DESKTOP-FKBGLVA)\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\glacial_inferno\\glacial_inferno.csproj",
+  "projectFilePath": "C:\\Users\\carror\\OneDrive - Rensselaer Polytechnic Institute\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\glacial_inferno\\glacial_inferno.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Kyle\\.nuget\\packages\\tmodloader.codeassist\\0.1.5\\tmodloader.codeassist.0.1.5.nupkg.sha512"
+    "C:\\Users\\carror\\.nuget\\packages\\tmodloader.codeassist\\0.1.5\\tmodloader.codeassist.0.1.5.nupkg.sha512"
   ],
   "logs": []
 }

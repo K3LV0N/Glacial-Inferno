@@ -5,4 +5,14 @@ Items: {
 		DisplayName: yuh
 		Tooltip: ""
 	}
-} 
+
+	basicSword: {
+		DisplayName: basic Sword
+		Tooltip: ""
+	}
+
+	UpgradedSnowCannon: {
+		DisplayName: Upgraded Snow Cannon
+		Tooltip: ""
+	}
+}
