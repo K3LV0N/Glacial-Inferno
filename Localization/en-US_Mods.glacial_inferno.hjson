@@ -5,4 +5,23 @@ Items: {
 		DisplayName: yuh
 		Tooltip: ""
 	}
-} 
+
+	basicSword: {
+		DisplayName: basic Sword
+		Tooltip: ""
+	}
+
+	IceSummon: {
+		DisplayName: Ice Summon
+		Tooltip: ""
+	}
+}
+
+Buffs: {
+	SnowballSummonBuff: {
+		DisplayName: Snowball Summon Buff
+		Description: Mods.glacial_inferno.Buffs.SnowballSummonBuff.Description
+	}
+}
+
+Projectiles.SnowballSummon.DisplayName: Snowball Summon
