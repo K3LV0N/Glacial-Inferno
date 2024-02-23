@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("glacial_inferno")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6b0dcc5d409723d350233709aec578f87993e4c6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+49c570e26e3e56cf64b1470829f53260821b3a33")]
 [assembly: System.Reflection.AssemblyProductAttribute("glacial_inferno")]
 [assembly: System.Reflection.AssemblyTitleAttribute("glacial_inferno")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
