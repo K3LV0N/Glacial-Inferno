@@ -8,20 +8,20 @@ using Terraria;
 using Terraria.ModLoader;
 using Terraria.Localization;
 
-//https://github.com/tModLoader/tModLoader/blob/1.4.4/ExampleMod/Content/Items/Armor/ExampleHelmet.cs use as reference
+//https://github.com/tModLoader/tModLoader/blob/1.4.4/ExampleMod/Content/Items/Armor/ExampleBreastplate.cs use as reference
 
 
 namespace glacial_inferno.Items.Armor.BasicIceArmor
 {
-    [AutoloadEquip(EquipType.Head)]
-    public class IceArmorHelmet : ModItem
+    [AutoloadEquip(EquipType.Body)]
+    public class IceArmorBreastplate : ModItem
     {
         public override void SetDefaults()
         {
-            Item.headSlot = 1;
+            Item.bodySlot = 1;
             Item.width = 18;
             Item.height = 18;
-            Item.defense = 1;
+            Item.defense = 3;
             Item.rare = ItemRarityID.White;
             base.SetDefaults();
         }
