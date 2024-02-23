@@ -11,6 +11,7 @@ using Terraria.Localization;
 //https://github.com/tModLoader/tModLoader/blob/1.4.4/ExampleMod/Content/Items/Armor/ExampleHelmet.cs use as reference
 
 
+
 namespace glacial_inferno.Items.Armor.BasicIceArmor
 {
     [AutoloadEquip(EquipType.Head)]
@@ -33,5 +34,16 @@ namespace glacial_inferno.Items.Armor.BasicIceArmor
             recipe.AddTile(TileID.WorkBenches);
             recipe.Register();
         }
+
+        public override bool IsArmorSet(Item head, Item body, Item legs)
+        {
+            return body.type == ModContent.ItemType<IceArmorBreastplate>() && legs.type == ModContent.ItemType<IceArmorLeggings>();
+        }
+
+
+        // UpdateArmorSet allows you to give set bonuses to the armor.
+		public override void UpdateArmorSet(Player player) {
+			player.GetDamage(DamageClass.Generic) += 10 / 100f; // Increase dealt damage for all weapon classes by 20%
+		}
     }
 }
