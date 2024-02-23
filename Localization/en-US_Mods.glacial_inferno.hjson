@@ -3,6 +3,33 @@
 Items: {
 	EarlyIceSword: {
 		DisplayName: Ice Sword
-		Tooltip: "A sword made of ice"
+		Tooltip: A sword made of ice
+	}
+
+	glacialBow: {
+		Tooltip: ""
+		DisplayName: glacial Bow
+	}
+
+	fireBow: {
+		Tooltip: ""
+		DisplayName: fire Bow
+	}
+}
+
+Projectiles: {
+	glacialArrow.DisplayName: glacial Arrow
+	fireArrow.DisplayName: fire Arrow
+}
+
+Buffs: {
+	glacial2: {
+		Description: Mods.glacial_inferno.Buffs.glacial2.Description
+		DisplayName: glacial2
+	}
+
+	glacial: {
+		Description: Mods.glacial_inferno.Buffs.glacial.Description
+		DisplayName: glacial
 	}
 }
