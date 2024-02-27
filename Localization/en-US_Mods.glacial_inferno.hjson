@@ -15,6 +15,11 @@ Items: {
 		Tooltip: ""
 		DisplayName: fire Bow
 	}
+
+	FireSword: {
+		DisplayName: Fire Sword
+		Tooltip: ""
+	}
 }
 
 Projectiles: {

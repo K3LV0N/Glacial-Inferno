@@ -3,12 +3,12 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.DataStructures;
 using Microsoft.Xna.Framework;
-using glacial_inferno.Projectiles;
+using glacial_inferno.Projectiles.Weapons.Ranged;
 
 
 namespace glacial_inferno.Items.Weapons.Ranged
 {
-    public class fireBow : ModItem
+    public class FireBow : ModItem
     {
         public override void SetDefaults()
         {
@@ -39,7 +39,7 @@ namespace glacial_inferno.Items.Weapons.Ranged
         //turns the arrows into fire arrows
         public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
         {
-            type = ModContent.ProjectileType<Projectiles.fireArrow>();
+            type = ModContent.ProjectileType<FireArrow>();
         }
 
         //Need to think about this needs to be somewhat expensive

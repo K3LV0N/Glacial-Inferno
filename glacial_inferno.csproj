@@ -21,7 +21,6 @@
     <Folder Include="Items\Vanity\" />
     <Folder Include="Items\Weapons\Magic\" />
     <Folder Include="Items\Weapons\Summon\" />
-    <Folder Include="Items\Weapons\Ranged\" />
     <Folder Include="Buffs\" />
     <Folder Include="Dusts\" />
     <Folder Include="Systems\" />
@@ -30,7 +29,6 @@
     <Folder Include="Projectiles\Other\" />
     <Folder Include="Projectiles\Weapons\Magic\" />
     <Folder Include="Projectiles\Weapons\Melee\" />
-    <Folder Include="Projectiles\Weapons\Ranged\" />
     <Folder Include="Projectiles\Weapons\Summon\" />
   </ItemGroup>
 </Project>
