@@ -45,8 +45,7 @@ namespace glacial_inferno.Items.Weapons.Ranged
         //Need to think about this needs to be somewhat expensive
         public override void AddRecipes()
         {
-            Recipe recipe = CreateRecipe();
-            recipe.Register();
+            return;
         }
     }
 }

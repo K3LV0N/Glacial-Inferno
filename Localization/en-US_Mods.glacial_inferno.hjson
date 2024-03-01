@@ -20,11 +20,23 @@ Items: {
 		DisplayName: Fire Sword
 		Tooltip: ""
 	}
+
+	FireTome: {
+		DisplayName: Fire Tome
+		Tooltip: ""
+	}
+
+	FireBow: {
+		DisplayName: Fire Bow
+		Tooltip: ""
+	}
 }
 
 Projectiles: {
 	glacialArrow.DisplayName: glacial Arrow
 	fireArrow.DisplayName: fire Arrow
+	FireBall.DisplayName: Fire Ball
+	FireArrow.DisplayName: Fire Arrow
 }
 
 Buffs: {
