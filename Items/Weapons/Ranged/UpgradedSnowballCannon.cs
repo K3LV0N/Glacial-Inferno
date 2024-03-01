@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 
 namespace glacial_inferno.Items.Weapons.Ranged
 {
-    public class UpgradedSnowCannon : ModItem
+    public class UpgradedSnowballCannon : ModItem
     {
         // The Display Name and Tooltip of this item can be edited in the Localization/en-US_Mods.glacial_inferno.hjson file.
 
@@ -15,16 +15,18 @@ namespace glacial_inferno.Items.Weapons.Ranged
             Item.DamageType = DamageClass.Ranged;
             Item.width = 40;
             Item.height = 40;
-            Item.useTime = Item.useAnimation = 19;
+            Item.useTime = Item.useAnimation = 9;
             Item.useStyle = ItemUseStyleID.Shoot;
-            Item.knockBack = 6;
+            Item.knockBack = 2;
             Item.value = Item.sellPrice(0, 2, 50, 0);
             Item.rare = ItemRarityID.Orange;
             Item.UseSound = SoundID.Item1;
             Item.autoReuse = true;
             Item.useAmmo = AmmoID.Snowball;
-            Item.shoot = ProjectileID.SnowBallFriendly;
             Item.shootSpeed = 16;
+			Item.noMelee = true;
+			// This value doesn't really matter, but must not be 0
+			Item.shoot = ProjectileID.SnowBallFriendly;
         }
 
         public override void AddRecipes()

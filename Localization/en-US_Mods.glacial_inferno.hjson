@@ -3,11 +3,18 @@
 Items: {
 	EarlyIceSword: {
 		DisplayName: Ice Sword
-		Tooltip: "A sword made of ice"
+		Tooltip: A sword made of ice
 	}
-    
+
 	UpgradedSnowCannon: {
 		DisplayName: Upgraded Snow Cannon
 		Tooltip: ""
 	}
+
+	LeadLinedSnowball: {
+		Tooltip: ""
+		DisplayName: Lead Lined Snowball
+	}
 }
+
+Projectiles.LeadLinedSnowballProjectile.DisplayName: Lead Lined Snowball Projectile
