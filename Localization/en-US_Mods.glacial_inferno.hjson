@@ -5,4 +5,28 @@ Items: {
 		DisplayName: yuh
 		Tooltip: ""
 	}
-} 
+
+	basicSword: {
+		DisplayName: basic Sword
+		Tooltip: ""
+	}
+
+	FrozenBullet: {
+		DisplayName: Frozen Bullet
+		Tooltip: Slows enemies on impact
+	}
+
+	FlaskOfFreezing: {
+		DisplayName: Flask Of Freezing
+		Tooltip: Slows your movement by 10%, but all attacks slow enemies by 20%
+	}
+}
+
+Buffs: {
+	Frozen: {
+		DisplayName: Frozen
+		Description: Mods.glacial_inferno.Buffs.Frozen.Description
+	}
+}
+
+Projectiles.FrozenBullet.DisplayName: Frozen Bullet

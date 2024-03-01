@@ -10,6 +10,7 @@ namespace glacial_inferno.Items.Weapons.Melee
 
         public override void SetDefaults()
         {
+            
             Item.damage = 50;
             Item.DamageType = DamageClass.Melee;
             Item.width = 40;
@@ -24,12 +25,14 @@ namespace glacial_inferno.Items.Weapons.Melee
             Item.autoReuse = true;
         }
 
+      
         public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe();
             recipe.AddIngredient(ItemID.DirtBlock, 10);
             recipe.AddTile(TileID.WorkBenches);
             recipe.Register();
+            
         }
     }
 }
