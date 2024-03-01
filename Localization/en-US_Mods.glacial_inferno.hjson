@@ -12,14 +12,29 @@ Items: {
 	}
 
 	SpyCicle: {
-		DisplayName: Spy Cicle
-		Tooltip: ""
+		DisplayName: Magical Ice Club
+		Tooltip: Gets stronger the longer you hold it for! Beware of fire!
+	}
+
+	IceArmorHelmet: {
+		DisplayName: Ice Helmet
+		Tooltip: Please somebody do better art for this thing.
+	}
+
+	IceArmorBreastplate: {
+		DisplayName: Ice Breastplate
+		Tooltip: Please somebody do better art for this thing.
+	}
+
+	IceArmorLeggings: {
+		DisplayName: Ice Leggings
+		Tooltip: Please somebody do better art for this thing.
 	}
 }
 
 Buffs: {
 	MeltedIce: {
 		DisplayName: Melted Ice
-		Description: Mods.glacial_inferno.Buffs.MeltedIce.Description
+		Description: Your weapon has melted!
 	}
 }

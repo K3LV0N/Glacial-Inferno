@@ -18,10 +18,9 @@ namespace glacial_inferno.Items.Armor.BasicIceArmor
     {
         public override void SetDefaults()
         {
-            Item.bodySlot = 1;
             Item.width = 18;
             Item.height = 18;
-            Item.defense = 3;
+            Item.defense = 5;
             Item.rare = ItemRarityID.White;
             base.SetDefaults();
         }

@@ -1,21 +1,17 @@
-﻿using System;
+﻿using glacial_inferno.Items.Armor.BasicIceArmor;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Terraria.ID;
-using Terraria;
 using Terraria.ModLoader;
-using Terraria.Localization;
+using Terraria;
 
-//https://github.com/tModLoader/tModLoader/blob/1.4.4/ExampleMod/Content/Items/Armor/ExampleHelmet.cs use as reference
-
-
-
-namespace glacial_inferno.Items.Armor.BasicIceArmor
+namespace glacial_inferno.Items.Armor.BasicIceMageArmor
 {
     [AutoloadEquip(EquipType.Head)]
-    public class IceArmorHelmet : ModItem
+    public class IceMageHelmet : ModItem
     {
         public override void SetDefaults()
         {
@@ -36,14 +32,15 @@ namespace glacial_inferno.Items.Armor.BasicIceArmor
 
         public override bool IsArmorSet(Item head, Item body, Item legs)
         {
-            return body.type == ModContent.ItemType<IceArmorBreastplate>() && legs.type == ModContent.ItemType<IceArmorLeggings>();
+            return body.type == ModContent.ItemType<IceMageBreastplate>() && legs.type == ModContent.ItemType<IceMageLeggings>();
         }
 
 
         // UpdateArmorSet allows you to give set bonuses to the armor.
-		public override void UpdateArmorSet(Player player) {
-            player.setBonus = "Hardened Ice! Gain 50 More HP!";
-			player.statLifeMax2 += 50; // Increase dealt damage for all weapon classes by 20%
-		}
+        public override void UpdateArmorSet(Player player)
+        {
+            player.setBonus = "You're in tune with your Ice Cape! Gain 50 More Mana!";
+            player.statManaMax2 += 50; // Increase dealt damage for all weapon classes by 20%
+        }
     }
 }
