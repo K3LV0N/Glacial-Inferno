@@ -3,6 +3,7 @@ using Terraria;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
 using Microsoft.CodeAnalysis;
+using glacial_inferno.Buffs.Summon;
 
 namespace glacial_inferno.Projectiles.Weapons.Summon
 {
@@ -11,27 +12,40 @@ namespace glacial_inferno.Projectiles.Weapons.Summon
         private bool jumping = false;
         private int jumpTimer = 0;
 
+        public override void SetStaticDefaults()
+        {
+            ProjectileID.Sets.MinionTargettingFeature[Projectile.type] = true;
+
+            Main.projPet[Projectile.type] = true;
+
+            ProjectileID.Sets.MinionSacrificable[Projectile.type] = true;
+            ProjectileID.Sets.CultistIsResistantTo[Projectile.type] = true;
+        }
+
         public override void SetDefaults()
         {
             Projectile.width = 16; 
             Projectile.height = 16;
+            Projectile.ignoreWater = true;
 
             Projectile.friendly = true; 
             Projectile.minion = true;
-            Projectile.minionSlots = 3; 
-            Projectile.timeLeft = 3600;
+            Projectile.DamageType = DamageClass.Summon;
+            Projectile.minionSlots = 1f;
+            Projectile.penetrate = -1;
+        }
 
-            Projectile.tileCollide = true;
-            Projectile.ignoreWater = true;
-
-            Projectile.aiStyle = 1;
-            AIType = ProjectileID.SnowBallFriendly;
+        public override bool MinionContactDamage()
+        {
+            return true;
         }
 
         public override void AI()
         {
+             if (!CheckActive(Main.player[Projectile.owner])) return;
+
             Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, DustID.Snow, 0f, 0f, 0, Color.Cyan, 1f);
-            return;
+
             float speed = 4f;
             float inertia = 20f;
             float jumpSpeed = 8f;
@@ -102,6 +116,23 @@ namespace glacial_inferno.Projectiles.Weapons.Summon
         {
             target.AddBuff(BuffID.Frozen, 2 * 60);
             Projectile.Kill();
+        }
+
+        private bool CheckActive(Player owner)
+        {
+            if (owner.dead || !owner.active)
+            {
+                owner.ClearBuff(ModContent.BuffType<SnowballSummonBuff>());
+
+                return false;
+            }
+
+            if (owner.HasBuff(ModContent.BuffType<SnowballSummonBuff>()))
+            {
+                Projectile.timeLeft = 2;
+            }
+
+            return true;
         }
     }
 }

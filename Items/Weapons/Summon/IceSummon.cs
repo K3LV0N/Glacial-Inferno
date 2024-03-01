@@ -10,10 +10,15 @@ namespace glacial_inferno.Items.Weapons.Summon
 {
     public class IceSummon : ModItem
     {
+        public override void SetStaticDefaults()
+        {
+            ItemID.Sets.LockOnIgnoresCollision[Item.type] = true;
+        }
+
         public override void SetDefaults()
         {
-            Item.damage = 0;
-            Item.knockBack = 2f;
+            Item.damage = 1;
+            Item.knockBack = 3f;
             Item.mana = 5;
 
             Item.noMelee = true;
@@ -21,18 +26,15 @@ namespace glacial_inferno.Items.Weapons.Summon
             Item.notAmmo = true;
             Item.maxStack = 1;
 
-            Item.width = 26;
-            Item.height = 26;
+            Item.width = 32;
+            Item.height = 32;
 
             Item.useTime = 20;
             Item.useAnimation = 20;
-            Item.useStyle = ItemUseStyleID.Shoot;
-
-            Item.shoot = ModContent.ProjectileType<SnowballSummon>();
-            Item.shootSpeed = 10;
-
+            Item.useStyle = ItemUseStyleID.Swing;
+            Item.DamageType = DamageClass.Summon;
             Item.buffType = ModContent.BuffType<SnowballSummonBuff>();
-            Item.buffTime = 3600;
+            Item.shoot = ModContent.ProjectileType<SnowballSummon>();
 
             Item.value = Item.buyPrice(gold: 1);
             Item.rare = ItemRarityID.Green;
@@ -48,22 +50,19 @@ namespace glacial_inferno.Items.Weapons.Summon
             recipe.Register();
         }
 
-        public override bool AltFunctionUse(Player player)
+        public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
         {
-            return true;
+            position = player.Center;
         }
 
-        /*
         public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
         {
-            if (player.altFunctionUse == 2)
-            {
-                player.MinionNPCTargetAim(true);
-                return false;
-            }
+            player.AddBuff(Item.buffType, 2);
 
-            return true;
+            var projectile = Projectile.NewProjectileDirect(source, position, velocity, type, damage, knockback, Main.myPlayer);
+            projectile.originalDamage = Item.damage;
+
+            return false;
         }
-        */
     }
 }
