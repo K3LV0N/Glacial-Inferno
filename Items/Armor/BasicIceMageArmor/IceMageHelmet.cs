@@ -17,7 +17,7 @@ namespace glacial_inferno.Items.Armor.BasicIceMageArmor
         {
             Item.width = 18;
             Item.height = 18;
-            Item.defense = 2;
+            Item.defense = 1;
             Item.rare = ItemRarityID.White;
             base.SetDefaults();
         }
@@ -39,8 +39,8 @@ namespace glacial_inferno.Items.Armor.BasicIceMageArmor
         // UpdateArmorSet allows you to give set bonuses to the armor.
         public override void UpdateArmorSet(Player player)
         {
-            player.setBonus = "You're in tune with your Ice Cape! Gain 50 More Mana!";
-            player.statManaMax2 += 50; // Increase dealt damage for all weapon classes by 20%
+            player.setBonus = "You're really in tune with your Ice Cape! Gain 100 More Mana!";
+            player.statManaMax2 += 100; // Increase dealt damage for all weapon classes by 20%
         }
     }
 }

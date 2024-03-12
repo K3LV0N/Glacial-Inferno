@@ -12,7 +12,7 @@ Items: {
 	}
 
 	SpyCicle: {
-		DisplayName: Magical Ice Club
+		DisplayName: Angry Ice Club
 		Tooltip: Gets stronger the longer you hold it for! Beware of fire!
 	}
 
@@ -28,6 +28,21 @@ Items: {
 
 	IceArmorLeggings: {
 		DisplayName: Ice Leggings
+		Tooltip: Please somebody do better art for this thing.
+	}
+
+	IceMageBreastplate: {
+		DisplayName: Magical Ice Cape
+		Tooltip: Please somebody do better art for this thing.
+	}
+
+	IceMageHelmet: {
+		DisplayName: Magical Ice Crown
+		Tooltip: Please somebody do better art for this thing.
+	}
+
+	IceMageLeggings: {
+		DisplayName: Magical Ice Boots
 		Tooltip: Please somebody do better art for this thing.
 	}
 }
