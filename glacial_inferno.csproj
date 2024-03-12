@@ -24,6 +24,7 @@
     <Folder Include="Items\Weapons\Ranged\" />
     <Folder Include="Buffs\" />
     <Folder Include="Dusts\" />
+    <Folder Include="Projectiles\Ammo\" />
     <Folder Include="Systems\" />
     <Folder Include="NPCs\" />
     <Folder Include="Projectiles\Enemy\" />

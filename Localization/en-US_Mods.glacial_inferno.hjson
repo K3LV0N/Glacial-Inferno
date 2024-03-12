@@ -3,6 +3,8 @@
 Items: {
 	EarlyIceSword: {
 		DisplayName: Ice Sword
-		Tooltip: "A sword made of ice"
+		Tooltip: A sword made of ice
 	}
 }
+
+Projectiles.IceBolt.DisplayName: Ice Bolt

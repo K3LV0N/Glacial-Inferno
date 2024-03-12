@@ -128,8 +128,9 @@ C:\Users\Kyle\Dropbox\My PC (DESKTOP-FKBGLVA)\Documents\My Games\Terraria\tModLo
 C:\Users\Kyle\Dropbox\My PC (DESKTOP-FKBGLVA)\Documents\My Games\Terraria\tModLoader\ModSources\glacial_inferno\obj\Debug\net6.0\glacial_inferno.AssemblyInfoInputs.cache
 C:\Users\Kyle\Dropbox\My PC (DESKTOP-FKBGLVA)\Documents\My Games\Terraria\tModLoader\ModSources\glacial_inferno\obj\Debug\net6.0\glacial_inferno.AssemblyInfo.cs
 C:\Users\Kyle\Dropbox\My PC (DESKTOP-FKBGLVA)\Documents\My Games\Terraria\tModLoader\ModSources\glacial_inferno\obj\Debug\net6.0\glacial_inferno.csproj.CoreCompileInputs.cache
-C:\Users\Kyle\Dropbox\My PC (DESKTOP-FKBGLVA)\Documents\My Games\Terraria\tModLoader\ModSources\glacial_inferno\obj\Debug\net6.0\glacial_inferno.csproj.CopyComplete
 C:\Users\Kyle\Dropbox\My PC (DESKTOP-FKBGLVA)\Documents\My Games\Terraria\tModLoader\ModSources\glacial_inferno\obj\Debug\net6.0\glacial_inferno.dll
 C:\Users\Kyle\Dropbox\My PC (DESKTOP-FKBGLVA)\Documents\My Games\Terraria\tModLoader\ModSources\glacial_inferno\obj\Debug\net6.0\refint\glacial_inferno.dll
 C:\Users\Kyle\Dropbox\My PC (DESKTOP-FKBGLVA)\Documents\My Games\Terraria\tModLoader\ModSources\glacial_inferno\obj\Debug\net6.0\glacial_inferno.pdb
 C:\Users\Kyle\Dropbox\My PC (DESKTOP-FKBGLVA)\Documents\My Games\Terraria\tModLoader\ModSources\glacial_inferno\obj\Debug\net6.0\ref\glacial_inferno.dll
+C:\Users\Kyle\Dropbox\My PC (DESKTOP-FKBGLVA)\Documents\My Games\Terraria\tModLoader\ModSources\glacial_inferno\obj\Debug\net6.0\glacial_inferno.sourcelink.json
+C:\Users\Kyle\Dropbox\My PC (DESKTOP-FKBGLVA)\Documents\My Games\Terraria\tModLoader\ModSources\glacial_inferno\obj\Debug\net6.0\glacial_.9AFF3153.Up2Date
