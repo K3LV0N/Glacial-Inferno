@@ -18,7 +18,7 @@ namespace glacial_inferno.Items.Weapons.Ranged
             Item.useTime = Item.useAnimation = 9;
             Item.useStyle = ItemUseStyleID.Shoot;
             Item.knockBack = 2;
-            Item.value = Item.sellPrice(0, 2, 50, 0);
+            Item.value = Item.sellPrice(0, 3, 75, 0);
             Item.rare = ItemRarityID.Orange;
             Item.UseSound = SoundID.Item1;
             Item.autoReuse = true;
