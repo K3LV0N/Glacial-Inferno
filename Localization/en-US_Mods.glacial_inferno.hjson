@@ -11,10 +11,41 @@ Items: {
 		Tooltip: ""
 	}
 
-	LeadLinedSnowball: {
+	FrozenBullet: {
+		DisplayName: Frozen Bullet
 		Tooltip: ""
-		DisplayName: Lead Lined Snowball
+	}
+
+	HeavySnowball: {
+		DisplayName: Heavy Snowball
+		Tooltip: ""
+	}
+
+	IcySnowball: {
+		DisplayName: Icy Snowball
+		Tooltip: ""
+	}
+
+	FlaskOfFreezing: {
+		DisplayName: Flask Of Freezing
+		Tooltip: ""
+	}
+
+	UpgradedSnowballCannon: {
+		DisplayName: Upgraded Snowball Cannon
+		Tooltip: ""
 	}
 }
 
-Projectiles.LeadLinedSnowballProjectile.DisplayName: Lead Lined Snowball Projectile
+Projectiles: {
+	HeavySnowballProjectile.DisplayName: Heavy Snowball Projectile
+	IcySnowballProjectile.DisplayName: Icy Snowball Projectile
+	FrozenBullet.DisplayName: Frozen Bullet
+}
+
+Buffs: {
+	Frozen: {
+		DisplayName: Frozen
+		Description: Mods.glacial_inferno.Buffs.Frozen.Description
+	}
+}
