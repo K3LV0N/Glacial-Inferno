@@ -29,7 +29,7 @@ namespace glacial_inferno.Buffs
         
         public override void Update(Player player, ref int buffIndex)
         {
-   
+            //Creates a particle effect on players and npcs inflicted with the debuff
             Dust.NewDust(player.position, player.width, player.height, ModContent.DustType<FrozenBuffDust>());
 
 

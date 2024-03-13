@@ -16,11 +16,13 @@ namespace glacial_inferno.Systems
         {
             if (shop.NpcType == NPCID.ArmsDealer)
             {
+
                 shop.Add(ModContent.ItemType<FrozenBullet>(), Condition.InSnow);
                 shop.Add(ModContent.ItemType<FlamingBullet>(), Condition.InUnderworld);
             }
             base.ModifyShop(shop);
         }
 
+   
     }
 }

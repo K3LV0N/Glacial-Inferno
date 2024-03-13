@@ -25,6 +25,7 @@ namespace glacial_inferno.Items.Ammo
             Item.knockBack = 2;
             Item.shoot =ModContent.ProjectileType<Projectiles.Other.FrozenBullet>();
             Item.shootSpeed = 10;
+            Item.value = 30;
         }
 
         public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)

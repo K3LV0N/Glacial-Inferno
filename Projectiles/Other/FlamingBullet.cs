@@ -38,6 +38,7 @@ namespace glacial_inferno.Projectiles.Other
 
         public override void AI()
         {
+            //Spawns a fire particle effect on the bullet trail
             Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, 6);
             base.AI();
         }
