@@ -11,7 +11,7 @@ using System.Numerics;
 using Microsoft.Xna.Framework;
 namespace glacial_inferno.Projectiles.Other
 {
-    public class FrozenBullet : ModProjectile
+    public class FlamingBullet : ModProjectile
     {
         public override void SetDefaults()
         {
@@ -26,16 +26,20 @@ namespace glacial_inferno.Projectiles.Other
             Projectile.tileCollide = true; // Can the projectile collide with tiles?
             Projectile.extraUpdates = 1;
             Projectile.light = .4f;
- 
+            
             AIType = ProjectileID.Bullet;
         }
         public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
-            int buffType = ModContent.BuffType<Frozen>();
-            target.AddBuff(buffType,900);
+            
+            target.AddBuff(BuffID.OnFire, 300);
             base.OnHitNPC(target, hit, damageDone);
         }
 
+        public override void AI()
+        {
+            Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, 6);
+            base.AI();
+        }
     }
-    
 }

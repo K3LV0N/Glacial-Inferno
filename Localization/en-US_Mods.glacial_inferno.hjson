@@ -20,6 +20,11 @@ Items: {
 		DisplayName: Flask Of Freezing
 		Tooltip: Slows your movement by 10%, but all attacks slow enemies by 20%
 	}
+
+	FlamingBullet: {
+		DisplayName: Flaming Bullet
+		Tooltip: Burns enemies on impact
+	}
 }
 
 Buffs: {
@@ -29,4 +34,7 @@ Buffs: {
 	}
 }
 
-Projectiles.FrozenBullet.DisplayName: Frozen Bullet
+Projectiles: {
+	FrozenBullet.DisplayName: Frozen Bullet
+	FlamingBullet.DisplayName: Flaming Bullet
+}

@@ -15,10 +15,10 @@ namespace glacial_inferno.Buffs
         
         public override void Update(NPC npc, ref int buffIndex)
         {
-            for (int i = 0; i < 1; i++) {
-                Dust.NewDust(npc.position, npc.width, npc.height, ModContent.DustType<FrozenBuffDust>());
+     
+            Dust.NewDust(npc.position, npc.width, npc.height, ModContent.DustType<FrozenBuffDust>());
           
-            }
+            //Slows the npc by 20%
             npc.position.X -= (npc.velocity.X * .2f);
             if (npc.gravity == 0)
             {
@@ -29,9 +29,17 @@ namespace glacial_inferno.Buffs
         
         public override void Update(Player player, ref int buffIndex)
         {
+   
+            Dust.NewDust(player.position, player.width, player.height, ModContent.DustType<FrozenBuffDust>());
+
+
             player.GetModPlayer<FrozenPlayer>().PlayerHasFrozenBuff = true;
+            //Slows the player by 10%
             player.position.X -= (player.velocity.X * .1f);
-            
+            if (player.gravity == 0)
+            {
+                player.position.Y -= player.velocity.Y * .1f;
+            }
             base.Update(player, ref buffIndex);
         }
         
