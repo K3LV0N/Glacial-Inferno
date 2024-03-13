@@ -1,5 +1,9 @@
-.vscode
-bin
-.vs
-obj
+## visual studio/vscode stuff ##
 *.sln
+*.vs
+*.vscode
+obj/
+bin/
+
+## compiled mod ##
+*.dll
