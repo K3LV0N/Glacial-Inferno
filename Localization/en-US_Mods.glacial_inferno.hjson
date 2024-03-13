@@ -1,9 +1,9 @@
 # This file will automatically update with entries for new content after a build and reload
 
 Items: {
-	yuh: {
-		DisplayName: yuh
-		Tooltip: ""
+	EarlyIceSword: {
+		DisplayName: Ice Sword
+		Tooltip: "A sword made of ice"
 	}
 
 	basicSword: {
