@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "wWQnIC9TqRqVEJAwld5g9fLyGdU5w5GQsnTSm6uGXm0JfwYmBtuY8wyctIhnOKEz2XumMRZeA4yM4Y/La0U6Ew==",
+=======
+  "dgSpecHash": "V7k9ym98k2BwYqhivhjBPvN2SKHuGVy7jFA3sOdCUvI2IXgb+QBquJLwMh6s9v5jEE4vcIKhHHYHV4/82T4mDg==",
+>>>>>>> main
   "success": true,
   "projectFilePath": "C:\\Users\\kiran\\OneDrive\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\glacial_inferno\\glacial_inferno.csproj",
   "expectedPackageFiles": [
