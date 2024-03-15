@@ -18,9 +18,6 @@ namespace glacial_inferno.Items.Other.Blocks
             TileObjectData.newTile.Height = 1;
             TileObjectData.addTile(Type);
             Main.tileLighted[Type] = true;
-            //Main.
-            //Main.
-            //DustType = ;
             //AddMapEntry(new Color(200, 200, 200));
         }
 

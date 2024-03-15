@@ -28,12 +28,9 @@ namespace glacial_inferno.Items.Weapons.Melee
         public override void AddRecipes()
         {
             Recipe r1 = CreateRecipe();
-            r1.AddIngredient(ItemID.DemoniteBar, 15);
+            r1.AddIngredient(ItemID.DemoniteBar, 10);
             r1.AddIngredient(ItemID.IceBlock, 20);
             r1.Register();
-
-            Recipe r2 = CreateRecipe();
-            r2.Register();
         }
     }
 }
