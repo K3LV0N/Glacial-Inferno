@@ -8,7 +8,9 @@ namespace glacial_inferno
         private bool devBranch = true;
 
         public override void AddRecipes()
-        {     
+        {   
+            // Allows creation of any item from glacial inferno
+            // to be made from thin air
             if(devBranch)
             {
                 int maxItems = ItemLoader.ItemCount;
@@ -24,8 +26,6 @@ namespace glacial_inferno
                     }
                 }
             }
-            
         }
-
     }
 }
