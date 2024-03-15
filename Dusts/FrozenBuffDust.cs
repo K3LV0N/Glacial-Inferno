@@ -8,15 +8,17 @@ namespace glacial_inferno.Dusts
     {
         public override void OnSpawn(Dust dust)
         {
+            dust.velocity *= .8f;
             dust.noGravity = true;
-            dust.frame = new Rectangle(0, Main.rand.Next(3)*8, 8, 8);
-            dust.scale = .8f;
-            // If our texture had 3 different dust on top of each other (a 30x90 pixel image), we might do this:
-            // dust.frame = new Rectangle(0, Main.rand.Next(3) * 30, 30, 30);
+            dust.frame = new Rectangle(0, Main.rand.Next(3)*8, 8, 8);   //Randomly selects one of the three dust sprites to spawn
+            dust.scale = .7f;
+           
+
         }
 
         public override bool Update(Dust dust)
         {
+            //Shrinks the dust and deletes it when it reaches a certain size
             dust.position += dust.velocity;
             dust.scale -= 0.01f;
 

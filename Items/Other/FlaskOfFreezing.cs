@@ -16,13 +16,13 @@ namespace glacial_inferno.Items.Other
             Item.width = 20;
             Item.height = 26;
             Item.maxStack = 9999;
-            Item.rare = 1;
+            Item.rare = ItemRarityID.Blue;
             Item.useAnimation = 17;
             Item.useTime = 45;
-            Item.useStyle = 2;
+            Item.useStyle = ItemUseStyleID.EatFood;
             Item.consumable = true;
             Item.value = 100;
-            Item.buffType = ModContent.BuffType<Frozen>(); // Your custom buff
+            Item.buffType = ModContent.BuffType<Frozen>(); 
             Item.buffTime = 60*60*5; // Buff duration in ticks, 60 ticks = 1 second
         }
         public override void AddRecipes()
