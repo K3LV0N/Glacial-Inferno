@@ -20,9 +20,4 @@ Items: {
 		DisplayName: Chilled Repeater
 		Tooltip: Brain freeze right between the eyes
 	}
-
-	bitterFrostBlock: {
-		DisplayName: Bitterfrost Ore
-		Tooltip: "An ore born from hatred and despair. Resonates well with evil forces..."
-	}
 }
