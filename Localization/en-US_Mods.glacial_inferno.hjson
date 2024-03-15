@@ -5,7 +5,7 @@ Buffs: {
 	Frozen: {
 		DisplayName: Frozen
 		Description: Slows your movement by 10% but attacks slow enemies by 20%
-  }
+    }
 }
     
     
@@ -28,10 +28,11 @@ Items: {
 	IceArrow: {
 		DisplayName: Ice Arrow
 		Tooltip: An Ice Arrow. Ice Shatters on impact.
+    }
     
     FrozenBullet: {
 		DisplayName: Frozen Bullet
-		Tooltip: ""
+		Tooltip: Slows enemies on impact
 	}
 
 	HeavySnowball: {
@@ -46,7 +47,7 @@ Items: {
 
 	FlaskOfFreezing: {
 		DisplayName: Flask Of Freezing
-		Tooltip: ""
+		Tooltip: Slows your movement by 10%, but all attacks slow enemies by 20%
 	}
 
 	UpgradedSnowballCannon: {
