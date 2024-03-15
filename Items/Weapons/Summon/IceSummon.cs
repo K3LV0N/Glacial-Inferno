@@ -26,8 +26,8 @@ namespace glacial_inferno.Items.Weapons.Summon
             Item.notAmmo = true;
             Item.maxStack = 1;
 
-            Item.width = 32;
-            Item.height = 32;
+            Item.width = 24;
+            Item.height = 49;
 
             Item.useTime = 20;
             Item.useAnimation = 20;
@@ -36,7 +36,8 @@ namespace glacial_inferno.Items.Weapons.Summon
             Item.buffType = ModContent.BuffType<SnowballSummonBuff>();
             Item.shoot = ModContent.ProjectileType<SnowballSummon>();
 
-            Item.value = Item.buyPrice(gold: 1);
+            Item.value = Item.buyPrice(gold: 30);
+            Item.value = Item.sellPrice(gold: 25);
             Item.rare = ItemRarityID.Green;
             Item.UseSound = SoundID.Item1;
         }
@@ -45,7 +46,10 @@ namespace glacial_inferno.Items.Weapons.Summon
         {
             // Add crafting recipes for the item if desired
             Recipe recipe = CreateRecipe();
-            recipe.AddIngredient(ItemID.DirtBlock, 1);
+            recipe.AddIngredient(ItemID.BorealWood, 5);
+            recipe.AddIngredient(ItemID.Gel, 5);
+            recipe.AddIngredient(ItemID.IceBlock, 5);
+            recipe.AddIngredient(ItemID.SnowBlock, 5);
             recipe.AddTile(TileID.WorkBenches);
             recipe.Register();
         }
