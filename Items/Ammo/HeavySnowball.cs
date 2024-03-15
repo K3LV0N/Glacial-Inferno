@@ -14,18 +14,16 @@ namespace glacial_inferno.Items.Ammo
         {
             Item.damage = 16;
             Item.DamageType = DamageClass.Ranged;
-            Item.width = 10;
-            Item.height = 10;
+            Item.noUseGraphic = true;
 			Item.ammo = AmmoID.Snowball;
 			Item.consumable = true;
+            Item.noMelee = true;
             Item.useTime = Item.useAnimation = 19;
             Item.useStyle = ItemUseStyleID.Swing;
-            Item.noUseGraphic = true;
-            Item.knockBack = 11.5f;
-            // Item.value = Item.sellPrice(0, 2, 50, 0);
+            Item.knockBack = 9f;
             Item.rare = ItemRarityID.White;
             Item.UseSound = SoundID.Item1;
-            Item.shootSpeed = 4;
+            Item.shootSpeed = 4.25f;
 			Item.shoot = ModContent.ProjectileType<HeavySnowballProjectile>();
 			Item.maxStack = 9999;
         }

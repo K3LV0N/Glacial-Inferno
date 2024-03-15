@@ -13,13 +13,10 @@ namespace glacial_inferno.Projectiles.Ammo
 
         public override void SetDefaults()
         {
-            Projectile.DamageType = DamageClass.Ranged;
-            Projectile.width = 10;
-            Projectile.height = 10;
-			Projectile.velocity = Projectile.velocity * 2;
-			Projectile.aiStyle = ProjAIStyleID.Arrow;
+            Projectile.CloneDefaults(ProjectileID.SnowBallFriendly);
+            // Projectile.width = 12;
+            // Projectile.height = 12;
 			AIType = ProjectileID.SnowBallFriendly;
-			Projectile.friendly = true;
         }
 
 		public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)

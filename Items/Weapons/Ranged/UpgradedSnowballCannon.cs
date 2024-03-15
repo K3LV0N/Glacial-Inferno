@@ -13,12 +13,12 @@ namespace glacial_inferno.Items.Weapons.Ranged
         {
             Item.damage = 22;
             Item.DamageType = DamageClass.Ranged;
-            Item.width = 40;
-            Item.height = 40;
-            Item.useTime = Item.useAnimation = 9;
+            Item.width = 26;
+            Item.height = 13;
+            Item.useTime = Item.useAnimation = 14;
             Item.useStyle = ItemUseStyleID.Shoot;
-            Item.knockBack = 2;
-            Item.value = Item.sellPrice(0, 3, 75, 0);
+            Item.knockBack = 1;
+            Item.value = Item.sellPrice(0, 4, 75, 0);
             Item.rare = ItemRarityID.Orange;
             Item.UseSound = SoundID.Item1;
             Item.autoReuse = true;
