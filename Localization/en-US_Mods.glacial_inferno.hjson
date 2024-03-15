@@ -3,7 +3,7 @@
 Items: {
 	EarlyIceSword: {
 		DisplayName: Ice Sword
-		Tooltip: "A sword made of ice"
+		Tooltip: A sword made of ice
 	}
 
 	basicSword: {
@@ -30,7 +30,7 @@ Items: {
 Buffs: {
 	Frozen: {
 		DisplayName: Frozen
-		Description: Mods.glacial_inferno.Buffs.Frozen.Description
+		Description: Slows your movement by 10% but attacks slow enemies by 20%
 	}
 }
 

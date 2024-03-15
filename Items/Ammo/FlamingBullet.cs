@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using glacial_inferno.Buffs;
 using System.Net.Cache;
 
 namespace glacial_inferno.Items.Ammo
