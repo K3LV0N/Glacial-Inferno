@@ -15,12 +15,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Items\Ammo\" />
-    <Folder Include="Items\Armor\" />
     <Folder Include="Items\Accessories\" />
     <Folder Include="Items\Other\" />
     <Folder Include="Items\Vanity\" />
     <Folder Include="Items\Weapons\Summon\" />
-    <Folder Include="Buffs\" />
     <Folder Include="Dusts\" />
     <Folder Include="Systems\" />
     <Folder Include="NPCs\" />

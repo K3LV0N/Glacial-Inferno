@@ -4,10 +4,11 @@ using Terraria.ModLoader;
 using glacial_inferno.Projectiles.Weapons.Magic;
 using System.Numerics;
 using glacial_inferno.Projectiles.Weapons.Ranged;
+using glacial_inferno.Buffs;
 
 namespace glacial_inferno.Items.Weapons.Magic
 {
-    internal class FireTome : ModItem
+    public class FireTome : ModItem
     {
         /*public override void SetStaticDefaults()
         {
@@ -41,5 +42,25 @@ namespace glacial_inferno.Items.Weapons.Magic
 
             Item.staff[Item.type] = true;
         }
+
+        public override void ModifyWeaponDamage(Player player, ref StatModifier damage)
+        {
+            if (player.HasBuff<FireWeaponBuff>())
+                damage.Base += 5f;
+        }
+
+        //TODO: Figure Recipes Out
+        public override void AddRecipes()
+        {
+            Recipe r = CreateRecipe();
+            //TODO: add Recipe items
+            //r.AddIngredient()
+            //TODO: add workbench requirement (might be a modded workbench I got no clue)
+            //r.AddTile()
+            //TODO: register recipe
+            //r.Register();
+        }
+
+        
     }
 }

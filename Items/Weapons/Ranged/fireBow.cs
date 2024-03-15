@@ -4,6 +4,7 @@ using Terraria.ModLoader;
 using Terraria.DataStructures;
 using Microsoft.Xna.Framework;
 using glacial_inferno.Projectiles.Weapons.Ranged;
+using glacial_inferno.Buffs;
 
 
 namespace glacial_inferno.Items.Weapons.Ranged
@@ -42,10 +43,22 @@ namespace glacial_inferno.Items.Weapons.Ranged
             type = ModContent.ProjectileType<FireArrow>();
         }
 
-        //Need to think about this needs to be somewhat expensive
+        public override void ModifyWeaponDamage(Player player, ref StatModifier damage)
+        {
+            if (player.HasBuff<FireWeaponBuff>())
+                damage.Base += 5f;
+        }
+
+        //TODO: Figure Recipes Out
         public override void AddRecipes()
         {
-            return;
+            //Recipe r = CreateRecipe();
+            //TODO: add Recipe items
+            //r.AddIngredient()
+            //TODO: add workbench requirement (might be a modded workbench I got no clue)
+            //r.AddTile()
+            //TODO: register recipe
+            //r.Register();
         }
     }
 }

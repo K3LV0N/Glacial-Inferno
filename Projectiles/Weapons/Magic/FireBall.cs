@@ -8,7 +8,7 @@ using Terraria.ModLoader;
 
 namespace glacial_inferno.Projectiles.Weapons.Magic
 {
-    internal class FireBall : ModProjectile
+    public class FireBall : ModProjectile
     {
         public override void SetDefaults()
         {

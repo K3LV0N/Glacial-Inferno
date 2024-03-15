@@ -1,4 +1,5 @@
-﻿using System;
+﻿using glacial_inferno.Buffs;
+using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -32,14 +33,7 @@ namespace glacial_inferno.Items.Weapons.Melee
             Item.autoReuse = true;
         }
 
-        //RECIPE TBD
-        public override void AddRecipes()
-        {
-            Recipe recipe = CreateRecipe();
-            //recipe.AddIngredient(ItemID., 10);
-            recipe.AddTile(TileID.WorkBenches);
-            recipe.Register();
-        }
+        
 
         public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
         {
@@ -62,6 +56,12 @@ namespace glacial_inferno.Items.Weapons.Melee
             }
         }
 
+        public override void ModifyWeaponDamage(Player player, ref StatModifier damage)
+        {
+            if (player.HasBuff<FireWeaponBuff>())
+                damage.Base += 5f;
+        }
+
         //Increase the damage by 2 if the enemy is already on fire and the weapon has a charge
         public override void ModifyHitNPC(Player player, NPC target, ref NPC.HitModifiers modifiers)
         {
@@ -71,5 +71,18 @@ namespace glacial_inferno.Items.Weapons.Melee
                 charge--;
             }
         }
+
+        //TODO: Figure Recipes Out
+        public override void AddRecipes()
+        {
+            //Recipe r = CreateRecipe();
+            //TODO: add Recipe items
+            //r.AddIngredient()
+            //TODO: add workbench requirement (might be a modded workbench I got no clue)
+            //r.AddTile()
+            //TODO: register recipe
+            //r.Register();
+        }
+
     }
 }

@@ -6,47 +6,45 @@ Items: {
 		Tooltip: A sword made of ice
 	}
 
-	glacialBow: {
-		Tooltip: ""
-		DisplayName: glacial Bow
-	}
-
-	fireBow: {
-		Tooltip: ""
-		DisplayName: fire Bow
-	}
-
 	FireSword: {
 		DisplayName: Fire Sword
-		Tooltip: ""
+		Tooltip: Has 3 charges that recharge every 5 seconds. When hitting an enemy with a charged attack light them on fire, if they are already on fire the swing does more damage.
 	}
 
 	FireTome: {
 		DisplayName: Fire Tome
-		Tooltip: ""
+		Tooltip: Spawns a fire ball that rotates around the player and homes to any nearby hostile npc dealing damage and lighting them on fire.
 	}
 
 	FireBow: {
 		DisplayName: Fire Bow
-		Tooltip: ""
+		Tooltip: Shoots a fire arrow lights enemies on fire and  splits into 3 other fire arrows after a moment.
+	}
+
+	FireBreastplate: {
+		DisplayName: Fire Breastplate
+		Tooltip: Grants immunity to fire debuffs.
+	}
+
+	FireHelmet: {
+		DisplayName: Fire Helmet
+		Tooltip: A burning helmet
+	}
+
+	FireLeggings: {
+		DisplayName: Fire Leggings
+		Tooltip: Grants a small movement speed buff
 	}
 }
 
 Projectiles: {
-	glacialArrow.DisplayName: glacial Arrow
-	fireArrow.DisplayName: fire Arrow
 	FireBall.DisplayName: Fire Ball
 	FireArrow.DisplayName: Fire Arrow
 }
 
 Buffs: {
-	glacial2: {
-		Description: Mods.glacial_inferno.Buffs.glacial2.Description
-		DisplayName: glacial2
-	}
-
-	glacial: {
-		Description: Mods.glacial_inferno.Buffs.glacial.Description
-		DisplayName: glacial
+	FireWeaponBuff: {
+		DisplayName: Fire Weapon Buff
+		Description: Increases the damage of the mod's fire weapons
 	}
 }
