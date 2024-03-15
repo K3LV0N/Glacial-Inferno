@@ -1,5 +1,14 @@
 # This file will automatically update with entries for new content after a build and reload
 
+
+Buffs: {
+	Frozen: {
+		DisplayName: Frozen
+		Description: Slows your movement by 10% but attacks slow enemies by 20%
+  }
+}
+    
+    
 Items: {
 	EarlyIceSword: {
 		DisplayName: Ice Sword
@@ -19,10 +28,26 @@ Items: {
 	IceArrow: {
 		DisplayName: Ice Arrow
 		Tooltip: An Ice Arrow. Ice Shatters on impact.
+    
+  FrozenBullet: {
+		DisplayName: Frozen Bullet
+		Tooltip: Slows enemies on impact
+	}
+
+	FlaskOfFreezing: {
+		DisplayName: Flask Of Freezing
+		Tooltip: Slows your movement by 10%, but all attacks slow enemies by 20%
+	}
+
+	FlamingBullet: {
+		DisplayName: Flaming Bullet
+		Tooltip: Burns enemies on impact
 	}
 }
 
 Projectiles: {
+	FrozenBullet.DisplayName: Frozen Bullet
+	FlamingBullet.DisplayName: Flaming Bullet
 	IceBolt.DisplayName: Ice Bolt
 	IceBoltShatter.DisplayName: Ice Bolt
 	IceArrowProjectile.DisplayName: Ice Arrow
