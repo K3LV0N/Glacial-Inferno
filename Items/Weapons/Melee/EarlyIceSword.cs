@@ -13,7 +13,7 @@ namespace glacial_inferno.Items.Weapons.Melee
         // The Display Name and Tooltip of this item can be edited in the Localization/en-US_Mods.glacial_inferno.hjson file.
         public override void SetDefaults()
         {
-            Item.damage = 8;
+            Item.damage = 10;
             Item.knockBack = 3;
             Item.DamageType = DamageClass.Melee;
 
@@ -35,10 +35,12 @@ namespace glacial_inferno.Items.Weapons.Melee
 
         public override void AddRecipes()
         {
-            Recipe recipe = CreateRecipe();
-            recipe.AddIngredient(ItemID.IceBlock, 10);
-            recipe.AddTile(TileID.WorkBenches);
-            recipe.Register();
+
+            Recipe r1 = CreateRecipe();
+            r1.AddIngredient(ItemID.IceBlock, 30);
+            r1.AddTile(TileID.Anvils);
+            r1.AddCondition(Condition.InSnow);
+            r1.Register();
         }
 
         public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
@@ -51,7 +53,7 @@ namespace glacial_inferno.Items.Weapons.Melee
             float knockBack = 0.5f;
             float yoffset = 10;
 
-            BasicShatter(target, projectileAmount, damage, min, max, vel, knockBack, yoffset);
+            BasicShatter<IceBolt>(target, projectileAmount, damage, min, max, vel, knockBack, yoffset);
         }
     }
 }

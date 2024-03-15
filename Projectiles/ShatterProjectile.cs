@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace glacial_inferno.Items.Weapons
+namespace glacial_inferno.Projectiles
 {
-    public abstract class ShatterItem : ModItem
+    public abstract class ShatterProjectile : ModProjectile
     {
         public virtual void BasicShatter<T>(NPC target, int projectileAmount, int damage, int minAngle, int maxAngle, float startingVelocity, float knockBack, float yOffset) where T : ModProjectile
         {
@@ -26,7 +26,7 @@ namespace glacial_inferno.Items.Weapons
                 {
                     randNumber = rand.Next(minAngle, maxAngle);
                 }
-                
+
             }
 
 
@@ -41,7 +41,7 @@ namespace glacial_inferno.Items.Weapons
                 Matrix matrix = Matrix.CreateRotationZ(angle);
 
                 proj = Vector2.Transform(proj, matrix);
-                Projectile.NewProjectile(Item.GetSource_OnHit(target), pos, proj, ModContent.ProjectileType<T>(), damage, knockBack);
+                Projectile.NewProjectile(Projectile.GetSource_OnHit(target), pos, proj, ModContent.ProjectileType<T>(), damage, knockBack);
             }
         }
     }
