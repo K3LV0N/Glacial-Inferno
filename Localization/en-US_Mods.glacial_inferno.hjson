@@ -5,4 +5,24 @@ Items: {
 		DisplayName: Ice Sword
 		Tooltip: "A sword made of ice"
 	}
+
+	corruptedCold: {
+		DisplayName: Corrupted Cold
+		Tooltip: An amalgamation of ice and corruption
+	}
+
+	crimsonCold: {
+		DisplayName: Crimson Cold
+		Tooltip: An abomination of ice and crimson
+	}
+
+	chilledRepeater: {
+		DisplayName: Chilled Repeater
+		Tooltip: Brain freeze right between the eyes
+	}
+
+	bitterFrostBlock: {
+		DisplayName: Bitterfrost Ore
+		Tooltip: "An ore born from hatred and despair. Resonates well with evil forces..."
+	}
 }
