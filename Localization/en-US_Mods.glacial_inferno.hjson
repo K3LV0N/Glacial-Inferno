@@ -3,6 +3,27 @@
 Items: {
 	EarlyIceSword: {
 		DisplayName: Ice Sword
-		Tooltip: "A sword made of ice"
+		Tooltip: A sword made of ice. Ice Shatters on impact.
 	}
+
+	FrostBolt: {
+		DisplayName: Frost Bolt
+		Tooltip: Shoots frost bolts. Ice Shatters on impact.
+	}
+
+	IceBow: {
+		DisplayName: Ice Bow
+		Tooltip: An Icy Bow. When shooting regular arrows, ice arrows are shot instead.
+	}
+
+	IceArrow: {
+		DisplayName: Ice Arrow
+		Tooltip: An Ice Arrow. Ice Shatters on impact.
+	}
+}
+
+Projectiles: {
+	IceBolt.DisplayName: Ice Bolt
+	IceBoltShatter.DisplayName: Ice Bolt
+	IceArrowProjectile.DisplayName: Ice Arrow
 }
