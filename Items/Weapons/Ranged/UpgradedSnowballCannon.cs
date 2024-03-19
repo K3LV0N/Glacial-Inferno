@@ -24,9 +24,9 @@ namespace glacial_inferno.Items.Weapons.Ranged
             Item.autoReuse = true;
             Item.useAmmo = AmmoID.Snowball;
             Item.shootSpeed = 16;
-			Item.noMelee = true;
-			// This value doesn't really matter, but must not be 0
-			Item.shoot = ProjectileID.SnowBallFriendly;
+            Item.noMelee = true;
+            // This value doesn't really matter, but must not be 0
+            Item.shoot = ProjectileID.SnowBallFriendly;
         }
 
         public override void AddRecipes()

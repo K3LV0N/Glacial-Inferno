@@ -16,14 +16,14 @@ namespace glacial_inferno.Projectiles.Ammo
             Projectile.CloneDefaults(ProjectileID.SnowBallFriendly);
             // Projectile.width = 12;
             // Projectile.height = 12;
-			AIType = ProjectileID.SnowBallFriendly;
+            AIType = ProjectileID.SnowBallFriendly;
         }
 
-		public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
-		{
-			base.OnHitNPC(target, hit, damageDone);
+        public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
+        {
+            base.OnHitNPC(target, hit, damageDone);
             // LUKE KISSLING MADE THIS BUFF NOT ME -RYAN
-			target.AddBuff(ModContent.BuffType<Frozen>(), 600);
-		}
-	}
+            target.AddBuff(ModContent.BuffType<Frozen>(), 600);
+        }
+    }
 }

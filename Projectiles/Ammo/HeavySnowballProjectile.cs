@@ -17,5 +17,5 @@ namespace glacial_inferno.Projectiles.Ammo
             // Projectile.height = 12;
             AIType = ProjectileID.SnowBallFriendly;
         }
-	}
+    }
 }

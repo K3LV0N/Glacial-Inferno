@@ -15,8 +15,8 @@ namespace glacial_inferno.Items.Ammo
             Item.damage = 8;
             Item.DamageType = DamageClass.Ranged;
             Item.noUseGraphic = true;
-			Item.ammo = AmmoID.Snowball;
-			Item.consumable = true;
+            Item.ammo = AmmoID.Snowball;
+            Item.consumable = true;
             Item.noMelee = true;
             Item.useTime = Item.useAnimation = 19;
             Item.useStyle = ItemUseStyleID.Swing;
@@ -24,14 +24,14 @@ namespace glacial_inferno.Items.Ammo
             Item.rare = ItemRarityID.White;
             Item.UseSound = SoundID.Item1;
             Item.shootSpeed = 7;
-			Item.shoot = ModContent.ProjectileType<IcySnowballProjectile>();
-			Item.maxStack = 9999;
+            Item.shoot = ModContent.ProjectileType<IcySnowballProjectile>();
+            Item.maxStack = 9999;
         }
 
         public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe(10);
-			recipe.AddIngredient(ItemID.IceBlock, 4);
+            recipe.AddIngredient(ItemID.IceBlock, 4);
             recipe.AddIngredient(ItemID.SnowBlock, 4);
             recipe.AddTile(TileID.WorkBenches);
             recipe.Register();
