@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Terraria;
+﻿using Terraria;
 using Terraria.ModLoader;
 using glacial_inferno.Buffs;
 using Terraria.ID;
-using System.Numerics;
-using Microsoft.Xna.Framework;
+
 namespace glacial_inferno.Projectiles.Other
 {
     public class FrozenBullet : ModProjectile

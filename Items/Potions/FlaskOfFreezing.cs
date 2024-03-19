@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Terraria.ModLoader;
+﻿using Terraria.ModLoader;
 using Terraria.ID;
 using Terraria;
 using glacial_inferno.Buffs;
-namespace glacial_inferno.Items.Other
+
+namespace glacial_inferno.Items.Potions
 {
     public class FlaskOfFreezing :ModItem
     {
