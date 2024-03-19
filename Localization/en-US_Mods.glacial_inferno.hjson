@@ -1,23 +1,87 @@
 # This file will automatically update with entries for new content after a build and reload
 
+
+Buffs: {
+    Frozen: {
+        DisplayName: Frozen
+        Description: Slows your movement by 10% but attacks slow enemies by 20%
+    }
+}
+    
+    
 Items: {
-	EarlyIceSword: {
-		DisplayName: Ice Sword
-		Tooltip: "A sword made of ice"
-	}
+	  corruptedCold: {
+		  DisplayName: Corrupted Cold
+		  Tooltip: An amalgamation of ice and corruption
+	  }
 
-	corruptedCold: {
-		DisplayName: Corrupted Cold
-		Tooltip: An amalgamation of ice and corruption
-	}
+	  crimsonCold: {
+		  DisplayName: Crimson Cold
+		  Tooltip: An abomination of ice and crimson
+	  }
 
-	crimsonCold: {
-		DisplayName: Crimson Cold
-		Tooltip: An abomination of ice and crimson
-	}
+	  chilledRepeater: {
+		  DisplayName: Chilled Repeater
+		  Tooltip: Brain freeze right between the eyes
+	  }
+    
+    EarlyIceSword: {
+        DisplayName: Ice Sword
+        Tooltip: A sword made of ice. Ice Shatters on impact.
+    }
 
-	chilledRepeater: {
-		DisplayName: Chilled Repeater
-		Tooltip: Brain freeze right between the eyes
-	}
+    FrostBolt: {
+        DisplayName: Frost Bolt
+        Tooltip: Shoots frost bolts. Ice Shatters on impact.
+    }
+
+    IceBow: {
+        DisplayName: Ice Bow
+        Tooltip: An Icy Bow. When shooting regular arrows, ice arrows are shot instead.
+    }
+
+    IceArrow: {
+        DisplayName: Ice Arrow
+        Tooltip: An Ice Arrow. Ice Shatters on impact.
+    }
+    
+    FrozenBullet: {
+        DisplayName: Frozen Bullet
+        Tooltip: Slows enemies on impact
+    }
+
+    HeavySnowball: {
+        DisplayName: Heavy Snowball
+        Tooltip: ""
+    }
+
+    IcySnowball: {
+        DisplayName: Icy Snowball
+        Tooltip: ""
+    }
+
+    FlaskOfFreezing: {
+        DisplayName: Flask Of Freezing
+        Tooltip: Slows your movement by 10%, but all attacks slow enemies by 20%
+    }
+
+    UpgradedSnowballCannon: {
+        DisplayName: Upgraded Snowball Cannon
+        Tooltip: ""
+    }
+
+    FlamingBullet: {
+        DisplayName: Flaming Bullet
+        Tooltip: Burns enemies on impact
+    }
+}
+
+Projectiles: {
+    HeavySnowballProjectile.DisplayName: Heavy Snowball Projectile
+    IcySnowballProjectile.DisplayName: Icy Snowball Projectile
+    FrozenBullet.DisplayName: Frozen Bullet
+    FlamingBullet.DisplayName: Flaming Bullet
+    IceBolt.DisplayName: Ice Bolt
+    IceBoltShatter.DisplayName: Ice Bolt
+    IceArrowProjectile.DisplayName: Ice Arrow
 }
