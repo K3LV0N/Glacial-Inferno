@@ -33,7 +33,6 @@ namespace glacial_inferno.Items.Weapons.Melee
             Item.autoReuse = true;
         }
 
-      
         public override void AddRecipes()
         {
 

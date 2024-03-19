@@ -1,6 +1,7 @@
-## visual studio stuff ##
+## visual studio/vscode stuff ##
 *.sln
 *.vs
+*.vscode
 obj/
 bin/
 
