@@ -10,20 +10,20 @@ Buffs: {
     
     
 Items: {
-	CorruptedCold: {
-		DisplayName: Corrupted Cold
-		Tooltip: An amalgamation of ice and corruption
-	}
+    CorruptedCold: {
+	DisplayName: Corrupted Cold
+	Tooltip: An amalgamation of ice and corruption
+    }
 
     CrimsonCold: {
-		DisplayName: Crimson Cold
-		Tooltip: An abomination of ice and crimson
-	}
+	DisplayName: Crimson Cold
+	Tooltip: An abomination of ice and crimson
+    }
 
-	ChilledRepeater: {
-		DisplayName: Chilled Repeater
-		Tooltip: Brain freeze right between the eyes
-	}
+    ChilledRepeater: {
+	DisplayName: Chilled Repeater
+	Tooltip: Brain freeze right between the eyes
+    }
     
     EarlyIceSword: {
         DisplayName: Ice Sword
