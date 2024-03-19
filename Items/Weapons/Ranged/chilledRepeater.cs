@@ -1,5 +1,4 @@
-﻿using glacial_inferno.Items.Other.Blocks;
-using Terraria;
+﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -32,7 +31,15 @@ namespace glacial_inferno.Items.Weapons.Ranged
         {
             Recipe r1 = CreateRecipe();
             r1.AddIngredient(ItemID.IceBlock, 20);
+            r1.AddIngredient(ItemID.SilverBar, 10);
+            r1.AddTile(TileID.Anvils);
             r1.Register();
+
+            Recipe r2 = CreateRecipe();
+            r2.AddIngredient(ItemID.IceBlock, 20);
+            r2.AddIngredient(ItemID.TungstenBar, 10);
+            r2.AddTile(TileID.Anvils);
+            r2.Register();
         }
     }
 }
