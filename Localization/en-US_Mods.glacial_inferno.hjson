@@ -26,6 +26,11 @@ Buffs: {
 		DisplayName: Snowball Summon Buff
 		Description: Mods.glacial_inferno.Buffs.SnowballSummonBuff.Description
 	}
+
+	FrozenBuff: {
+		DisplayName: Frozen Buff
+		Description: Mods.glacial_inferno.Buffs.FrozenBuff.Description
+	}
 }
 
 Projectiles.SnowballSummon.DisplayName: Snowball Summon
