@@ -4,7 +4,7 @@ using Terraria.ID;
 
 namespace glacial_inferno.Items.Weapons.Melee
 {
-    public class crimsonCold: ModItem
+    public class CrimsonCold: ModItem
     {
         public override void SetDefaults()
         {

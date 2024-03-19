@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace glacial_inferno.Items.Weapons.Ranged
 {
-    public class chilledRepeater: ModItem
+    public class ChilledRepeater: ModItem
     {
         public override void SetDefaults()
         {
