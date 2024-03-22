@@ -104,11 +104,5 @@ namespace glacial_inferno.Items.Weapons.Melee
             return base.CanUseItem(player);
         }
 
-        //check to see if you're behind enemy, should increase crit if behind them (WIP)
-        public override void ModifyWeaponCrit(Player player, ref float crit)
-        {
-            base.ModifyWeaponCrit(player, ref crit);
-        }
-
     }
 }

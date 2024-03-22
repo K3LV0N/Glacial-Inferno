@@ -1,16 +1,6 @@
 # This file will automatically update with entries for new content after a build and reload
 
 Items: {
-	yuh: {
-		DisplayName: yuh
-		Tooltip: ""
-	}
-
-	basicSword: {
-		DisplayName: basic Sword
-		Tooltip: ""
-	}
-
 	SpyCicle: {
 		DisplayName: Angry Ice Club
 		Tooltip: Gets stronger the longer you hold it for! Beware of fire!
@@ -45,6 +35,11 @@ Items: {
 		DisplayName: Magical Ice Boots
 		Tooltip: Please somebody do better art for this thing.
 	}
+
+	basicSword: {
+		DisplayName: basic Sword
+		Tooltip: ""
+	}
 }
 
 Buffs: {
@@ -52,4 +47,11 @@ Buffs: {
 		DisplayName: Melted Ice
 		Description: Your weapon has melted!
 	}
+
+	IceAura: {
+		DisplayName: Ice Aura
+		Description: Testing Testing 1 2 3
+	}
 }
+
+Projectiles.IceAuraProjectile.DisplayName: Ice Aura Projectile

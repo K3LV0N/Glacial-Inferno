@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria;
+using glacial_inferno.Buffs;
 
 namespace glacial_inferno.Items.Armor.BasicIceMageArmor
 {
@@ -40,6 +41,7 @@ namespace glacial_inferno.Items.Armor.BasicIceMageArmor
         public override void UpdateArmorSet(Player player)
         {
             player.setBonus = "You're really in tune with your Ice Cape! Gain 100 More Mana!";
+            player.AddBuff(ModContent.BuffType<IceAura>(), 1);
             player.statManaMax2 += 100; // Increase dealt damage for all weapon classes by 20%
         }
     }
