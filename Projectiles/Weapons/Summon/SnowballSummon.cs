@@ -29,7 +29,7 @@ namespace glacial_inferno.Projectiles.Weapons.Summon
             Projectile.friendly = true;
             Projectile.minion = true;
             Projectile.DamageType = DamageClass.Summon;
-            Projectile.minionSlots = 0.25f;
+            Projectile.minionSlots = 0.5f;
             Projectile.penetrate = -1;
         }
 
@@ -180,7 +180,7 @@ namespace glacial_inferno.Projectiles.Weapons.Summon
             Projectile.friendly = foundTarget;
         }
 
-        private const int JumpCooldown = 60;
+        public virtual int jumpCooldown { get { return 60; } }
         private int jumpCooldownTimer = 0;
         private void Movement(bool foundTarget, float distanceFromTarget, Vector2 targetCenter, float distanceToIdlePosition, Vector2 vectorToIdlePosition)
         {
@@ -217,7 +217,7 @@ namespace glacial_inferno.Projectiles.Weapons.Summon
                     Projectile.velocity.Y = distanceY;
                     Projectile.velocity.X = distanceX;
 
-                    jumpCooldownTimer = JumpCooldown;
+                    jumpCooldownTimer = jumpCooldown;
                 }
             }
             else
@@ -228,7 +228,7 @@ namespace glacial_inferno.Projectiles.Weapons.Summon
                     vectorToIdlePosition.Normalize();
                     Projectile.velocity.Y = -jumpVelocity;
                     Projectile.velocity.X = vectorToIdlePosition.X * horizontalSpeed;
-                    jumpCooldownTimer = JumpCooldown;
+                    jumpCooldownTimer = jumpCooldown;
                 }
             }
 
