@@ -2,13 +2,12 @@
 
 
 Buffs: {
-    Frozen: {
-        DisplayName: Frozen
-        Description: Slows your movement by 10% but attacks slow enemies by 20%
-    }
+	Frozen: {
+		DisplayName: Frozen
+		Description: Slows your movement by 10% but attacks slow enemies by 20%
+	}
 }
-    
-    
+
 Items: {
     CorruptedCold: {
 	DisplayName: Corrupted Cold
@@ -30,60 +29,58 @@ Items: {
         Tooltip: A sword made of ice. Ice Shatters on impact.
     }
 
-    FrostBolt: {
-        DisplayName: Frost Bolt
-        Tooltip: Shoots frost bolts. Ice Shatters on impact.
-    }
+	FrostBolt: {
+		DisplayName: Frost Bolt
+		Tooltip: Shoots frost bolts. Ice Shatters on impact.
+	}
 
-    IceBow: {
-        DisplayName: Ice Bow
-        Tooltip: An Icy Bow. When shooting regular arrows, ice arrows are shot instead.
-    }
+	IceBow: {
+		DisplayName: Ice Bow
+		Tooltip: An Icy Bow. When shooting regular arrows, ice arrows are shot instead.
+	}
 
-    IceArrow: {
-        DisplayName: Ice Arrow
-        Tooltip: An Ice Arrow. Ice Shatters on impact.
-    }
-    
-    FrozenBullet: {
-        DisplayName: Frozen Bullet
-        Tooltip: Slows enemies on impact
-    }
+	IceArrow: {
+		DisplayName: Ice Arrow
+		Tooltip: An Ice Arrow. Ice Shatters on impact.
+	}
 
-    HeavySnowball: {
-        DisplayName: Heavy Snowball
-        Tooltip: ""
-    }
+	FrozenBullet: {
+		DisplayName: Frozen Bullet
+		Tooltip: Slows enemies on impact.
+	}
 
-    IcySnowball: {
-        DisplayName: Icy Snowball
-        Tooltip: ""
-    }
+	HeavySnowball: {
+		DisplayName: Heavy Snowball
+		Tooltip: A snowball packed with metal.
+	}
 
-    FlaskOfFreezing: {
-        DisplayName: Flask Of Freezing
-        Tooltip: Slows your movement by 10%, but all attacks slow enemies by 20%
-    }
+	IcySnowball: {
+		DisplayName: Icy Snowball
+		Tooltip: A snowball packed with ice. Slows enemies on impact.
+	}
 
-    UpgradedSnowballCannon: {
-        DisplayName: Upgraded Snowball Cannon
-        Tooltip: ""
-    }
+	FlaskOfFreezing: {
+		DisplayName: Flask Of Freezing
+		Tooltip: Slows your movement by 10%, but all attacks slow enemies by 20%.
+	}
 
-    FlamingBullet: {
-        DisplayName: Flaming Bullet
-        Tooltip: Burns enemies on impact
-    }
+	UpgradedSnowballCannon: {
+		DisplayName: Upgraded Snowball Cannon
+		Tooltip: An improved version of the Snowball Cannon.
+	}
 
-    
+	FlamingBullet: {
+		DisplayName: Flaming Bullet
+		Tooltip: Burns enemies on impact.
+	}
 }
 
 Projectiles: {
-    HeavySnowballProjectile.DisplayName: Heavy Snowball Projectile
-    IcySnowballProjectile.DisplayName: Icy Snowball Projectile
-    FrozenBullet.DisplayName: Frozen Bullet
-    FlamingBullet.DisplayName: Flaming Bullet
-    IceBolt.DisplayName: Ice Bolt
-    IceBoltShatter.DisplayName: Ice Bolt
-    IceArrowProjectile.DisplayName: Ice Arrow
+	HeavySnowballProjectile.DisplayName: Heavy Snowball Projectile
+	IcySnowballProjectile.DisplayName: Icy Snowball Projectile
+	FrozenBullet.DisplayName: Frozen Bullet
+	FlamingBullet.DisplayName: Flaming Bullet
+	IceBolt.DisplayName: Ice Bolt
+	IceBoltShatter.DisplayName: Ice Bolt
+	IceArrowProjectile.DisplayName: Ice Arrow
 }

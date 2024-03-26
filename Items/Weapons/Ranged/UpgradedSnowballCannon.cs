@@ -1,7 +1,7 @@
-using System.Numerics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Microsoft.Xna.Framework;
 
 namespace glacial_inferno.Items.Weapons.Ranged
 {
@@ -27,6 +27,12 @@ namespace glacial_inferno.Items.Weapons.Ranged
             Item.noMelee = true;
             // This value doesn't really matter, but must not be 0
             Item.shoot = ProjectileID.SnowBallFriendly;
+        }
+
+        public override Vector2? HoldoutOffset()
+        {
+            base.HoldoutOffset();
+            return new Vector2(-10, 10);
         }
 
         public override void AddRecipes()

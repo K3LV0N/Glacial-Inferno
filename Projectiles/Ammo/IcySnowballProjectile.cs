@@ -14,8 +14,8 @@ namespace glacial_inferno.Projectiles.Ammo
         public override void SetDefaults()
         {
             Projectile.CloneDefaults(ProjectileID.SnowBallFriendly);
-            // Projectile.width = 12;
-            // Projectile.height = 12;
+            Projectile.width = 12;
+            Projectile.height = 12;
             AIType = ProjectileID.SnowBallFriendly;
         }
 
