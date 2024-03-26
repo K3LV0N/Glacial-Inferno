@@ -10,6 +10,21 @@ Buffs: {
     
     
 Items: {
+    CorruptedCold: {
+	DisplayName: Corrupted Cold
+	Tooltip: An amalgamation of ice and corruption
+    }
+
+    CrimsonCold: {
+	DisplayName: Crimson Cold
+	Tooltip: An abomination of ice and crimson
+    }
+
+    ChilledRepeater: {
+	DisplayName: Chilled Repeater
+	Tooltip: Brain freeze right between the eyes
+    }
+    
     EarlyIceSword: {
         DisplayName: Ice Sword
         Tooltip: A sword made of ice. Ice Shatters on impact.
@@ -59,6 +74,8 @@ Items: {
         DisplayName: Flaming Bullet
         Tooltip: Burns enemies on impact
     }
+
+    
 }
 
 Projectiles: {
