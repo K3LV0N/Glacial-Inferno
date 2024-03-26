@@ -9,32 +9,25 @@ Buffs: {
 }
 
 Items: {
-<<<<<<< HEAD
+	CorruptedCold: {
+		DisplayName: Corrupted Cold
+		Tooltip: An amalgamation of ice and corruption
+	}
+
+	CrimsonCold: {
+		DisplayName: Crimson Cold
+		Tooltip: An abomination of ice and crimson
+	}
+
+	ChilledRepeater: {
+		DisplayName: Chilled Repeater
+		Tooltip: Brain freeze right between the eyes
+	}
+
 	EarlyIceSword: {
 		DisplayName: Ice Sword
 		Tooltip: A sword made of ice. Ice Shatters on impact.
 	}
-=======
-    CorruptedCold: {
-	DisplayName: Corrupted Cold
-	Tooltip: An amalgamation of ice and corruption
-    }
-
-    CrimsonCold: {
-	DisplayName: Crimson Cold
-	Tooltip: An abomination of ice and crimson
-    }
-
-    ChilledRepeater: {
-	DisplayName: Chilled Repeater
-	Tooltip: Brain freeze right between the eyes
-    }
-    
-    EarlyIceSword: {
-        DisplayName: Ice Sword
-        Tooltip: A sword made of ice. Ice Shatters on impact.
-    }
->>>>>>> main
 
 	FrostBolt: {
 		DisplayName: Frost Bolt
@@ -71,7 +64,6 @@ Items: {
 		Tooltip: Slows your movement by 10%, but all attacks slow enemies by 20%
 	}
 
-<<<<<<< HEAD
 	UpgradedSnowballCannon: {
 		DisplayName: Upgraded Snowball Cannon
 		Tooltip: ""
@@ -81,14 +73,6 @@ Items: {
 		DisplayName: Flaming Bullet
 		Tooltip: Burns enemies on impact
 	}
-=======
-    FlamingBullet: {
-        DisplayName: Flaming Bullet
-        Tooltip: Burns enemies on impact
-    }
-
-    
->>>>>>> main
 }
 
 Projectiles: {
@@ -99,4 +83,6 @@ Projectiles: {
 	IceBolt.DisplayName: Ice Bolt
 	IceBoltShatter.DisplayName: Ice Bolt
 	IceArrowProjectile.DisplayName: Ice Arrow
+	FlamingBulletProj.DisplayName: Flaming Bullet Proj
+	FrozenBulletProj.DisplayName: Frozen Bullet Proj
 }

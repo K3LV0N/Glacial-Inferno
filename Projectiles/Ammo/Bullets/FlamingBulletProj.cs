@@ -2,9 +2,9 @@
 using Terraria.ModLoader;
 using Terraria.ID;
 
-namespace glacial_inferno.Projectiles.Other
+namespace glacial_inferno.Projectiles.Ammo.Bullets
 {
-    public class FlamingBullet : ModProjectile
+    public class FlamingBulletProj : ModProjectile
     {
         public override void SetDefaults()
         {
@@ -19,12 +19,12 @@ namespace glacial_inferno.Projectiles.Other
             Projectile.tileCollide = true; // Can the projectile collide with tiles?
             Projectile.extraUpdates = 1;
             Projectile.light = .4f;
-            
+
             AIType = ProjectileID.Bullet;
         }
         public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
-            
+
             target.AddBuff(BuffID.OnFire, 300);
             base.OnHitNPC(target, hit, damageDone);
         }

@@ -1,4 +1,5 @@
-﻿using Terraria;
+﻿using glacial_inferno.Projectiles.Ammo.Bullets;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -16,7 +17,7 @@ namespace glacial_inferno.Items.Ammo.Bullets
             Item.consumable = true;
             Item.damage = 10;
             Item.knockBack = 2;
-            Item.shoot = ModContent.ProjectileType<Projectiles.Other.FlamingBullet>();
+            Item.shoot = ModContent.ProjectileType<FlamingBulletProj>();
             Item.shootSpeed = 10;
             Item.value = 30;
         }
