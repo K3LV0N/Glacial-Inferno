@@ -182,57 +182,63 @@ namespace glacial_inferno.Projectiles.Weapons.Summon
 
         public virtual int jumpCooldown { get { return 60; } }
         private int jumpCooldownTimer = 0;
+        private int jumpPhase = 0; // 0: Not jumping, 1: Jumping up, 2: Moving horizontally
+        private int verticalJumpFrames = 0;
+
         private void Movement(bool foundTarget, float distanceFromTarget, Vector2 targetCenter, float distanceToIdlePosition, Vector2 vectorToIdlePosition)
         {
-            float jumpVelocity = 8f;
+            float jumpVelocity = 9f;
             float horizontalSpeed = 4f;
+            int framesForVerticalJump = 3;
 
             bool onGround = Projectile.velocity.Y == 0 && Projectile.oldVelocity.Y == 0;
 
             if (onGround)
+            {
                 Projectile.frame = 0;
+                jumpPhase = 0;
+                verticalJumpFrames = 0;
+                Projectile.velocity.X = 0;
+            }
             else
+            {
                 Projectile.frame = 1;
+            }
 
             if (jumpCooldownTimer > 0)
             {
                 jumpCooldownTimer--;
-                if (onGround) Projectile.velocity.X = 0f;
             }
 
-            //Jump towards the target
-            if (foundTarget)
+            // Jumping Logic
+            if (onGround && jumpCooldownTimer <= 0 && jumpPhase == 0)
             {
-                if (onGround && jumpCooldownTimer <= 0)
-                {
-                    Vector2 direction = targetCenter - Projectile.Center;
-                    float distanceX = 0;
-                    float distanceY = -Math.Abs(jumpVelocity);
-
-                    if (Math.Abs(direction.X) > 40)
-                    {
-                        distanceX = direction.X > 0 ? horizontalSpeed : -horizontalSpeed;
-                    }
-
-                    Projectile.velocity.Y = distanceY;
-                    Projectile.velocity.X = distanceX;
-
-                    jumpCooldownTimer = jumpCooldown;
-                }
+                Projectile.velocity.Y = -jumpVelocity;
+                jumpPhase = 1;
+                jumpCooldownTimer = jumpCooldown;
             }
-            else
+
+            if (jumpPhase == 1)
             {
-                // Idle behavior, jumping towards player if on the ground
-                if (onGround && distanceToIdlePosition > 40f && jumpCooldownTimer <= 0)
+                verticalJumpFrames++;
+                if (verticalJumpFrames >= framesForVerticalJump)
                 {
-                    vectorToIdlePosition.Normalize();
-                    Projectile.velocity.Y = -jumpVelocity;
-                    Projectile.velocity.X = vectorToIdlePosition.X * horizontalSpeed;
-                    jumpCooldownTimer = jumpCooldown;
+                    jumpPhase = 2;
                 }
             }
 
-            // Apply gravity to simulate the jump falling down
+            if (jumpPhase == 2)
+            {
+                Vector2 direction = foundTarget ? targetCenter - Projectile.Center : vectorToIdlePosition;
+                direction.Normalize();
+
+                if (Projectile.velocity.X == 0)
+                {
+                    Projectile.velocity.X = direction.X * horizontalSpeed;
+                }
+            }
+
+            // Apply gravity
             if (!onGround || Projectile.velocity.Y < 0)
             {
                 Projectile.velocity.Y += 0.4f;
