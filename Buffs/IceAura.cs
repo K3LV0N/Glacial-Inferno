@@ -1,4 +1,5 @@
-﻿using glacial_inferno.Projectiles.Other;
+﻿using glacial_inferno.Dusts;
+using glacial_inferno.Projectiles.Other;
 using Microsoft.CodeAnalysis;
 using Microsoft.Xna.Framework;
 using System;
@@ -34,7 +35,7 @@ namespace glacial_inferno.Buffs
             {
                 NPC nPC = Main.npc[i];
                 Vector2 distance = player.Center - nPC.Center;
-                if (nPC.active && !nPC.friendly && distance.Length() <= 200f && !nPC.dontTakeDamage)
+                if (nPC.active && !nPC.friendly && !nPC.dontTakeDamage && distance.Length() <= 75f && !nPC.dontTakeDamage)
                 {
                     nPC.AddBuff(BuffID.Chilled, 120);
                     nPC.AddBuff(BuffID.Frostburn, 120);
@@ -43,8 +44,9 @@ namespace glacial_inferno.Buffs
             // Create visual effects
             if (Main.rand.NextBool(4)) // Adjust frequency of dust creation
             {
-                Dust.NewDust(player.position, player.width, player.height, DustID.InfernoFork, player.velocity.X * 0.5f, player.velocity.Y * 0.5f, 100, default(Color), 1.5f); // Adjust dust parameters
+                Dust.NewDust(player.position, player.width, player.height, DustID.SnowflakeIce, player.velocity.X * 0.5f, player.velocity.Y * 0.5f, 100, default(Color), 1.5f); // Adjust dust parameters
             }
+
             base.Update(player, ref buffIndex);
         }
     }
