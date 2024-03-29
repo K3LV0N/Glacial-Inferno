@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Terraria;
+﻿using Terraria;
 using Terraria.ModLoader;
+using glacial_inferno.Buffs;
 using Terraria.ID;
-using System.Numerics;
-using Microsoft.Xna.Framework;
 
-namespace glacial_inferno.Projectiles.Other
+namespace glacial_inferno.Projectiles.Ammo.Bullets
 {
-    public class FlamingBullet : ModProjectile
+    public class FrozenBulletProj : ModProjectile
     {
         public override void SetDefaults()
         {
@@ -26,21 +20,16 @@ namespace glacial_inferno.Projectiles.Other
             Projectile.tileCollide = true; // Can the projectile collide with tiles?
             Projectile.extraUpdates = 1;
             Projectile.light = .4f;
-            
+
             AIType = ProjectileID.Bullet;
         }
         public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
-            
-            target.AddBuff(BuffID.OnFire, 300);
+            int buffType = ModContent.BuffType<Frozen>();
+            target.AddBuff(buffType, 900);
             base.OnHitNPC(target, hit, damageDone);
         }
 
-        public override void AI()
-        {
-            //Spawns a fire particle effect on the bullet trail
-            Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, 6);
-            base.AI();
-        }
     }
+
 }
