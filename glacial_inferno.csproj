@@ -29,7 +29,6 @@
     <Folder Include="Projectiles\Weapons\Melee\" />
     <Folder Include="Projectiles\Weapons\Summon\" />
     <Folder Include="Systems\" />
-    <Folder Include="Projectiles\Weapons\Magic\" />
     <Folder Include="Projectiles\Other\" />
   </ItemGroup>
 </Project>
