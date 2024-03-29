@@ -9,7 +9,7 @@ using Terraria.ModLoader;
 
 namespace glacial_inferno.Items.Weapons.Melee
 {
-    public class SpyCicle : ModItem
+    public class MagicalClub : ModItem
     {
         public override void SetDefaults()
         {
@@ -45,11 +45,13 @@ namespace glacial_inferno.Items.Weapons.Melee
             base.OnHitNPC(player, target, hit, damageDone);
         }
 
+        /*
         public override bool AltFunctionUse(Player player)
         {
             player.AddBuff(BuffID.OnFire, 200);
             return base.AltFunctionUse(player);
         }
+        */
 
         //checks to see if you are on fire and are holding the weapon
         //if this happens, weapon disintegrates and you get a small buff

@@ -1,8 +1,8 @@
 # This file will automatically update with entries for new content after a build and reload
 
 Items: {
-	SpyCicle: {
-		DisplayName: Angry Ice Club
+	MagicalClub: {
+		DisplayName: Magical Ice Club
 		Tooltip: Gets stronger the longer you hold it for! Beware of fire!
 	}
 
@@ -34,11 +34,6 @@ Items: {
 	IceMageLeggings: {
 		DisplayName: Magical Ice Boots
 		Tooltip: Please somebody do better art for this thing.
-	}
-
-	basicSword: {
-		DisplayName: basic Sword
-		Tooltip: ""
 	}
 }
 
