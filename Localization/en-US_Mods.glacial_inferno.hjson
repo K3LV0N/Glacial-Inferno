@@ -58,6 +58,11 @@ Items: {
 		DisplayName: Flaming Bullet
 		Tooltip: Burns enemies on impact
 	}
+
+	PlasmaRailgun: {
+		DisplayName: Plasma Railgun
+		Tooltip: ""
+	}
 }
 
 Projectiles: {
@@ -68,4 +73,5 @@ Projectiles: {
 	IceBolt.DisplayName: Ice Bolt
 	IceBoltShatter.DisplayName: Ice Bolt
 	IceArrowProjectile.DisplayName: Ice Arrow
+	PlasmaRailgunProj.DisplayName: Plasma Railgun Proj
 }
