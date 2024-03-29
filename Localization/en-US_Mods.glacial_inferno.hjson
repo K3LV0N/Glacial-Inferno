@@ -6,6 +6,11 @@ Buffs: {
 		DisplayName: Frozen
 		Description: Slows your movement by 10% but attacks slow enemies by 20%
 	}
+
+	FireWeaponBuff: {
+		DisplayName: Fire Weapon Buff
+		Description: Mods.glacial_inferno.Buffs.FireWeaponBuff.Description
+	}
 }
 
 Items: {
@@ -73,6 +78,36 @@ Items: {
 		DisplayName: Flaming Bullet
 		Tooltip: Burns enemies on impact
 	}
+
+	FireBreastplate: {
+		DisplayName: Fire Breastplate
+		Tooltip: ""
+	}
+
+	FireHelmet: {
+		DisplayName: Fire Helmet
+		Tooltip: ""
+	}
+
+	FireLeggings: {
+		DisplayName: Fire Leggings
+		Tooltip: ""
+	}
+
+	FireTome: {
+		DisplayName: Fire Tome
+		Tooltip: ""
+	}
+
+	FireSword: {
+		DisplayName: Fire Sword
+		Tooltip: ""
+	}
+
+	FireBow: {
+		DisplayName: Fire Bow
+		Tooltip: ""
+	}
 }
 
 Projectiles: {
@@ -85,4 +120,6 @@ Projectiles: {
 	IceArrowProjectile.DisplayName: Ice Arrow
 	FlamingBulletProj.DisplayName: Flaming Bullet Proj
 	FrozenBulletProj.DisplayName: Frozen Bullet Proj
+	FireBall.DisplayName: Fire Ball
+	FireArrow.DisplayName: Fire Arrow
 }
