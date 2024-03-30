@@ -1,13 +1,11 @@
-// using System.Numerics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Microsoft.Xna.Framework;
 using glacial_inferno.Buffs;
 using Terraria.Audio;
 using glacial_inferno.Items.Ammo;
 
-namespace glacial_inferno.Projectiles.Ammo
+namespace glacial_inferno.Projectiles.Ammo.Other
 {
     public class IcySnowballProjectile : ModSnowballProjectile
     {

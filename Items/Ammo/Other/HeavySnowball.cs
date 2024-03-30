@@ -1,10 +1,9 @@
-using System.Numerics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using glacial_inferno.Projectiles.Ammo;
+using glacial_inferno.Projectiles.Ammo.Other;
 
-namespace glacial_inferno.Items.Ammo
+namespace glacial_inferno.Items.Ammo.Other
 {
     public class HeavySnowball : ModSnowball
     {

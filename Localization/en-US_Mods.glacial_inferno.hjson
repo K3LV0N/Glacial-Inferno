@@ -46,32 +46,32 @@ Items: {
 
 	FrozenBullet: {
 		DisplayName: Frozen Bullet
-		Tooltip: Slows enemies on impact.
+		Tooltip: Slows enemies on impact
 	}
 
 	HeavySnowball: {
 		DisplayName: Heavy Snowball
-		Tooltip: A snowball packed with metal.
+		Tooltip: ""
 	}
 
 	IcySnowball: {
 		DisplayName: Icy Snowball
-		Tooltip: A snowball packed with ice. Slows enemies on impact.
+		Tooltip: ""
 	}
 
 	FlaskOfFreezing: {
 		DisplayName: Flask Of Freezing
-		Tooltip: Slows your movement by 10%, but all attacks slow enemies by 20%.
+		Tooltip: Slows your movement by 10%, but all attacks slow enemies by 20%
 	}
 
 	UpgradedSnowballCannon: {
 		DisplayName: Upgraded Snowball Cannon
-		Tooltip: An improved version of the Snowball Cannon.
+		Tooltip: ""
 	}
 
 	FlamingBullet: {
 		DisplayName: Flaming Bullet
-		Tooltip: Burns enemies on impact.
+		Tooltip: Burns enemies on impact
 	}
 }
 
@@ -83,4 +83,6 @@ Projectiles: {
 	IceBolt.DisplayName: Ice Bolt
 	IceBoltShatter.DisplayName: Ice Bolt
 	IceArrowProjectile.DisplayName: Ice Arrow
+	FlamingBulletProj.DisplayName: Flaming Bullet Proj
+	FrozenBulletProj.DisplayName: Frozen Bullet Proj
 }

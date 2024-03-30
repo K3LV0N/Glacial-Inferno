@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
 using Terraria.Audio;
 
-namespace glacial_inferno.Projectiles.Ammo
+namespace glacial_inferno.Projectiles.Ammo.Other
 {
     public class HeavySnowballProjectile : ModSnowballProjectile
     {
