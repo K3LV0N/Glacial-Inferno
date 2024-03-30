@@ -73,6 +73,11 @@ Items: {
 		DisplayName: Flaming Bullet
 		Tooltip: Burns enemies on impact
 	}
+
+	BlizzardBlower: {
+		DisplayName: Blizzard Blower
+		Tooltip: ""
+	}
 }
 
 Projectiles: {
