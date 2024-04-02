@@ -5,6 +5,7 @@ using Terraria.DataStructures;
 using Microsoft.Xna.Framework;
 using glacial_inferno.Projectiles.Weapons.Ranged;
 using glacial_inferno.Buffs;
+using glacial_inferno.Items.Ores;
 
 
 namespace glacial_inferno.Items.Weapons.Ranged
@@ -49,11 +50,10 @@ namespace glacial_inferno.Items.Weapons.Ranged
                 damage.Base += 5f;
         }
 
-        //I want to change this recipe with custom mod items later this is just a placeholder
         public override void AddRecipes()
         {
             Recipe r = CreateRecipe();
-            r.AddIngredient(ItemID.LivingFireBlock, 3);
+            r.AddIngredient(ModContent.ItemType<FireIngot>(), 3);
             r.AddIngredient(ItemID.Rope, 3);
             r.AddTile(TileID.Anvils);
             r.Register();

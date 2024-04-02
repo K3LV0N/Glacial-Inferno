@@ -1,4 +1,5 @@
 ﻿using glacial_inferno.Buffs;
+using glacial_inferno.Items.Ores;
 using System;
 using Terraria;
 using Terraria.ID;
@@ -33,8 +34,6 @@ namespace glacial_inferno.Items.Weapons.Melee
             Item.autoReuse = true;
         }
 
-        
-
         public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
         {
             //Sets the npc on fire if sword has a charge and the npc isn't on fire yet
@@ -44,7 +43,6 @@ namespace glacial_inferno.Items.Weapons.Melee
                 charge--;
             }
         }
-
 
         public override void HoldItem(Player player) 
         {
@@ -72,15 +70,13 @@ namespace glacial_inferno.Items.Weapons.Melee
             }
         }
 
-        //I want to change this recipe with custom mod items later this is just a placeholder
         public override void AddRecipes()
         {
             Recipe r = CreateRecipe();
-            r.AddIngredient(ItemID.LivingFireBlock, 3);
-            r.AddIngredient(ItemID.IronBar, 2);
+            r.AddIngredient(ModContent.ItemType<FireIngot>(), 3);
+            r.AddIngredient(ItemID.GoldBar, 2);
             r.AddTile(TileID.Anvils);
             r.Register();
         }
-
     }
 }

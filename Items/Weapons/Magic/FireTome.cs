@@ -5,6 +5,7 @@ using glacial_inferno.Projectiles.Weapons.Magic;
 using System.Numerics;
 using glacial_inferno.Projectiles.Weapons.Ranged;
 using glacial_inferno.Buffs;
+using glacial_inferno.Items.Ores;
 
 namespace glacial_inferno.Items.Weapons.Magic
 {
@@ -49,11 +50,10 @@ namespace glacial_inferno.Items.Weapons.Magic
                 damage.Base += 5f;
         }
 
-        //I want to change this recipe with custom mod items later this is just a placeholder
         public override void AddRecipes()
         {
             Recipe r = CreateRecipe();
-            r.AddIngredient(ItemID.LivingFireBlock, 5);
+            r.AddIngredient(ModContent.ItemType<FireIngot>(), 5);
             r.AddIngredient(ItemID.Book, 1);
             r.AddTile(TileID.Bookcases);
             r.Register();

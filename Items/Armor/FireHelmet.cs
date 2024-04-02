@@ -1,4 +1,5 @@
 ﻿using glacial_inferno.Buffs;
+using glacial_inferno.Items.Ores;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -27,12 +28,11 @@ namespace glacial_inferno.Items.Armor
             player.AddBuff(ModContent.BuffType<FireWeaponBuff>(), 2);
         }
 
-        //I want to change this recipe with custom mod items later this is just a placeholder
         public override void AddRecipes()
         {
             Recipe r = CreateRecipe();
-            r.AddIngredient(ItemID.LivingFireBlock, 5);
-            r.AddIngredient(ItemID.IronBar, 5);
+            r.AddIngredient(ModContent.ItemType<FireIngot>(), 5);
+            r.AddIngredient(ItemID.GoldBar, 5);
             r.AddTile(TileID.Anvils);
             r.Register();
         }

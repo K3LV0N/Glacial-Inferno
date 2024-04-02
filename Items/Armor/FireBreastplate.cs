@@ -1,6 +1,7 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using glacial_inferno.Items.Ores;
 
 namespace glacial_inferno.Items.Armor
 {
@@ -24,12 +25,11 @@ namespace glacial_inferno.Items.Armor
             //player.buffImmunep[BuffID.Frozen] = true;
         }
 
-        //I want to change this recipe with custom mod items later this is just a placeholder
         public override void AddRecipes()
         {
             Recipe r = CreateRecipe();
-            r.AddIngredient(ItemID.LivingFireBlock, 8);
-            r.AddIngredient(ItemID.IronBar, 8);
+            r.AddIngredient(ModContent.ItemType<FireIngot>(), 8);
+            r.AddIngredient(ItemID.GoldBar, 8);
             r.AddTile(TileID.Anvils);
             r.Register();
         }

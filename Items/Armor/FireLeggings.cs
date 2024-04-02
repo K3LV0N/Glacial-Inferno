@@ -1,4 +1,5 @@
-﻿using Terraria;
+﻿using glacial_inferno.Items.Ores;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -21,12 +22,11 @@ namespace glacial_inferno.Items.Armor
             player.moveSpeed += 0.1f;
         }
 
-        //I want to change this recipe with custom mod items later this is just a placeholder
         public override void AddRecipes()
         {
             Recipe r = CreateRecipe();
-            r.AddIngredient(ItemID.LivingFireBlock, 7);
-            r.AddIngredient(ItemID.IronBar, 7);
+            r.AddIngredient(ModContent.ItemType<FireIngot>(), 7);
+            r.AddIngredient(ItemID.GoldBar, 7);
             r.AddTile(TileID.Anvils);
             r.Register();
         }
