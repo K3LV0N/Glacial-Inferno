@@ -35,7 +35,7 @@ namespace glacial_inferno.Buffs
             {
                 NPC nPC = Main.npc[i];
                 Vector2 distance = player.Center - nPC.Center;
-                if (nPC.active && !nPC.friendly && !nPC.dontTakeDamage && distance.Length() <= 75f && !nPC.dontTakeDamage)
+                if (nPC.active && !nPC.friendly && !nPC.dontTakeDamage && !nPC.CountsAsACritter && distance.Length() <= 75f && !nPC.dontTakeDamage)
                 {
                     nPC.AddBuff(BuffID.Chilled, 120);
                     nPC.AddBuff(BuffID.Frostburn, 120);
