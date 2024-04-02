@@ -108,6 +108,16 @@ Items: {
 		DisplayName: Fire Bow
 		Tooltip: ""
 	}
+
+	FireIngot: {
+		DisplayName: Fire Ingot
+		Tooltip: A fire ingot
+	}
+
+	FireOre: {
+		DisplayName: Fire Ore
+		Tooltip: Fire Ore
+	}
 }
 
 Projectiles: {
@@ -123,3 +133,6 @@ Projectiles: {
 	FireBall.DisplayName: Fire Ball
 	FireArrow.DisplayName: Fire Arrow
 }
+
+Tiles.FireOre.MapEntry: Fire Ore
+WorldGen.FireOrePassMessage: Mods.glacial_inferno.WorldGen.FireOrePassMessage

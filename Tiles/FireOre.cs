@@ -59,6 +59,10 @@ namespace glacial_inferno.Tiles
     {
         public static LocalizedText FireOrePassMessage { get; private set; }
 
+        public override void SetStaticDefaults()
+        {
+            FireOrePassMessage = Mod.GetLocalization($"WorldGen.{nameof(FireOrePassMessage)}");
+        }
         public override void ModifyWorldGenTasks(List<GenPass> tasks, ref double totalWeight)
         {
             int shiniesIndex = tasks.FindIndex(genpass => genpass.Name.Equals("Shinies"));
