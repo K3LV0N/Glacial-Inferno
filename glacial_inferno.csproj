@@ -27,12 +27,10 @@
     <PackageReference Include="tModLoader.CodeAssist" Version="0.1.*" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Items\Ammo\" />
     <Folder Include="Items\Accessories\" />
     <Folder Include="Items\Armor\" />
     <Folder Include="Items\Potions\" />
     <Folder Include="Items\Vanity\" />
-    <Folder Include="Items\Weapons\Ranged\" />
     <Folder Include="Buffs\" />
     <Folder Include="Dusts\" />
     <Folder Include="Items\Weapons\Summon\" />
