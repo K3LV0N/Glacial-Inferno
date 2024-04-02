@@ -1,9 +1,6 @@
 using Terraria;
-using Terraria.ID;
 using Terraria.ModLoader;
 using glacial_inferno.Buffs;
-using Terraria.Audio;
-using glacial_inferno.Items.Ammo;
 
 namespace glacial_inferno.Projectiles.Ammo.Other
 {

@@ -56,7 +56,7 @@ Items: {
 
 	IcySnowball: {
 		DisplayName: Icy Snowball
-		Tooltip: ""
+		Tooltip: Slows enemies on impact
 	}
 
 	FlaskOfFreezing: {
@@ -73,6 +73,11 @@ Items: {
 		DisplayName: Flaming Bullet
 		Tooltip: Burns enemies on impact
 	}
+
+	GlassSnowball: {
+		DisplayName: Glass Snowball
+		Tooltip: Shatters on impact
+	}
 }
 
 Projectiles: {
@@ -85,4 +90,6 @@ Projectiles: {
 	IceArrowProjectile.DisplayName: Ice Arrow
 	FlamingBulletProj.DisplayName: Flaming Bullet Proj
 	FrozenBulletProj.DisplayName: Frozen Bullet Proj
+	GlassSnowballProjectile.DisplayName: Glass Snowball Projectile
+	GlassSnowballShatter.DisplayName: Glass Snowball Shatter
 }
