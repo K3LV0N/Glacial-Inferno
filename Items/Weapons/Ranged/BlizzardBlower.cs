@@ -1,14 +1,16 @@
-using Microsoft.Xna.Framework;
-using Terraria;
 using Terraria.DataStructures;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Microsoft.Xna.Framework;
+using glacial_inferno.Items.Ammo.Other;
+using System;
 
 namespace glacial_inferno.Items.Weapons.Ranged
 {
-    public class BlizzardBlower: ModItem
+    public class BlizzardBlower : ModItem
     {
-        double manaAccumulator = 0;
+        private double manaAccumulator = 0;
         //A weapon that "blows" bits of blizzard towards the enemy.
         //Shoots very many small projectiles that simulate wind
         //when projectiles hit they FrostBurn the enemy and "blow them back" 
@@ -17,9 +19,9 @@ namespace glacial_inferno.Items.Weapons.Ranged
 
         public override void SetDefaults()
         {
-            Item.damage = 15;
-            Item.useTime = 50;
-            Item.useAnimation = 50;
+            Item.damage = 1;
+            Item.useTime = 15;
+            Item.useAnimation = 15;
             Item.knockBack = 0f;
             Item.noMelee = true;
             Item.notAmmo = true;
@@ -31,16 +33,17 @@ namespace glacial_inferno.Items.Weapons.Ranged
             Item.autoReuse = true;
             Item.width = 43;
             Item.height = 23;
-            
 
-            
-           
+
+
+
+
 
 
             //dont matter so set to random values
             Item.shoot = ProjectileID.SnowBallFriendly; // Set this to the ID of the projectile you want to shoot
             Item.shootSpeed = 10f; // How fast the projectile is shot
-            
+
 
         }
 
@@ -70,12 +73,28 @@ namespace glacial_inferno.Items.Weapons.Ranged
 
 
         public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
-        {   
-            //run the shoot animation
+        {
+            
+            // Calculate the rotation to match the direction of the velocity
+            float rotation = (float)Math.Atan2(velocity.Y, velocity.X);
 
+            // Create the projectile at the specified position with the calculated rotation
+            Projectile projectile = Main.projectile[Projectile.NewProjectile(source, position, velocity, ModContent.ProjectileType<BlizzardBlowerProjectile>(), damage, knockback, player.whoAmI)];
 
-            return false; // Return false because we don't want Terraria to shoot the projectile automatically
+            // Set the rotation of the projectile
+            projectile.rotation = rotation;
+
+            // Make sure the sprite faces the right way if it has a direction
+            if (projectile.spriteDirection == -1)
+            {
+                projectile.rotation += MathHelper.Pi;
+            }
+
+            // Return false because we don't want Terraria to shoot the projectile automatically
+            return false;
         }
+
+
 
 
 

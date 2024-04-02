@@ -90,4 +90,5 @@ Projectiles: {
 	IceArrowProjectile.DisplayName: Ice Arrow
 	FlamingBulletProj.DisplayName: Flaming Bullet Proj
 	FrozenBulletProj.DisplayName: Frozen Bullet Proj
+	BlizzardBlowerProjectile.DisplayName: Blizzard Blower Projectile
 }
