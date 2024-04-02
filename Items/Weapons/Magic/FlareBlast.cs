@@ -12,36 +12,42 @@ namespace glacial_inferno.Items.Weapons.Magic
     {
         public override void SetDefaults()
         {
-            int shotTime = 15;
-            float velocity = 15f;
+            Item.useTime = 350;
+            Item.useAnimation = 350;
+            int shotTime = 40;
+            float velocity = 4f;
             bool autoReuse = true;
             Item.DefaultToMagicWeapon(ModContent.ProjectileType<FlareBlastProj>(), shotTime, velocity, autoReuse);
             Item.mana = 7;
             Item.UseSound = SoundID.Item1;
             Item.damage = 10;
+            
         }
         public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
         {
             Vector2 mousePos = Main.MouseWorld;
             Vector2 relPos = mousePos - player.Center;
-            int angle = 45;
-            int spread = 30; //The angle of random spread.
-            float spreadMult = 0.1f; //M
-    
+            int angle = 20;
+        
 
             for (int i = 0; i < 5; i++)
             {
                 float offset = MathHelper.ToRadians(angle);
                 Vector2 relVelo = relPos.RotatedBy(offset);
-            //    float vX = velocity.X * ((float)Math.Cos(angle * (Math.PI / 180)));
-              //  float vY = velocity.Y * ((float)Math.Sin(angle * (Math.PI / 180)));
+          
+                if (i == 2)
+                {
+                    Projectile.NewProjectile(source, position.X, position.Y, relVelo.X, relVelo.Y, ModContent.ProjectileType<BigFlareBlastProj>(), damage, knockback);
+                  //  Projectile.NewProjectile(source, position.X, position.Y, relVelo.X, relVelo.Y, ModContent.ProjectileType<FlareBlastProj>(), damage, knockback);
 
-                float vX = velocity.X * ((float)Math.Sin(angle * (Math.PI / 180)));
-                float vY = velocity.Y * ((float)Math.Sin(angle * (Math.PI / 180)));
-                Projectile.NewProjectile(source, position.X, position.Y, relVelo.X, relVelo.Y, type, damage, knockback);
+                }
+                else
+                {
+                    Projectile.NewProjectile(source, position.X, position.Y, relVelo.X, relVelo.Y, type, damage, knockback);
 
-             //   Projectile.NewProjectile(source, position.X, position.Y, vX, vY, type, damage, knockback);
-                angle -= 15;
+                }
+
+                angle -= 10;
             }
             return false;
         }

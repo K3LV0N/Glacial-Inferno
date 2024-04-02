@@ -97,4 +97,5 @@ Projectiles: {
 	FrozenBulletProj.DisplayName: Frozen Bullet Proj
 	PlasmaRailgunProj.DisplayName: Plasma Railgun Proj
 	FlareBlastProj.DisplayName: Flare Blast Proj
+	BigFlareBlastProj.DisplayName: Big Flare Blast Proj
 }
