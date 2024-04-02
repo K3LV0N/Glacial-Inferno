@@ -8,6 +8,12 @@
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="Items\Ammo\Arrows\IceArrow.png" />
+    <None Remove="Items\Weapons\Magic\FrostBolt.png" />
+    <None Remove="Items\Weapons\Melee\EarlyIceSword.png" />
+    <None Remove="Projectiles\Weapons\Magic\IceBoltShatter.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Remove="Buffs\IceAura.png" />
     <None Remove="Dusts\IceAuraDust.png" />
     <None Remove="Items\Armor\BasicIceMageArmor\IceMageBreastplate_Body.png" />
@@ -23,11 +29,13 @@
   <ItemGroup>
     <Folder Include="Items\Ammo\" />
     <Folder Include="Items\Accessories\" />
-    <Folder Include="Items\Other\" />
+    <Folder Include="Items\Armor\" />
+    <Folder Include="Items\Potions\" />
     <Folder Include="Items\Vanity\" />
-    <Folder Include="Items\Weapons\Magic\" />
-    <Folder Include="Items\Weapons\Summon\" />
     <Folder Include="Items\Weapons\Ranged\" />
+    <Folder Include="Buffs\" />
+    <Folder Include="Dusts\" />
+    <Folder Include="Items\Weapons\Summon\" />
     <Folder Include="Systems\" />
     <Folder Include="NPCs\" />
     <Folder Include="Projectiles\Enemy\" />
@@ -35,5 +43,8 @@
     <Folder Include="Projectiles\Weapons\Melee\" />
     <Folder Include="Projectiles\Weapons\Ranged\" />
     <Folder Include="Projectiles\Weapons\Summon\" />
+    <Folder Include="Systems\" />
+    <Folder Include="Projectiles\Weapons\Magic\" />
+    <Folder Include="Projectiles\Other\" />
   </ItemGroup>
 </Project>
