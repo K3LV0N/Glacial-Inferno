@@ -20,8 +20,8 @@ namespace glacial_inferno.Items.Weapons.Ranged
         public override void SetDefaults()
         {
             Item.damage = 1;
-            Item.useTime = 15;
-            Item.useAnimation = 15;
+            Item.useTime = 5;
+            Item.useAnimation = 5;
             Item.knockBack = 0f;
             Item.noMelee = true;
             Item.notAmmo = true;
