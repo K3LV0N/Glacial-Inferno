@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -16,8 +17,15 @@ namespace glacial_inferno.Buffs.Summon
         public bool isFrozen = false;
 
         //Perma Freeze
-        private int aiUpdateTimer = 0;
-        private bool shouldUpdateAI = true;
+        private const float maxDistance = 500f;
+        public DateTime buffAppliedTime { get; set; }
+        private float minTime = 8f;
+        private bool isPermaFrozen = false;
+
+        public override void SetDefaults(NPC npc)
+        {
+            buffAppliedTime = DateTime.MinValue; // Initialize to a minimum value
+        }
 
         public override void ResetEffects(NPC npc)
         {
@@ -69,24 +77,68 @@ namespace glacial_inferno.Buffs.Summon
 
             if (npc.HasBuff(ModContent.BuffType<PermaFreezeBuff>()))
             {
-                aiUpdateTimer++;
-
-                if (aiUpdateTimer >= 120)
+                if (!isPermaFrozen)
                 {
-                    shouldUpdateAI = !shouldUpdateAI;
-                    aiUpdateTimer = 0;
-                }
-
-                if (shouldUpdateAI)
-                {
-                    base.AI(npc);
+                    buffAppliedTime = DateTime.UtcNow;
+                    isPermaFrozen = true;
                 }
             }
             else
             {
-                aiUpdateTimer = 0;
-                shouldUpdateAI = true;
-                base.AI(npc);
+                isPermaFrozen = false;
+            }
+
+            int buffId = ModContent.BuffType<PermaFreezeBuff>();
+            int buffIndex = npc.FindBuffIndex(buffId);
+
+            //Disables the buff
+            if (buffIndex != -1)
+            {
+                TimeSpan elapsed = DateTime.UtcNow - buffAppliedTime;
+                if (elapsed.TotalSeconds >= 8)
+                {
+                    foreach (Player player in Main.player)
+                    {
+                        if (player.active && !player.dead)
+                        {
+                            float distance = Vector2.Distance(player.Center, npc.Center) / 16;
+                            if (distance > maxDistance)
+                            {
+                                npc.DelBuff(buffIndex);
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        //Disables the Perma Freeze Debuff if it gets hit by the Player
+        public override void OnHitByItem(NPC npc, Player player, Item item, NPC.HitInfo hit, int damageDone)
+        {
+            RemoveBuff(npc);
+        }
+
+        public override void OnHitByProjectile(NPC npc, Projectile projectile, NPC.HitInfo hit, int damageDone)
+        {
+            if (projectile.owner == Main.myPlayer && Main.player[projectile.owner].active)
+            {
+                RemoveBuff(npc);
+            }
+        }
+
+        private void RemoveBuff(NPC npc)
+        {
+            TimeSpan elapsed = DateTime.UtcNow - buffAppliedTime;
+
+            if (elapsed.TotalSeconds >= minTime && isPermaFrozen)
+            {
+                int buffIndex = npc.FindBuffIndex(ModContent.BuffType<PermaFreezeBuff>());
+                if (buffIndex != -1)
+                {
+                    npc.DelBuff(buffIndex);
+                }
+                isPermaFrozen = false;
             }
         }
     }

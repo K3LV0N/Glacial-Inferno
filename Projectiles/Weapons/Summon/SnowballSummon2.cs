@@ -9,12 +9,14 @@ namespace glacial_inferno.Projectiles.Weapons.Summon
 {
     public class SnowballSummon2 : SnowballSummon
     {
-        public override int jumpCooldown { get { return 30; } }
+        public override int jumpCooldown { get { return 45; } }
 
         public override void SetDefaults()
         {
             base.SetDefaults();
             Projectile.minionSlots = 0.25f;
+            Projectile.width = 24;
+            Projectile.height = 18;
         }
 
         public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)

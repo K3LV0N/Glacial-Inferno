@@ -23,7 +23,7 @@ Buffs: {
 	}
 
 	SnowballSummonBuff2: {
-		DisplayName: Snowball Summon Buff2
+		DisplayName: Advanced Snowball Summon Buff
 		Description: Mods.glacial_inferno.Buffs.SnowballSummonBuff2.Description
 	}
 }
@@ -35,7 +35,7 @@ Items: {
 	}
 
 	IceSummon: {
-		DisplayName: Ice Summon
+		DisplayName: Ice Snowball Summon
 		Tooltip: ""
 	}
 
@@ -70,7 +70,7 @@ Items: {
 	}
 
 	IceSummon2: {
-		DisplayName: Ice Summon2
+		DisplayName: Advanced Ice Snowball Summon
 		Tooltip: ""
 	}
 }
@@ -82,7 +82,7 @@ Projectiles: {
 	IceBolt.DisplayName: Ice Bolt
 	IceBoltShatter.DisplayName: Ice Bolt
 	IceArrowProjectile.DisplayName: Ice Arrow
-	SnowballSummon2.DisplayName: Snowball Summon2
+	SnowballSummon2.DisplayName: Advanced Snowball Summon
 }
 
 FrostBolt: {

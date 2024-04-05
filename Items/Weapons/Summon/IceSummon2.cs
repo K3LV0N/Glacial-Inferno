@@ -29,10 +29,9 @@ namespace glacial_inferno.Items.Weapons.Summon
         public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe();
-            //recipe.AddIngredient(ModContent.ItemType<IceSummon>(), 1);
-            //recipe.AddIngredient(ItemID.FrostCore, 1);
-            //recipe.AddIngredient(ItemID.IceFeather, 1);
-            recipe.AddIngredient(ItemID.DirtBlock, 1);
+            recipe.AddIngredient(ModContent.ItemType<IceSummon>(), 1);
+            recipe.AddIngredient(ItemID.FrostCore, 1);
+            recipe.AddIngredient(ItemID.IceFeather, 1);
             recipe.AddTile(TileID.WorkBenches);
             recipe.Register();
         }
