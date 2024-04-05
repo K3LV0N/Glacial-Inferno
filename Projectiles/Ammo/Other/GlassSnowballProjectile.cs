@@ -25,7 +25,13 @@ namespace glacial_inferno.Projectiles.Ammo.Other
         public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
             base.OnHitNPC(target, hit, damageDone);
-            BasicShatter<GlassSnowballShatter>(target, 4, 6, -30, 30, 2, Projectile.knockBack, 0);
+            // BasicShatter<GlassSnowballShatter>(target, 4, 6, -30, 30, 2, Projectile.knockBack, 0);
+        }
+
+        public override void OnKill(int timeLeft)
+        {
+            base.OnKill(timeLeft);
+            BasicShatter<GlassSnowballShatter>(4, 6, -30, 30, 2, Projectile.knockBack, 0);
         }
 
         public void BasicShatter<T>(int projectileAmount, int damage, int minAngle, int maxAngle, float startingVelocity, float knockBack, float yOffset) where T : ModProjectile
@@ -34,18 +40,21 @@ namespace glacial_inferno.Projectiles.Ammo.Other
 
             HashSet<int> randomAngles = new HashSet<int>();
 
+            int baseAngle = (int)MathHelper.ToDegrees((float)(Math.Atan(Projectile.velocity.Y / Projectile.velocity.X) + Math.PI));
             for (int i = 0; i < projectileAmount; i++)
             {
-                int randNumber = rand.Next(minAngle, maxAngle);
+                int randNumber = rand.Next(minAngle, maxAngle) + baseAngle;
                 while (!randomAngles.Add(randNumber))
                 {
-                    randNumber = rand.Next(minAngle, maxAngle);
+                    randNumber = rand.Next(minAngle, maxAngle) + baseAngle;
                 }
             }
 
             float y = Projectile.position.Y - yOffset;
             float x = Projectile.position.X;
             Vector2 pos = new Vector2(x, y);
+            // Vector2 vel = new Vector2(-Projectile.velocity.X, -Projectile.velocity.Y);
+            // vel.Normalize();
             foreach (int randomAngle in randomAngles)
             {
                 Vector2 proj = new Vector2(-startingVelocity, 0);
