@@ -5,6 +5,7 @@ namespace glacial_inferno
 {
     internal class testing : ModSystem
     {
+        // THIS NEEDS TO BE SET TO FALSE BEFORE RELEASES
         private bool devBranch = true;
 
         public override void AddRecipes()
