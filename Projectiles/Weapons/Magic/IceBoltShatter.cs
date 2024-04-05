@@ -4,7 +4,7 @@ using Terraria.ID;
 
 namespace glacial_inferno.Projectiles.Weapons.Magic
 {
-    public class IceBoltShatter : ShatterProjectile
+    public class IceBoltShatter : SpecialProjectile
     {
         public override void SetDefaults()
         {
