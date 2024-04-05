@@ -78,6 +78,11 @@ Items: {
 		DisplayName: Blizzard Blower
 		Tooltip: ""
 	}
+
+	InfernoBlower: {
+		DisplayName: Inferno Blower
+		Tooltip: ""
+	}
 }
 
 Projectiles: {
@@ -91,4 +96,5 @@ Projectiles: {
 	FlamingBulletProj.DisplayName: Flaming Bullet Proj
 	FrozenBulletProj.DisplayName: Frozen Bullet Proj
 	BlizzardBlowerProjectile.DisplayName: Blizzard Blower Projectile
+	InfernoBlowerProjectile.DisplayName: Inferno Blower Projectile
 }
