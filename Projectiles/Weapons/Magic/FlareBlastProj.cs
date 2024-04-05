@@ -14,32 +14,48 @@ namespace glacial_inferno.Projectiles.Weapons.Magic
     public class FlareBlastProj : ModProjectile
 
     {
-        private Vector2 baseVelo;
+        
         public override void SetDefaults()
         {
-            baseVelo = Projectile.velocity;
+            
             Projectile.scale = 1.2f;
             Projectile.width = (int)(9f * Projectile.scale);
             Projectile.height = (int)(19f * Projectile.scale);
             Projectile.ai[0] = 0;
             Projectile.friendly = true;
-            //AIType = ProjectileID.Bullet;
+            
             Projectile.timeLeft = 300;
-         
+            
             Projectile.aiStyle = ProjAIStyleID.Arrow;
         }
 
         public override bool PreAI()
         {
      
-            
+            //Spawns dusts on the projectile 
             Dust.NewDust(Projectile.Center, Projectile.width, Projectile.height, DustID.Torch, 0f, 0f, 0, default, 0.8f);
             Dust.NewDust(Projectile.Center, Projectile.width, Projectile.height, DustID.Torch, 0f, 0f, 0, default, 0.8f);
 
             return true;
         }
 
+        /*
+        public override void AI()
+        {
+           
+           Projectile.ai[0] = (Projectile.ai[0] >= 360) ? 0 : Projectile.ai[0]++; 
+            
+             
+            Projectile.position.X += (float)(Math.Cos(Projectile.velocity.X)*Projectile.velocity.X);
+            Projectile.position.Y += (float)(Math.Sin(Projectile.velocity.Y)*Projectile.velocity.Y);
+            
+           // base.AI();
+        }*/
 
+        public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
+        {
+            target.AddBuff(BuffID.OnFire, 300);
+        }
         public override void OnKill(int timeLeft)
         {
             Collision.HitTiles(Projectile.position, Projectile.velocity, Projectile.width, Projectile.height);

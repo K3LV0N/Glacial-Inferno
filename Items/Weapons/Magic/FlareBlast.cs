@@ -1,4 +1,5 @@
 ﻿using glacial_inferno.Projectiles.Weapons.Magic;
+using glacial_inferno.Items.Other;
 using Microsoft.Xna.Framework;
 using System;
 using Terraria;
@@ -12,15 +13,15 @@ namespace glacial_inferno.Items.Weapons.Magic
     {
         public override void SetDefaults()
         {
-            Item.useTime = 350;
-            Item.useAnimation = 350;
-            int shotTime = 40;
-            float velocity = 4f;
+        
+            int shotTime = 25;
+            float velocity = 5f;
             bool autoReuse = true;
             Item.DefaultToMagicWeapon(ModContent.ProjectileType<FlareBlastProj>(), shotTime, velocity, autoReuse);
             Item.mana = 7;
             Item.UseSound = SoundID.Item1;
-            Item.damage = 10;
+            Item.damage = 50;
+            
             
         }
         public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
@@ -29,7 +30,7 @@ namespace glacial_inferno.Items.Weapons.Magic
             Vector2 relPos = mousePos - player.Center;
             int angle = 20;
         
-
+            //Spawns 5 projectiles in an arc
             for (int i = 0; i < 5; i++)
             {
                 float offset = MathHelper.ToRadians(angle);
@@ -37,14 +38,10 @@ namespace glacial_inferno.Items.Weapons.Magic
           
                 if (i == 2)
                 {
+                    //Spawns a big projectile in the middle
                     Projectile.NewProjectile(source, position.X, position.Y, relVelo.X, relVelo.Y, ModContent.ProjectileType<BigFlareBlastProj>(), damage, knockback);
-                  //  Projectile.NewProjectile(source, position.X, position.Y, relVelo.X, relVelo.Y, ModContent.ProjectileType<FlareBlastProj>(), damage, knockback);
-
-                }
-                else
-                {
+                } else {
                     Projectile.NewProjectile(source, position.X, position.Y, relVelo.X, relVelo.Y, type, damage, knockback);
-
                 }
 
                 angle -= 10;
@@ -55,7 +52,8 @@ namespace glacial_inferno.Items.Weapons.Magic
         {
             Recipe r1 = CreateRecipe();
             r1.AddIngredient(ItemID.Book);
-            r1.AddIngredient(ItemID.HellstoneBar, 12);
+            r1.AddIngredient(ModContent.ItemType<LavaFragment>(),20);
+            r1.AddIngredient(ItemID.HellstoneBar, 20);
             r1.AddTile(TileID.Bookcases);
             r1.AddCondition(Condition.InUnderworld);
             r1.Register();

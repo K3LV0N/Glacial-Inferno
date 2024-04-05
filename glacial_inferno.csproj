@@ -23,7 +23,6 @@
     <Folder Include="Items\Potions\" />
     <Folder Include="Items\Vanity\" />
     <Folder Include="Buffs\" />
-    <Folder Include="Dusts\" />
     <Folder Include="Items\Weapons\Summon\" />
     <Folder Include="NPCs\" />
     <Folder Include="Projectiles\Enemy\" />

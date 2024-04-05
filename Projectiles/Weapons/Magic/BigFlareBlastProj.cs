@@ -15,7 +15,7 @@ namespace glacial_inferno.Projectiles.Weapons.Magic
      
         public override void SetDefaults()
         {
-            Projectile.scale = 1.1f;
+            Projectile.scale = 1.5f;
             Projectile.width = (int)(9f * Projectile.scale);
             Projectile.height = (int)(19f * Projectile.scale);
             Projectile.timeLeft = 300;
@@ -23,6 +23,7 @@ namespace glacial_inferno.Projectiles.Weapons.Magic
             Projectile.tileCollide = false;
             Projectile.light = .5f;
             Projectile.aiStyle = ProjAIStyleID.Arrow;
+            Projectile.penetrate = 4;
            
         }
 
@@ -39,7 +40,11 @@ namespace glacial_inferno.Projectiles.Weapons.Magic
             return true;
         }
 
-
+        public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
+        {
+            target.AddBuff(BuffID.OnFire, 300);
+    
+        }
         public override void OnKill(int timeLeft)
         {
 
