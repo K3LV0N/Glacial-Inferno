@@ -21,7 +21,6 @@ namespace glacial_inferno.Projectiles.Ammo
 
         public override void OnKill(int timeLeft)
         {
-            base.OnKill(timeLeft);
             // Play the base game snowball's death sound (found SoundID on Terraria wiki)
             SoundEngine.PlaySound(SoundID.Item51);
             // Dust dust = Dust.CloneDust(DustID.SnowSpray);

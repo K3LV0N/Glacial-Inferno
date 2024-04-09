@@ -51,7 +51,7 @@ Items: {
 
 	HeavySnowball: {
 		DisplayName: Heavy Snowball
-		Tooltip: ""
+		Tooltip: A heavy-hitting snowball. Deals high knock back
 	}
 
 	IcySnowball: {
@@ -66,7 +66,7 @@ Items: {
 
 	UpgradedSnowballCannon: {
 		DisplayName: Upgraded Snowball Cannon
-		Tooltip: ""
+		Tooltip: An upgraded snowball cannon. Has increased damage, and shoots farther and faster
 	}
 
 	FlamingBullet: {
