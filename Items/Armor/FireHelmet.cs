@@ -16,6 +16,7 @@ namespace glacial_inferno.Items.Armor
             Item.value = Item.sellPrice(0, 0, 90, 0);
             Item.rare = ItemRarityID.Blue;
             Item.defense = 30;
+            Item.wornArmor = true;
         }
 
         public override bool IsArmorSet(Item head, Item body, Item legs)

@@ -15,6 +15,7 @@ namespace glacial_inferno.Items.Armor
             Item.value = Item.sellPrice(0, 0, 95, 0);
             Item.rare = ItemRarityID.Blue;
             Item.defense = 45;
+            Item.wornArmor = true;
         }
 
         public override void UpdateEquip(Player player)
