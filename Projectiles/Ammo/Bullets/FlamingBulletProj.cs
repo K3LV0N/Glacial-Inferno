@@ -26,7 +26,7 @@ namespace glacial_inferno.Projectiles.Ammo.Bullets
         {
 
             target.AddBuff(BuffID.OnFire, 300);
-            base.OnHitNPC(target, hit, damageDone);
+        
         }
 
         public override void AI()
