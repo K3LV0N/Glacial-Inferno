@@ -9,7 +9,7 @@ Buffs: {
 
 	FireWeaponBuff: {
 		DisplayName: Fire Weapon Buff
-		Description: Mods.glacial_inferno.Buffs.FireWeaponBuff.Description
+		Description: Increases the damage of the mods fire weapons.
 	}
 }
 
@@ -81,7 +81,7 @@ Items: {
 
 	FireBreastplate: {
 		DisplayName: Fire Breastplate
-		Tooltip: ""
+		Tooltip: "Fire Breastplate that makes un immune to being on fire"
 	}
 
 	FireHelmet: {
@@ -91,22 +91,22 @@ Items: {
 
 	FireLeggings: {
 		DisplayName: Fire Leggings
-		Tooltip: ""
+		Tooltip: "Fire leggings that increase move speed by 10%"
 	}
 
 	FireTome: {
 		DisplayName: Fire Tome
-		Tooltip: ""
+		Tooltip: "Summons a fireball that rotates around the player and homes to enemies. It disappears after 10 seconds"
 	}
 
 	FireSword: {
 		DisplayName: Fire Sword
-		Tooltip: ""
+		Tooltip: "Fire sword that gains a charge every 5 seconds and holds up to 3 charges. Consume a charge on enemy hit to either light them on fire or do more damage."
 	}
 
 	FireBow: {
 		DisplayName: Fire Bow
-		Tooltip: ""
+		Tooltip: "Shoots fire arrows that split into 3 after a short while and set enemies on fire."
 	}
 
 	FireIngot: {
