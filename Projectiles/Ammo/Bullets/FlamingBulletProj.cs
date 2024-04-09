@@ -24,16 +24,13 @@ namespace glacial_inferno.Projectiles.Ammo.Bullets
         }
         public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
-
             target.AddBuff(BuffID.OnFire, 300);
-        
         }
 
         public override void AI()
         {
             //Spawns a fire particle effect on the bullet trail
             Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, 6);
-            base.AI();
         }
     }
 }

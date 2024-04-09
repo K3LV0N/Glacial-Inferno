@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 
 namespace glacial_inferno.Items.Weapons.Melee
 {
-    public class EarlyIceSword : ShatterItem
+    public class EarlyIceSword : SpecialItem
     {
         // The Display Name and Tooltip of this item can be edited in the Localization/en-US_Mods.glacial_inferno.hjson file.
         public override void SetDefaults()

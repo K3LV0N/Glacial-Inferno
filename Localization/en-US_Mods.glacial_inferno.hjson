@@ -4,7 +4,7 @@
 Buffs: {
 	Frozen: {
 		DisplayName: Frozen
-		Description: Slows your movement by 10% but attacks slow enemies by 20%
+		Description: Slows your movement by 10%, but attacks slow enemies by 20%
 	}
 }
 
@@ -104,3 +104,5 @@ Projectiles: {
 	FlareBlastProj.DisplayName: Flare Blast Proj
 	BigFlareBlastProj.DisplayName: Big Flare Blast Proj
 }
+
+NPCs.Wheely.DisplayName: Wheely
