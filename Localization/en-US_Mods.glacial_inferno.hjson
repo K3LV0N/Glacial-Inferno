@@ -182,6 +182,16 @@ Items: {
 		DisplayName: Magical Club
 		Tooltip: Gets stronger the longer you hold it for! Beware of fire!
 	}
+
+	ColdCuts: {
+		DisplayName: Cold Cuts
+		Tooltip: "Safe to shoot, not to eat!"
+	}
+
+	ColdCutter: {
+		DisplayName: Cold Cutter
+		Tooltip: "Shoot piercing, gravity defying cold cuts at high speed!"
+	}
 }
 
 Projectiles: {
@@ -193,4 +203,5 @@ Projectiles: {
 	IcySnowballProjectile.DisplayName: Icy Snowball Projectile
 	IceBolt.DisplayName: Ice Bolt
 	IceBoltShatter.DisplayName: Ice Bolt Shatter
+	ColdCutProjectile.DisplayName: Cold Cut Projectile
 }

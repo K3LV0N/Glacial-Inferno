@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Terraria.ID;
 using Terraria;
 using Terraria.ModLoader;
+using glacial_inferno.Projectiles.Ammo.Other;
 
 namespace glacial_inferno.Items.Ammo.Other
 {
@@ -13,11 +14,12 @@ namespace glacial_inferno.Items.Ammo.Other
     {
         public override void SetDefaults()
         {
-            Item.damage = 32;
+            Item.damage = 16;
             Item.consumable = true;
             Item.DamageType = DamageClass.Ranged;
             Item.ammo = Item.type;
-           
+            Item.maxStack = Item.CommonMaxStack;
+            Item.shoot = ModContent.ProjectileType<ColdCutProjectile>();
             base.SetDefaults();
         }
 
