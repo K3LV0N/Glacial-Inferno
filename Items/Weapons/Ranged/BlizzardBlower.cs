@@ -25,10 +25,8 @@ namespace glacial_inferno.Items.Weapons.Ranged
             Item.noMelee = true; // Indicates this is not a melee weapon
             Item.notAmmo = true; // Indicates this item is not considered ammo
             Item.DamageType = DamageClass.Magic; // Classifies the item as a magic weapon
-            // Item.useAmmo = AmmoID.None; // This item does not use conventional ammo
             Item.useStyle = ItemUseStyleID.Shoot; // Sets the use style to shooting
-            Item.value = 20000; // The value of the item in copper coins
-            // Item.UseSound = SoundID.Item11; // The sound played when the item is used
+            Item.value = 20000; // The value of the item in coins
             Item.autoReuse = true; // Allows the item to be automatically reused when holding down the mouse button
             Item.width = 43; // The width of the item's hitbox
             Item.height = 23; // The height of the item's hitbox

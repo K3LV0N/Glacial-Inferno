@@ -14,11 +14,6 @@ namespace glacial_inferno.Items.Weapons.Ranged
     {
         private double manaAccumulator = 0; // A variable to accumulate fractional mana costs
 
-        // This is a magic weapon that simulates blowing hot air towards enemies
-        // It shoots many small projectiles to simulate wind
-        // Projectiles provide warmth to the enemy and apply knockback
-        // The weapon consumes a very small amount of mana as ammo
-
         // Set the default properties for the item
         public override void SetDefaults()
         {
@@ -29,10 +24,8 @@ namespace glacial_inferno.Items.Weapons.Ranged
             Item.noMelee = true; // Indicates that the item is not a melee weapon
             Item.notAmmo = true; // Indicates that the item is not ammo
             Item.DamageType = DamageClass.Magic; // Sets the damage type to Magic
-            //Item.useAmmo = AmmoID.None; // Uncomment if the weapon does not use ammo
             Item.useStyle = ItemUseStyleID.Shoot; // The style of using the item (shooting)
             Item.value = 20000; // The value of the item in copper coins
-            //Item.UseSound = SoundID.Item11; // Uncomment to set the sound played when used
             Item.autoReuse = true; // Allows the item to be used repeatedly when holding down the mouse button
             Item.width = 25; // The width of the item's hitbox
             Item.height = 18; // The height of the item's hitbox
