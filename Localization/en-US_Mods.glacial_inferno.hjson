@@ -134,5 +134,7 @@ Projectiles: {
 	FireArrow.DisplayName: Fire Arrow
 }
 
+NPCs.Wheely.DisplayName: Wheely
+
 Tiles.FireOre.MapEntry: Fire Ore
 WorldGen.FireOrePassMessage: Mods.glacial_inferno.WorldGen.FireOrePassMessage
