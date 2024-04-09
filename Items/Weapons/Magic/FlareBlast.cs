@@ -13,16 +13,25 @@ namespace glacial_inferno.Items.Weapons.Magic
     {
         public override void SetDefaults()
         {
-        
+            
             int shotTime = 25;
             float velocity = 5f;
-            bool autoReuse = true;
-            Item.DefaultToMagicWeapon(ModContent.ProjectileType<FlareBlastProj>(), shotTime, velocity, autoReuse);
-            Item.mana = 7;
-            Item.UseSound = SoundID.Item1;
+          
+           
+            int mana = 7;
+            Item.DefaultToStaff(ModContent.ProjectileType<FlareBlastProj>(), velocity, shotTime, mana);
+            Item.width = 40;
+            Item.height = 40;
+            
             Item.damage = 50;
-            
-            
+            Item.useStyle = 5;
+            Item.UseSound = SoundID.Item43; 
+        }
+
+
+        public override Vector2? HoldoutOrigin()
+        {
+            return base.HoldoutOrigin();
         }
         public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
         {
