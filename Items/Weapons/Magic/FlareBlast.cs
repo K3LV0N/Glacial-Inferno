@@ -16,9 +16,7 @@ namespace glacial_inferno.Items.Weapons.Magic
         {
             
             int shotTime = 25;
-            float velocity = 4f;
-          
-           
+            float velocity = 4f;          
             int mana = 9;
             Item.DefaultToStaff(ModContent.ProjectileType<FlareBlastProj>(), velocity, shotTime, mana);
    
