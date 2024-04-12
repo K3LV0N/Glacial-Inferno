@@ -81,7 +81,7 @@ Items: {
 
 	FireBreastplate: {
 		DisplayName: Fire Breastplate
-		Tooltip: "Fire Breastplate that makes un immune to being on fire"
+		Tooltip: Fire Breastplate that makes un immune to being on fire
 	}
 
 	FireHelmet: {
@@ -91,22 +91,22 @@ Items: {
 
 	FireLeggings: {
 		DisplayName: Fire Leggings
-		Tooltip: "Fire leggings that increase move speed by 10%"
+		Tooltip: Fire leggings that increase move speed by 10%
 	}
 
 	FireTome: {
 		DisplayName: Fire Tome
-		Tooltip: "Summons a fireball that rotates around the player and homes to enemies. It disappears after 10 seconds"
+		Tooltip: Summons a fireball that rotates around the player and homes to enemies. It disappears after 10 seconds
 	}
 
 	FireSword: {
 		DisplayName: Fire Sword
-		Tooltip: "Fire sword that gains a charge every 5 seconds and holds up to 3 charges. Consume a charge on enemy hit to either light them on fire or do more damage."
+		Tooltip: Fire sword that gains a charge every 5 seconds and holds up to 3 charges. Consume a charge on enemy hit to either light them on fire or do more damage.
 	}
 
 	FireBow: {
 		DisplayName: Fire Bow
-		Tooltip: "Shoots fire arrows that split into 3 after a short while and set enemies on fire."
+		Tooltip: Shoots fire arrows that split into 3 after a short while and set enemies on fire.
 	}
 
 	FireIngot: {
@@ -155,9 +155,13 @@ Projectiles: {
 	InfernoBlowerProjectile.DisplayName: Inferno Blower Projectile
 	FireBall.DisplayName: Fire Ball
 	FireArrow.DisplayName: Fire Arrow
+	HostileFireBall.DisplayName: Hostile Fire Ball
 }
 
-NPCs.Wheely.DisplayName: Wheely
+NPCs: {
+	Wheely.DisplayName: Wheely
+	FireGolem.DisplayName: Fire Golem
+}
 
 Tiles.FireOre.MapEntry: Fire Ore
 WorldGen.FireOrePassMessage: Mods.glacial_inferno.WorldGen.FireOrePassMessage
