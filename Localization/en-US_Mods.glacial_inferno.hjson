@@ -74,8 +74,6 @@ Items: {
 		Tooltip: Burns enemies on impact
 	}
 
-	
-
 	FlareBlast: {
 		DisplayName: Flare Blast
 		Tooltip: ""
@@ -85,6 +83,7 @@ Items: {
 		DisplayName: Lava Fragment
 		Tooltip: ""
 	}
+
 	CorruptedGlacialBow: {
 		DisplayName: Corrupted Glacial Bow
 		Tooltip: A glacial bow infected with the corruption. When shooting wooden arrows, glacial arrows are shot instead.
