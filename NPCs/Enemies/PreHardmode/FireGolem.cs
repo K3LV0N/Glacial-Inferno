@@ -79,12 +79,14 @@ namespace glacial_inferno.NPCs.Enemies.PreHardmode
         public ref float AIPreviousXPos => ref NPC.ai[3];
 
         public bool jumping = false;
+        public bool stuckJumping = false;
         public bool leftOrRight = false;
         public float shootTimer = 0f;
 
         public override void SendExtraAI(BinaryWriter writer)
         {
             writer.Write(jumping);
+            writer.Write(stuckJumping);
             writer.Write(leftOrRight);
             writer.Write(shootTimer);
         }
@@ -92,13 +94,14 @@ namespace glacial_inferno.NPCs.Enemies.PreHardmode
         public override void ReceiveExtraAI(BinaryReader reader)
         {
             jumping = reader.ReadBoolean();
+            stuckJumping = reader.ReadBoolean();
             leftOrRight = reader.ReadBoolean();
             shootTimer = reader.ReadSingle();
         }
 
         public override void AI()
         {
-            float distanceToShoot = 50f;
+            float distanceToShoot = 100f;
             float distanceToTrigger = 450f;
             float distanceToEscape = 800f;
 
@@ -160,19 +163,27 @@ namespace glacial_inferno.NPCs.Enemies.PreHardmode
             {
                 //attacks the player
                 NPC.TargetClosest(true);
-
                 if (jumping)
                 {
                     //jump
                     if (jumpTimer == 0)
                     {
-                        NPC.velocity += new Vector2(0, -12f);
+                        if (stuckJumping) //jumps higher when stuck
+                        {
+                            NPC.velocity += new Vector2(0, -12f);
+                        }
+                        else //jumps lower when regular jumping
+                        {
+                            NPC.velocity += new Vector2(0, -6f);
+                        }
+                        
                     }
                     //check if ground is reached
                     Vector2 newPosition = new Vector2(NPC.position.X, NPC.position.Y + 2);
                     if (Collision.SolidCollision(newPosition, NPC.width, NPC.height))
                     {
                         jumping = false;
+                        stuckJumping = false;
                         AI_Timer = 0;
                     }
                     jumpTimer++;
@@ -180,11 +191,12 @@ namespace glacial_inferno.NPCs.Enemies.PreHardmode
                 else
                 {
                     //Check if stuck and if so jump
-                    if (AI_Timer % 15 == 0)
+                    if (AI_Timer % 15 == 0 && jumping == false)
                     {
                         if (NPC.position.X == AIPreviousXPos)
                         {
                             jumping = true;
+                            stuckJumping = true;
                             jumpTimer = 0;
                         }
                     }
