@@ -6,6 +6,7 @@ using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
+using System.Net.Cache;
 
 namespace glacial_inferno.Items.Weapons.Magic
 {
@@ -15,24 +16,25 @@ namespace glacial_inferno.Items.Weapons.Magic
         {
             
             int shotTime = 25;
-            float velocity = 5f;
+            float velocity = 4f;
           
            
-            int mana = 7;
+            int mana = 9;
             Item.DefaultToStaff(ModContent.ProjectileType<FlareBlastProj>(), velocity, shotTime, mana);
-            Item.width = 40;
-            Item.height = 40;
-            
-            Item.damage = 50;
-            Item.useStyle = 5;
-            Item.UseSound = SoundID.Item43; 
+   
+            Item.crit = 15;
+            Item.damage = 45;
+            Item.staff[Type] = true;
+            Item.UseSound = SoundID.Item43;
+            Item.rare = 4;
         }
 
-
-        public override Vector2? HoldoutOrigin()
+        public override Vector2? HoldoutOffset()
         {
-            return base.HoldoutOrigin();
+            return new Vector2(0, -5);
+           
         }
+
         public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
         {
             Vector2 mousePos = Main.MouseWorld;
