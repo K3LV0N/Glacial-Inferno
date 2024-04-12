@@ -185,12 +185,12 @@ Items: {
 
 	ColdCuts: {
 		DisplayName: Cold Cuts
-		Tooltip: "Safe to shoot, not to eat!"
+		Tooltip: Safe to shoot, not to eat!
 	}
 
 	ColdCutter: {
 		DisplayName: Cold Cutter
-		Tooltip: "Shoot piercing, gravity defying cold cuts at high speed!"
+		Tooltip: Shoot piercing, gravity defying cold cuts at high speed!
 	}
 }
 
