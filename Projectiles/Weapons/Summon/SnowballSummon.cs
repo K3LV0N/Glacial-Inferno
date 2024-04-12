@@ -59,7 +59,7 @@ namespace glacial_inferno.Projectiles.Weapons.Summon
             Movement(foundTarget, distanceFromTarget, targetCenter, distanceToIdlePosition, vectorToIdlePosition);
         }
 
-        private bool CheckActive(Player owner)
+        public bool CheckActive(Player owner)
         {
             if (owner.dead || !owner.active)
             {
@@ -76,7 +76,7 @@ namespace glacial_inferno.Projectiles.Weapons.Summon
             return true;
         }
 
-        private void GeneralBehavior(Player owner, out Vector2 vectorToIdlePosition, out float distanceToIdlePosition)
+        public void GeneralBehavior(Player owner, out Vector2 vectorToIdlePosition, out float distanceToIdlePosition)
         {
             Vector2 idlePosition = owner.Center;
             idlePosition.Y -= 48f; //Three tiles above the player.
@@ -131,7 +131,7 @@ namespace glacial_inferno.Projectiles.Weapons.Summon
             }
         }
 
-        private void SearchForTargets(Player owner, out bool foundTarget, out float distanceFromTarget, out Vector2 targetCenter)
+        public void SearchForTargets(Player owner, out bool foundTarget, out float distanceFromTarget, out Vector2 targetCenter)
         {
             // Starting search distance
             distanceFromTarget = 700f;
@@ -185,7 +185,7 @@ namespace glacial_inferno.Projectiles.Weapons.Summon
         private int jumpPhase = 0; // 0: Not jumping, 1: Jumping up, 2: Moving horizontally
         private int verticalJumpFrames = 0;
 
-        private void Movement(bool foundTarget, float distanceFromTarget, Vector2 targetCenter, float distanceToIdlePosition, Vector2 vectorToIdlePosition)
+        public virtual void Movement(bool foundTarget, float distanceFromTarget, Vector2 targetCenter, float distanceToIdlePosition, Vector2 vectorToIdlePosition)
         {
             float jumpVelocity = 9f;
             float horizontalSpeed = 4f;

@@ -12,12 +12,15 @@
     <None Remove="Buffs\Summon\PermaFreezeBuff.png" />
     <None Remove="Buffs\Summon\SnowballSummonBuff.png" />
     <None Remove="Buffs\Summon\SnowballSummonBuff2.png" />
+    <None Remove="Buffs\Summon\SnowballSummonBuff3.png" />
     <None Remove="Items\Ammo\Arrows\IceArrow.png" />
     <None Remove="Items\Weapons\Magic\FrostBolt.png" />
     <None Remove="Items\Weapons\Melee\EarlyIceSword.png" />
     <None Remove="Items\Weapons\Summon\IceSummon2.png" />
+    <None Remove="Items\Weapons\Summon\IceSummon3.png" />
     <None Remove="Projectiles\Weapons\Magic\IceBoltShatter.png" />
     <None Remove="Projectiles\Weapons\Summon\SnowballSummon2.png" />
+    <None Remove="Projectiles\Weapons\Summon\SnowballSummon3.png" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="tModLoader.CodeAssist" Version="0.1.*" />

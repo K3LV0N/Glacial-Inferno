@@ -8,29 +8,32 @@ using Microsoft.Xna.Framework;
 
 namespace glacial_inferno.Items.Weapons.Summon
 {
-    public class IceSummon2 : IceSummon
+    public class IceSummon3 : IceSummon2
     {
         public override void SetDefaults()
         {
             base.SetDefaults();
 
-            Item.damage = 5;
+            Item.damage = 10;
             Item.knockBack = 3f;
-            Item.mana = 10;
-            
-            Item.buffType = ModContent.BuffType<SnowballSummonBuff2>();
-            Item.shoot = ModContent.ProjectileType<SnowballSummon2>();
+            Item.mana = 20;
 
-            Item.value = Item.buyPrice(gold: 60);
-            Item.value = Item.sellPrice(gold: 50);
-            Item.rare = ItemRarityID.Blue;
+            Item.width = 30;
+            Item.height = 49;
+            
+            Item.buffType = ModContent.BuffType<SnowballSummonBuff3>();
+            Item.shoot = ModContent.ProjectileType<SnowballSummon3>();
+
+            Item.value = Item.buyPrice(gold: 180);
+            Item.value = Item.sellPrice(gold: 100);
+            Item.rare = ItemRarityID.Purple;
         }
 
         public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe();
-            recipe.AddIngredient(ModContent.ItemType<IceSummon>(), 1);
-            recipe.AddIngredient(ItemID.FrostCore, 1);
+            recipe.AddIngredient(ModContent.ItemType<IceSummon2>(), 1);
+            recipe.AddIngredient(ItemID.IceFeather, 2);
             recipe.AddTile(TileID.WorkBenches);
             recipe.Register();
         }

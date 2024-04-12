@@ -4,13 +4,13 @@ using glacial_inferno.Projectiles.Weapons.Summon;
 
 namespace glacial_inferno.Buffs.Summon
 {
-    public class SnowballSummonBuff2 : SnowballSummonBuff
+    public class SnowballSummonBuff3 : SnowballSummonBuff2
     {
         public override void Update(Player player, ref int buffIndex)
         {
-            if (player.ownedProjectileCounts[ModContent.ProjectileType<SnowballSummon2>()] > 0)
+            if (player.ownedProjectileCounts[ModContent.ProjectileType<SnowballSummon3>()] > 0)
             {
-                player.buffTime[buffIndex] = 6000;
+                player.buffTime[buffIndex] = 7200;
             }
             else
             {
