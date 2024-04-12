@@ -9,9 +9,9 @@ using Terraria.UI;
 using glacial_inferno.Items.Ores;
 using glacial_inferno.Projectiles.Enemy;
 
-namespace glacial_inferno.NPCs
+namespace glacial_inferno.NPCs.Enemies.PreHardmode
 {
-    public class FireGolem : ModNPC
+    public class FireGolem : BasicNPC
     {
         float docileSpeed;
         float aggroSpeed;
@@ -79,14 +79,12 @@ namespace glacial_inferno.NPCs
         public ref float AIPreviousXPos => ref NPC.ai[3];
 
         public bool jumping = false;
-        //public bool shooting = false;
         public bool leftOrRight = false;
         public float shootTimer = 0f;
 
         public override void SendExtraAI(BinaryWriter writer)
         {
             writer.Write(jumping);
-            //writer.Write(shooting);
             writer.Write(leftOrRight);
             writer.Write(shootTimer);
         }
@@ -94,17 +92,8 @@ namespace glacial_inferno.NPCs
         public override void ReceiveExtraAI(BinaryReader reader)
         {
             jumping = reader.ReadBoolean();
-            //shooting = reader.ReadBoolean();
             leftOrRight = reader.ReadBoolean();
             shootTimer = reader.ReadSingle();
-        }
-
-        private void move(float speed, float inertia, float xDirection)
-        {
-            Vector2 direction = new Vector2(xDirection, 0);
-            direction.Normalize();
-            direction *= speed;
-            NPC.velocity = (NPC.velocity * (inertia - 1) + direction) / inertia;
         }
 
         public override void AI()
@@ -122,7 +111,7 @@ namespace glacial_inferno.NPCs
             //check if the target got away
             if (AI_State == stateSurprised || AI_State == stateAttack)
             {
-                if(!NPC.HasValidTarget || Main.player[NPC.target].Distance(NPC.Center) >= distanceToEscape)
+                if (!NPC.HasValidTarget || Main.player[NPC.target].Distance(NPC.Center) >= distanceToEscape)
                 {
                     AI_State = stateDocile;
                     AI_Timer = 0;
@@ -132,7 +121,7 @@ namespace glacial_inferno.NPCs
             //If it gets hit and is docile or a player gets close enough aggro
             if (AI_State == stateDocile)
             {
-                if (NPC.justHit || (NPC.HasValidTarget && Main.player[NPC.target].Distance(NPC.Center) <= distanceToTrigger))
+                if (NPC.justHit || NPC.HasValidTarget && Main.player[NPC.target].Distance(NPC.Center) <= distanceToTrigger)
                 {
                     AI_State = stateSurprised;
                     AI_Timer = 0;
@@ -155,7 +144,7 @@ namespace glacial_inferno.NPCs
                     }
                 }
 
-                move(docileSpeed, inertia, NPC.direction);
+                InertiaMove(docileSpeed, inertia, NPC.direction);
             }
             //If it enters a surprised state stand still and play an animation for half a second 
             else if (AI_State == stateSurprised)
@@ -232,12 +221,12 @@ namespace glacial_inferno.NPCs
                 {
                     xDirection = -1;
                 }
-                move(aggroSpeed, inertia, xDirection);
+                InertiaMove(aggroSpeed, inertia, xDirection);
             }
             AI_Timer++;
             shootTimer++;
         }
-        
+
 
         private const int frame1 = 0;
         private const int frame2 = 1;
