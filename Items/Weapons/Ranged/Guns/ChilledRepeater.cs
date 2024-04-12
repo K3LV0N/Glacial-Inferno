@@ -2,9 +2,9 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace glacial_inferno.Items.Weapons.Ranged
+namespace glacial_inferno.Items.Weapons.Ranged.Guns
 {
-    public class ChilledRepeater: ModItem
+    public class ChilledRepeater : ModItem
     {
         public override void SetDefaults()
         {

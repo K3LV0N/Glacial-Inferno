@@ -7,7 +7,7 @@ using glacial_inferno.Items.Ammo.Arrows;
 
 namespace glacial_inferno.Projectiles.Ammo.Arrows
 {
-    public class IceArrowProjectile : SpecialProjectile
+    public class GlacialArrowProjectile : SpecialProjectile
     {
         public override void SetDefaults()
         {
@@ -40,7 +40,7 @@ namespace glacial_inferno.Projectiles.Ammo.Arrows
             int maxAng = 150;
             float startingVel = Projectile.velocity.Length() / 4;
             float yOffset = 10;
-            BasicShatter<IceBolt>(target, projAmt, dmg, minAng, maxAng, startingVel, Projectile.knockBack, yOffset);
+            BasicShatter<GlacialBolt>(target, projAmt, dmg, minAng, maxAng, startingVel, Projectile.knockBack, yOffset);
         }
         public override void OnKill(int timeLeft)
         {
@@ -50,7 +50,7 @@ namespace glacial_inferno.Projectiles.Ammo.Arrows
             if (Projectile.owner == Main.myPlayer)
             {
                 //has a chance to drop arrow for pickup
-                int item = Main.rand.NextBool(10) ? Item.NewItem(Entity.GetSource_Death(), Projectile.getRect(), ModContent.ItemType<IceArrow>()) : 0;
+                int item = Main.rand.NextBool(10) ? Item.NewItem(Entity.GetSource_Death(), Projectile.getRect(), ModContent.ItemType<GlacialArrow>()) : 0;
             }
         }
     }

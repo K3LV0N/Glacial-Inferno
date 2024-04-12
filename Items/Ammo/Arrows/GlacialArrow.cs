@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 
 namespace glacial_inferno.Items.Ammo.Arrows
 {
-    public class IceArrow : ModItem
+    public class GlacialArrow : ModItem
     {
         public override void SetDefaults()
         {
@@ -19,7 +19,7 @@ namespace glacial_inferno.Items.Ammo.Arrows
             Item.UseSound = SoundID.Item1;
             Item.autoReuse = false;
             Item.ammo = AmmoID.Arrow;
-            Item.shoot = ModContent.ProjectileType<IceArrowProjectile>();
+            Item.shoot = ModContent.ProjectileType<GlacialArrowProjectile>();
             Item.ResearchUnlockCount = 99;
         }
         public override void AddRecipes()
