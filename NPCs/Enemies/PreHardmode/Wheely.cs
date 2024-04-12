@@ -158,7 +158,7 @@ namespace glacial_inferno.NPCs.Enemies.PreHardmode
                 if (AI_Timer == 0)
                 {
                     // apply some jump velocity
-                    NPC.velocity += new Vector2(NPC.velocity.X, -8f);
+                    NPC.velocity += new Vector2(0, -8f);
                 }
 
                 // check to see if we have reached the ground yet
@@ -184,7 +184,7 @@ namespace glacial_inferno.NPCs.Enemies.PreHardmode
                     if (jumpTimer == 0)
                     {
                         // apply some jump velocity
-                        NPC.velocity += new Vector2(NPC.velocity.X, -12f);
+                        NPC.velocity += new Vector2(0, -12f);
                     }
 
                     // check to see if we have reached the ground yet
