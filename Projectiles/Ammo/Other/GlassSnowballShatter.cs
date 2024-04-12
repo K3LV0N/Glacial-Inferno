@@ -19,7 +19,5 @@ namespace glacial_inferno.Projectiles.Ammo.Other
             Projectile.width = 6;
             Projectile.height = 6;
         }
-
-        
     }
 }

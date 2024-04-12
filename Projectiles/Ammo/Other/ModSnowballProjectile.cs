@@ -2,12 +2,13 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.Audio;
+using Terraria.ModLoader;
 
 namespace glacial_inferno.Projectiles.Ammo
 {
     // An abstract class to parent all modded snowball projectiles, manages universal traits
     // Extends ShatterProjectile so that it has the option to invoke the BasicShatter method
-    public abstract class ModSnowballProjectile : ShatterProjectile
+    public abstract class ModSnowballProjectile : ModProjectile
     {
         // The Display Name and Tooltip of this item can be edited in the Localization/en-US_Mods.glacial_inferno.hjson file.
 

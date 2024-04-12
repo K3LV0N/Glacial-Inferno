@@ -24,33 +24,26 @@ namespace glacial_inferno.Projectiles.Ammo.Other
 
         public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
-            base.OnHitNPC(target, hit, damageDone);
-            // BasicShatter<GlassSnowballShatter>(target, 4, 6, -30, 30, 2, Projectile.knockBack, 0);
+            int projectileAmount = 6;
+            ShatterSnowball(projectileAmount, damageDone / projectileAmount, 0, 360, Projectile.velocity.Length() / 2, Projectile.knockBack);
         }
 
-        public override void OnKill(int timeLeft)
-        {
-            base.OnKill(timeLeft);
-            BasicShatter<GlassSnowballShatter>(15, 6, 0, 360, Projectile.velocity.Length(), Projectile.knockBack, 0);
-        }
-
-        public void BasicShatter<T>(int projectileAmount, int damage, int minAngle, int maxAngle, float startingVelocity, float knockBack, float yOffset) where T : ModProjectile
+        public void ShatterSnowball(int projectileAmount, int damage, int minAngle, int maxAngle, float startingVelocity, float knockBack)
         {
             Random rand = new Random();
 
             HashSet<int> randomAngles = new HashSet<int>();
 
-            // int baseAngle = (int)MathHelper.ToDegrees((float)(Math.Atan(Projectile.velocity.Y / Projectile.velocity.X) + Math.PI));
             for (int i = 0; i < projectileAmount; i++)
             {
-                int randNumber = rand.Next(minAngle, maxAngle) ;//+ baseAngle;
+                int randNumber = rand.Next(minAngle, maxAngle);
                 while (!randomAngles.Add(randNumber))
                 {
-                    randNumber = rand.Next(minAngle, maxAngle) ;//+ baseAngle;
+                    randNumber = rand.Next(minAngle, maxAngle);
                 }
             }
 
-            float y = Projectile.position.Y - yOffset;
+            float y = Projectile.position.Y;
             float x = Projectile.position.X;
             Vector2 pos = new Vector2(x, y);
             foreach (int randomAngle in randomAngles)
