@@ -9,19 +9,30 @@ Buffs: {
 }
 
 Items: {
+
+	BitterfrostBlock: {
+		DisplayName: Bitterfrost Ore
+		Tooltip: Born from the sorrow of those who perished in the icy caverns
+	}
+
+	BitterfrostBar: {
+		DisplayName: Bitterfrost Bar
+		Tooltip: ""
+	}
+
 	CorruptedCold: {
 		DisplayName: Corrupted Cold
-		Tooltip: An amalgamation of ice and corruption
+		Tooltip: An amalgamation of ice and corruption.\nShoots an accelerating corruption-infused ice crystal.
 	}
 
 	CrimsonCold: {
 		DisplayName: Crimson Cold
-		Tooltip: An abomination of ice and crimson
+		Tooltip: An abomination of ice and crimson.\nShoots a lingering crimson-infused ice crystal.
 	}
 
 	ChilledRepeater: {
 		DisplayName: Chilled Repeater
-		Tooltip: Brain freeze right between the eyes
+		Tooltip: Brain freeze right between the eyes.
 	}
 
 	GlacialSword: {
@@ -107,6 +118,13 @@ Projectiles: {
 	FrozenBulletProj.DisplayName: Frozen Bullet Proj
 	BlizzardBlowerProjectile.DisplayName: Blizzard Blower Projectile
 	InfernoBlowerProjectile.DisplayName: Inferno Blower Projectile
+	CrimsonIce.DisplayName: Crimson Ice
+	CorruptedIce.DisplayName: Corrupted Ice
+}
+
+Tiles: {
+	BitterFrostOre.MapEntry: Bitter Frost Ore
+	BitterfrostOre.MapEntry: Bitterfrost Ore
 }
 
 NPCs.Wheely.DisplayName: Wheely

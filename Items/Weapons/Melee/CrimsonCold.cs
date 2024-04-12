@@ -1,6 +1,8 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
+using glacial_inferno.Items.Other;
+using glacial_inferno.Projectiles.Weapons.Melee;
 
 namespace glacial_inferno.Items.Weapons.Melee
 {
@@ -8,13 +10,13 @@ namespace glacial_inferno.Items.Weapons.Melee
     {
         public override void SetDefaults()
         {
-            Item.damage = 18;
-            Item.useTime = 35;
-            Item.useAnimation = 35;
+            Item.damage = 32;
+            Item.useTime = 40;
+            Item.useAnimation = 40;
             Item.knockBack = 5;
             Item.noMelee = false;
             Item.notAmmo = true;
-            Item.shoot = ProjectileID.RubyBolt;
+            Item.shoot = ModContent.ProjectileType<CrimsonIce>();
             Item.shootSpeed = 10;
             Item.DamageType = DamageClass.Melee;
             Item.rare = ItemRarityID.Green;
@@ -28,8 +30,8 @@ namespace glacial_inferno.Items.Weapons.Melee
         public override void AddRecipes()
         {
             Recipe r1 = CreateRecipe();
-            r1.AddIngredient(ItemID.CrimtaneBar, 15);
-            r1.AddIngredient(ItemID.IceBlock, 20);
+            r1.AddIngredient(ItemID.CrimtaneBar, 5);
+            r1.AddIngredient(ModContent.ItemType<BitterfrostBar>(), 10);
             r1.AddTile(TileID.DemonAltar);
             r1.Register();
         }
