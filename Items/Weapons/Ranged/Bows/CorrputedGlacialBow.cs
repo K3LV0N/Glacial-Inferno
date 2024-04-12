@@ -4,32 +4,29 @@ using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
 using glacial_inferno.Projectiles.Ammo.Arrows;
 
-namespace glacial_inferno.Items.Weapons.Ranged
+namespace glacial_inferno.Items.Weapons.Ranged.Bows
 {
-    public class IceBow : ModItem
+    public class CorruptedGlacialBow : ModItem
     {
         public override void SetDefaults()
         {
-            int shotTime = 15;
-            float velocity = 15f;
-            bool autoReuse = true;
-            Item.DefaultToBow(shotTime, velocity, autoReuse);
-            Item.scale = 1.2f;
+            Item.CloneDefaults(ModContent.ItemType<CrimsonGlacialBow>());
         }
 
         public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
         {
             if (type == ProjectileID.WoodenArrowFriendly)
             {
-                type = ModContent.ProjectileType<IceArrowProjectile>();
+                type = ModContent.ProjectileType<GlacialArrowProjectile>();
             }
         }
 
         public override void AddRecipes()
         {
             Recipe r1 = CreateRecipe();
-            r1.AddIngredient(ItemID.IceBlock, 30);
-            r1.AddTile(TileID.WorkBenches);
+            r1.AddIngredient(ItemID.DemoniteBar, 20);
+            r1.AddIngredient<GlacialBow>();
+            r1.AddTile(TileID.Anvils);
             r1.AddCondition(Condition.InSnow);
             r1.Register();
         }

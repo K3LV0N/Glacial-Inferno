@@ -1,10 +1,11 @@
 ﻿using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
+using Terraria.ModLoader;
 
 namespace glacial_inferno.Projectiles.Weapons.Magic
 {
-    public class IceBoltShatter : SpecialProjectile
+    public class GlacialBolt : ModProjectile
     {
         public override void SetDefaults()
         {
@@ -27,17 +28,6 @@ namespace glacial_inferno.Projectiles.Weapons.Magic
                 Dust.NewDust(Projectile.Center, Projectile.width, Projectile.height, DustID.Ice, 0f, 0f, 0, default, 0.8f);
             }
             return true;
-        }
-
-        public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
-        {
-            int projAmt = 3;
-            int dmg = damageDone / 2;
-            int minAng = 30;
-            int maxAng = 150;
-            float startingVel = Projectile.velocity.Length() / 4;
-            float yOffset = 10;
-            BasicShatter<IceBolt>(target, projAmt, dmg, minAng, maxAng, startingVel, Projectile.knockBack, yOffset);
         }
 
         public override void OnKill(int timeLeft)
