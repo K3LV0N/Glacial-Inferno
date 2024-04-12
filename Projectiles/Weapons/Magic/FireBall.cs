@@ -18,7 +18,7 @@ namespace glacial_inferno.Projectiles.Weapons.Magic
             Projectile.friendly = true;
             Projectile.DamageType = DamageClass.Magic;
             Projectile.timeLeft = 600;
-
+            Projectile.aiStyle = -1;
         }
 
         public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
