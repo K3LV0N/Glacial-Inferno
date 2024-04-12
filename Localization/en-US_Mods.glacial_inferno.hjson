@@ -4,7 +4,7 @@
 Buffs: {
 	Frozen: {
 		DisplayName: Frozen
-		Description: Slows your movement by 10% but attacks slow enemies by 20%
+		Description: Slows your movement by 10%, but attacks slow enemies by 20%
 	}
 
 	IceAura: {
@@ -205,3 +205,5 @@ Projectiles: {
 	IceBoltShatter.DisplayName: Ice Bolt Shatter
 	ColdCutProjectile.DisplayName: Cold Cut Projectile
 }
+
+NPCs.Wheely.DisplayName: Wheely

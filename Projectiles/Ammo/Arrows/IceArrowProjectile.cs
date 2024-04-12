@@ -7,7 +7,7 @@ using glacial_inferno.Items.Ammo.Arrows;
 
 namespace glacial_inferno.Projectiles.Ammo.Arrows
 {
-    public class IceArrowProjectile : ShatterProjectile
+    public class IceArrowProjectile : SpecialProjectile
     {
         public override void SetDefaults()
         {

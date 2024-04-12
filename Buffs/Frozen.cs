@@ -26,7 +26,6 @@ namespace glacial_inferno.Buffs
             //Creates a particle effect on players and npcs inflicted with the debuff
             Dust.NewDust(player.position, player.width, player.height, ModContent.DustType<FrozenBuffDust>());
 
-
             player.GetModPlayer<FrozenPlayer>().PlayerHasFrozenBuff = true;
             //Slows the player by 10%
             player.position.X -= (player.velocity.X * .1f);
@@ -34,7 +33,6 @@ namespace glacial_inferno.Buffs
             {
                 player.position.Y -= player.velocity.Y * .1f;
             }
-            base.Update(player, ref buffIndex);
         }
         
         
