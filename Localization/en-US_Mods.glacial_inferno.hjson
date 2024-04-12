@@ -4,7 +4,7 @@
 Buffs: {
 	Frozen: {
 		DisplayName: Frozen
-		Description: Slows your movement by 10% but attacks slow enemies by 20%
+		Description: Slows your movement by 10%, but attacks slow enemies by 20%
 	}
 
 	FireWeaponBuff: {
@@ -29,8 +29,8 @@ Items: {
 		Tooltip: Brain freeze right between the eyes
 	}
 
-	EarlyIceSword: {
-		DisplayName: Ice Sword
+	GlacialSword: {
+		DisplayName: Glacial Sword
 		Tooltip: A sword made of ice. Ice Shatters on impact.
 	}
 
@@ -39,14 +39,14 @@ Items: {
 		Tooltip: Shoots frost bolts. Ice Shatters on impact.
 	}
 
-	IceBow: {
-		DisplayName: Ice Bow
-		Tooltip: An Icy Bow. When shooting regular arrows, ice arrows are shot instead.
+	GlacialBow: {
+		DisplayName: Glacial Bow
+		Tooltip: A glacial bow. When shooting wooden arrows, glacial arrows are shot instead.
 	}
 
-	IceArrow: {
-		DisplayName: Ice Arrow
-		Tooltip: An Ice Arrow. Ice Shatters on impact.
+	GlacialArrow: {
+		DisplayName: Glacial Arrow
+		Tooltip: A glacial arrow. Ice Shatters on impact.
 	}
 
 	FrozenBullet: {
@@ -120,16 +120,39 @@ Items: {
 	}
 }
 
+	BlizzardBlower: {
+		DisplayName: Blizzard Blower
+		Tooltip: "The Blizzard Blower: Sends enemies flying with a frosty gust, giving frostbite and a sudden craving for hot cocoa—all in one frosty breath!"
+	}
+
+	InfernoBlower: {
+		DisplayName: Inferno Blower
+		Tooltip: "The Inferno Blower: Blasts foes with a wave of heat that's not just hot air—expect them to be blown away and left feeling oddly cozy, as if they've been wrapped in a warm, fiery hug."
+  }
+  
+	CorruptedGlacialBow: {
+		DisplayName: Corrupted Glacial Bow
+		Tooltip: A glacial bow infected with the corruption. When shooting wooden arrows, glacial arrows are shot instead.
+	}
+
+	CrimsonGlacialBow: {
+		DisplayName: Crimson Glacial Bow
+		Tooltip: A glacial bow infected with the crimson. When shooting wooden arrows, glacial arrows are shot instead.
+	}
+}
+
 Projectiles: {
 	HeavySnowballProjectile.DisplayName: Heavy Snowball Projectile
 	IcySnowballProjectile.DisplayName: Icy Snowball Projectile
 	FrozenBullet.DisplayName: Frozen Bullet
 	FlamingBullet.DisplayName: Flaming Bullet
-	IceBolt.DisplayName: Ice Bolt
-	IceBoltShatter.DisplayName: Ice Bolt
-	IceArrowProjectile.DisplayName: Ice Arrow
+	GlacialBolt.DisplayName: Glacial Bolt
+	GlacialBoltShatter.DisplayName: Glacial Bolt
+	GlacialArrowProjectile.DisplayName: Glacial Arrow
 	FlamingBulletProj.DisplayName: Flaming Bullet Proj
 	FrozenBulletProj.DisplayName: Frozen Bullet Proj
+	BlizzardBlowerProjectile.DisplayName: Blizzard Blower Projectile
+	InfernoBlowerProjectile.DisplayName: Inferno Blower Projectile
 	FireBall.DisplayName: Fire Ball
 	FireArrow.DisplayName: Fire Arrow
 }
