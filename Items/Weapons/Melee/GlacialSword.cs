@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 
 namespace glacial_inferno.Items.Weapons.Melee
 {
-    public class EarlyIceSword : ShatterItem
+    public class GlacialSword : SpecialItem
     {
         // The Display Name and Tooltip of this item can be edited in the Localization/en-US_Mods.glacial_inferno.hjson file.
         public override void SetDefaults()
@@ -50,7 +50,7 @@ namespace glacial_inferno.Items.Weapons.Melee
             float knockBack = 0.5f;
             float yoffset = 10;
 
-            BasicShatter<IceBolt>(target, projectileAmount, damage, min, max, vel, knockBack, yoffset);
+            BasicShatter<GlacialBolt>(target, projectileAmount, damage, min, max, vel, knockBack, yoffset);
         }
     }
 }

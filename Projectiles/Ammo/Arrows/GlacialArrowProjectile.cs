@@ -1,16 +1,19 @@
-﻿using Terraria;
-using Terraria.Audio;
+﻿using glacial_inferno.Projectiles.Weapons.Magic;
 using Terraria.ID;
+using Terraria;
+using Terraria.Audio;
+using Terraria.ModLoader;
+using glacial_inferno.Items.Ammo.Arrows;
 
-namespace glacial_inferno.Projectiles.Weapons.Magic
+namespace glacial_inferno.Projectiles.Ammo.Arrows
 {
-    public class IceBoltShatter : ShatterProjectile
+    public class GlacialArrowProjectile : SpecialProjectile
     {
         public override void SetDefaults()
         {
-            Projectile.scale = 1.2f;
-            Projectile.width = (int)(9f * Projectile.scale);
-            Projectile.height = (int)(19f * Projectile.scale);
+            Projectile.scale = 1f;
+            Projectile.width = (int)(16f * Projectile.scale);
+            Projectile.height = (int)(16f * Projectile.scale);
 
             Projectile.friendly = true;
 
@@ -22,7 +25,7 @@ namespace glacial_inferno.Projectiles.Weapons.Magic
         public override bool PreAI()
         {
             Projectile.ai[1]++;
-            if (Projectile.ai[1] % 3 == 0)
+            if (Projectile.ai[1] % 4 == 0)
             {
                 Dust.NewDust(Projectile.Center, Projectile.width, Projectile.height, DustID.Ice, 0f, 0f, 0, default, 0.8f);
             }
@@ -37,13 +40,18 @@ namespace glacial_inferno.Projectiles.Weapons.Magic
             int maxAng = 150;
             float startingVel = Projectile.velocity.Length() / 4;
             float yOffset = 10;
-            BasicShatter<IceBolt>(target, projAmt, dmg, minAng, maxAng, startingVel, Projectile.knockBack, yOffset);
+            BasicShatter<GlacialBolt>(target, projAmt, dmg, minAng, maxAng, startingVel, Projectile.knockBack, yOffset);
         }
-
         public override void OnKill(int timeLeft)
         {
             Collision.HitTiles(Projectile.position, Projectile.velocity, Projectile.width, Projectile.height);
             SoundEngine.PlaySound(SoundID.Item10, Projectile.position);
+
+            if (Projectile.owner == Main.myPlayer)
+            {
+                //has a chance to drop arrow for pickup
+                int item = Main.rand.NextBool(10) ? Item.NewItem(Entity.GetSource_Death(), Projectile.getRect(), ModContent.ItemType<GlacialArrow>()) : 0;
+            }
         }
     }
 }

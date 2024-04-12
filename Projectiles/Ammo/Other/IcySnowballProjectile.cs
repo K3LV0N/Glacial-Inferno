@@ -19,7 +19,6 @@ namespace glacial_inferno.Projectiles.Ammo.Other
 
         public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
-            base.OnHitNPC(target, hit, damageDone);
             // LUKE KISSLING MADE THIS BUFF NOT ME -RYAN
             target.AddBuff(ModContent.BuffType<Frozen>(), 300);
         }

@@ -24,8 +24,6 @@ namespace glacial_inferno.Items.Ammo.Bullets
 
         public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
         {
-
-            base.OnHitNPC(player, target, hit, damageDone);
             target.AddBuff(BuffID.OnFire, 3600);
         }
 

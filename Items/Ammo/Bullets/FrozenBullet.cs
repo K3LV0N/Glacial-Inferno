@@ -27,9 +27,6 @@ namespace glacial_inferno.Items.Ammo.Bullets
         {
 
             int buffType = ModContent.BuffType<Frozen>();
-
-
-            base.OnHitNPC(player, target, hit, damageDone);
             target.AddBuff(buffType, 600);
         }
 
