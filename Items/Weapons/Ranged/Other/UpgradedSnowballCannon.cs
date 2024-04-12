@@ -2,7 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace glacial_inferno.Items.Weapons.Ranged
+namespace glacial_inferno.Items.Weapons.Ranged.Other
 {
     public class UpgradedSnowballCannon : ModItem
     {
