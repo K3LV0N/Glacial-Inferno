@@ -11,6 +11,7 @@
     <None Remove="Items\Ammo\Arrows\IceArrow.png" />
     <None Remove="Items\Weapons\Magic\FrostBolt.png" />
     <None Remove="Items\Weapons\Melee\EarlyIceSword.png" />
+    <None Remove="NPCs\Enemies\PreHardmode\Wheely.png" />
     <None Remove="Projectiles\Weapons\Magic\IceBoltShatter.png" />
   </ItemGroup>
   <ItemGroup>
@@ -38,6 +39,10 @@
     <Folder Include="Items\Weapons\Summon\" />
     <Folder Include="Systems\" />
     <Folder Include="NPCs\" />
+    <Folder Include="NPCs\Bosses\" />
+    <Folder Include="NPCs\Critters\" />
+    <Folder Include="NPCs\Enemies\Hardmode\" />
+    <Folder Include="NPCs\Townies\" />
     <Folder Include="Projectiles\Enemy\" />
     <Folder Include="Projectiles\Weapons\Magic\" />
     <Folder Include="Projectiles\Weapons\Melee\" />
