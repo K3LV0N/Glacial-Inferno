@@ -4,7 +4,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace Items.Consumable
+namespace glacial_inferno.Items.Consumable
 {   
     //Little Blue Pill
     //On consumption, grants complete invulnerability for 30 seconds, but
@@ -36,8 +36,8 @@ namespace Items.Consumable
 			//Item.DefaultToFood(22, 22, BuffID.WellFed3, 57600); // 57600 is 16 minutes: 16 * 60 * 60
 			Item.value = Item.buyPrice(0, 3);
 			Item.rare = ItemRarityID.Blue;
-            Item.width = 20;
-            Item.height = 20;
+            Item.width = 21;
+            Item.height = 21;
             Item.useStyle = ItemUseStyleID.EatFood;
             Item.useAnimation = 17;
             Item.useTime = 17;

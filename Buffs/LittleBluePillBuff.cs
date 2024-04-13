@@ -2,7 +2,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace Buffs
+namespace glacial_inferno.Buffs
 {
     public class LittleBluePillBuff : ModBuff
     {
