@@ -6,9 +6,9 @@ using Terraria.Audio;
 using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
-using glacial_inferno.Items.Weapons.Projectile;
+using glacial_inferno.glacial_inferno.Items.Weapons.Projectile.Guns;
 
-namespace glacial_inferno.Items.Weapons.Ammo
+namespace glacial_inferno.glacial_inferno.Items.Ammo.Bullets
 {
     internal class EndlessSnowBallPouch : ModItem
     {
@@ -25,7 +25,7 @@ namespace glacial_inferno.Items.Weapons.Ammo
             Item.shootSpeed = 10;
             Item.value = 30;
         }
-        
+
         public override void AddRecipes()
         {
             Recipe r1 = CreateRecipe();
