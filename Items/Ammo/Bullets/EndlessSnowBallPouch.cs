@@ -6,7 +6,7 @@ using Terraria.Audio;
 using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
-using glacial_inferno.glacial_inferno.Items.Weapons.Projectile.Guns;
+using glacial_inferno.glacial_inferno.Projectiles;
 
 namespace glacial_inferno.glacial_inferno.Items.Ammo.Bullets
 {
