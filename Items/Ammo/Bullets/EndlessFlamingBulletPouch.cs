@@ -11,7 +11,7 @@ using glacial_inferno.Projectiles.Ammo.Bullets;
 
 namespace glacial_inferno.Items.Ammo.Bullets
 {
-    internal class EndlessFlaming : ModItem
+    internal class EndlessFlamingBulletPouch : ModItem
     {
         public override void SetDefaults()
         {

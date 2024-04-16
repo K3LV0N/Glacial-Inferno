@@ -23,6 +23,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="Items\Ammo\Arrows\GlacialArrow.png" />
+    <None Remove="Items\Ammo\Bullets\EndlessFlamingBulletPouch.png" />
     <None Remove="Items\Weapons\Magic\FrostBolt.png" />
     <None Remove="Items\Weapons\Melee\GlacialSword.png" />
     <None Remove="Items\Weapons\Ranged\Bows\CorruptedGlacialBow.png" />

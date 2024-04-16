@@ -11,7 +11,7 @@ using glacial_inferno.Projectiles.Ammo.Bullets;
 
 namespace glacial_inferno.Items.Ammo.Bullets
 {
-    internal class EndlessFlaming : ModItem
+    internal class EndlessFrozenBulletPouch : ModItem
     {
         public override void SetDefaults()
         {
@@ -22,7 +22,7 @@ namespace glacial_inferno.Items.Ammo.Bullets
             Item.consumable = false;
             Item.damage = 10;
             Item.knockBack = 2;
-            Item.shoot = ModContent.ProjectileType<FlamingBulletProj>();
+            Item.shoot = ModContent.ProjectileType<FrozenBulletProj>();
             Item.shootSpeed = 10;
             Item.value = 30;
         }
@@ -30,7 +30,7 @@ namespace glacial_inferno.Items.Ammo.Bullets
         public override void AddRecipes()
         {
             Recipe r1 = CreateRecipe();
-            r1.AddIngredient(ModContent.ProjectileType<FlamingBulletProj>(), 3996);
+            r1.AddIngredient(ModContent.ProjectileType<FrozenBulletProj>(), 3996);
             r1.AddTile(TileID.WorkBenches);
             r1.Register();
         }

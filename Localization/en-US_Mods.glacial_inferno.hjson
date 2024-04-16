@@ -113,6 +113,16 @@ Items: {
 		DisplayName: Great White
 		Tooltip: ""
 	}
+
+	EndlessFlamingBulletPouch: {
+		DisplayName: Endless Flaming Bullet Pouch
+		Tooltip: ""
+	}
+
+	EndlessFrozenBulletPouch: {
+		DisplayName: Endless Frozen Bullet Pouch
+		Tooltip: ""
+	}
 }
 
 Projectiles: {
