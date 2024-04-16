@@ -7,14 +7,14 @@ using glacial_inferno.Projectiles.Ammo.Other;
 using System;
 
 // Define a namespace for the modded items, specifically ranged weapons
-namespace glacial_inferno.Items.Weapons.Ranged
+namespace glacial_inferno.Items.Weapons.Ranged.Other
 {
     // Declare a new class BlizzardBlower that inherits from ModItem to represent a custom weapon
     public class BlizzardBlower : ModItem
     {
         // Field to keep track of mana consumption over time
         private double manaAccumulator = 0;
-        
+
         // Set the default properties for the BlizzardBlower item
         public override void SetDefaults()
         {
@@ -50,7 +50,7 @@ namespace glacial_inferno.Items.Weapons.Ranged
             {
                 return false;
             }
-            
+
             // Consumes a fraction of mana on each use and checks if enough has been accumulated to subtract 1 mana point
             manaAccumulator += 0.1;
             if (manaAccumulator >= 1)
