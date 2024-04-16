@@ -67,6 +67,7 @@ namespace glacial_inferno.Projectiles.Weapons.Summon
             {
                 Projectile.velocity.X = 0;
                 Projectile.velocity.Y += gravity;
+                Projectile.frame = 1;
 
                 // Check if it should start flying again
                 if (Projectile.ai[1] >= resumeAfterStationary)
@@ -79,6 +80,8 @@ namespace glacial_inferno.Projectiles.Weapons.Summon
             }
             else
             {
+                Projectile.frame = 0;
+
                 if (foundTarget)
                 {
                     if (distanceFromTarget > 40f)

@@ -8,6 +8,7 @@
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="Buffs\Summon\SnowballSummonBuff3.png" />
     <None Remove="Items\Ammo\Arrows\GlacialArrow.png" />
     <None Remove="Items\Weapons\Magic\FrostBolt.png" />
     <None Remove="Items\Weapons\Melee\GlacialSword.png" />
@@ -26,7 +27,6 @@
     <Folder Include="Items\Armor\" />
     <Folder Include="Items\Potions\" />
     <Folder Include="Items\Vanity\" />
-    <Folder Include="Buffs\" />
     <Folder Include="Dusts\" />
     <Folder Include="Items\Weapons\Summon\" />
     <Folder Include="NPCs\Bosses\" />
@@ -36,7 +36,6 @@
     <Folder Include="Projectiles\Enemy\" />
     <Folder Include="Projectiles\Weapons\Melee\" />
     <Folder Include="Projectiles\Weapons\Ranged\" />
-    <Folder Include="Projectiles\Weapons\Summon\" />
     <Folder Include="Systems\" />
     <Folder Include="Projectiles\Other\" />
   </ItemGroup>

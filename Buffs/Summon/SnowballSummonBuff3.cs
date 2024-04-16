@@ -6,17 +6,9 @@ namespace glacial_inferno.Buffs.Summon
 {
     public class SnowballSummonBuff3 : SnowballSummonBuff2
     {
-        public override void Update(Player player, ref int buffIndex)
-        {
-            if (player.ownedProjectileCounts[ModContent.ProjectileType<SnowballSummon3>()] > 0)
-            {
-                player.buffTime[buffIndex] = 7200;
-            }
-            else
-            {
-                player.DelBuff(buffIndex);
-                buffIndex--;
-            }
-        }
+        public override float reviveTime => 2 * 60f;
+        public override int summonType => ModContent.ProjectileType<SnowballSummon3>();
+        public override int buffType => ModContent.BuffType<SnowballSummonBuff3>();
+        public override int damage => 10;
     }
 }

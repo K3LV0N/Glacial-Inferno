@@ -88,12 +88,58 @@ Items: {
 		DisplayName: Jetpack Ice Snowball Summon
 		Tooltip: ""
 	}
+
+	GlacialArrow: {
+		DisplayName: Glacial Arrow
+		Tooltip: ""
+	}
+
+	HeavySnowball: {
+		DisplayName: Heavy Snowball
+		Tooltip: ""
+	}
+
+	IcySnowball: {
+		DisplayName: Icy Snowball
+		Tooltip: ""
+	}
+
+	CorruptedGlacialBow: {
+		DisplayName: Corrupted Glacial Bow
+		Tooltip: ""
+	}
+
+	CrimsonGlacialBow: {
+		DisplayName: Crimson Glacial Bow
+		Tooltip: ""
+	}
+
+	GlacialBow: {
+		DisplayName: Glacial Bow
+		Tooltip: ""
+	}
+
+	BlizzardBlower: {
+		DisplayName: Blizzard Blower
+		Tooltip: ""
+	}
+
+	InfernoBlower: {
+		DisplayName: Inferno Blower
+		Tooltip: ""
+	}
+
+	UpgradedSnowballCannon: {
+		DisplayName: Upgraded Snowball Cannon
+		Tooltip: ""
+	}
 }
 
-FrostBolt: {
-	DisplayName: Frost Bolt
-	Tooltip: Shoots frost bolts. Ice Shatters on impact.
-}
+Weapons: {
+	FrostBolt: {
+		DisplayName: Frost Bolt
+		Tooltip: Shoots frost bolts. Ice Shatters on impact.
+	}
 
 	GlacialBow: {
 		DisplayName: Glacial Bow
@@ -168,6 +214,9 @@ Projectiles: {
 	FrozenBulletProj.DisplayName: Frozen Bullet Proj
 	BlizzardBlowerProjectile.DisplayName: Blizzard Blower Projectile
 	InfernoBlowerProjectile.DisplayName: Inferno Blower Projectile
+	SnowballSummon.DisplayName: Snowball Summon
+	SnowballSummon2.DisplayName: Snowball Summon2
+	SnowballSummon3.DisplayName: Snowball Summon3
 }
 
 NPCs.Wheely.DisplayName: Wheely
