@@ -82,109 +82,44 @@ Items: {
 		DisplayName: Upgraded Snowball Cannon
 		Tooltip: ""
 
-		MagicalClub: {
-			DisplayName: Magical Ice Club
-			Tooltip: Gets stronger the longer you hold it for! Beware of fire!
-		}
-
-		IceArmorHelmet: {
-			DisplayName: Ice Helmet
-			Tooltip: Please somebody do better art for this thing.
-		}
-
-		IceArmorBreastplate: {
-			DisplayName: Ice Breastplate
-			Tooltip: Please somebody do better art for this thing.
-		}
-
-		IceArmorLeggings: {
-			DisplayName: Ice Leggings
-			Tooltip: Please somebody do better art for this thing.
-		}
-
-		IceMageBreastplate: {
-			DisplayName: Magical Ice Cape
-			Tooltip: Please somebody do better art for this thing.
-		}
-
-		IceMageHelmet: {
-			DisplayName: Magical Ice Crown
-			Tooltip: Please somebody do better art for this thing.
-		}
-
-		IceMageLeggings: {
-			DisplayName: Magical Ice Boots
-			Tooltip: Please somebody do better art for this thing.
-		}
-	}
-
-	Buffs: {
-		MeltedIce: {
-			DisplayName: Melted Ice
-			Description: Your weapon has melted!
-		}
-
-		IceAura: {
-			DisplayName: Ice Aura
-			Description: Testing Testing 1 2 3
-		}
-
-		FlamingBullet: {
-			DisplayName: Flaming Bullet
-			Tooltip: Burns enemies on impact
-		}
-	}
-
-	Projectiles: {
-		HeavySnowballProjectile.DisplayName: Heavy Snowball Projectile
-		IcySnowballProjectile.DisplayName: Icy Snowball Projectile
-		FrozenBullet.DisplayName: Frozen Bullet
-		FlamingBullet.DisplayName: Flaming Bullet
-		IceBolt.DisplayName: Ice Bolt
-		IceBoltShatter.DisplayName: Ice Bolt
-		IceArrowProjectile.DisplayName: Ice Arrow
-		FlamingBulletProj.DisplayName: Flaming Bullet Proj
-		FrozenBulletProj.DisplayName: Frozen Bullet Proj
-	}
-
-	FlamingBullet: {
-		DisplayName: Flaming Bullet
-		Tooltip: ""
-	}
-
-	IceArmorBreastplate: {
-		DisplayName: Ice Armor Breastplate
-		Tooltip: Please somebody do better art for this thing.
+	MagicalClub: {
+		DisplayName: Magical Ice Club
+		Tooltip: Gets stronger the longer you hold it for! Beware of fire!
 	}
 
 	IceArmorHelmet: {
-		DisplayName: Ice Armor Helmet
+		DisplayName: Ice Helmet
+		Tooltip: Please somebody do better art for this thing.
+	}
+
+	IceArmorBreastplate: {
+		DisplayName: Ice Breastplate
 		Tooltip: Please somebody do better art for this thing.
 	}
 
 	IceArmorLeggings: {
-		DisplayName: Ice Armor Leggings
+		DisplayName: Ice Leggings
 		Tooltip: Please somebody do better art for this thing.
 	}
 
 	IceMageBreastplate: {
-		DisplayName: Ice Mage Breastplate
+		DisplayName: Magical Ice Cape
 		Tooltip: Please somebody do better art for this thing.
 	}
 
 	IceMageHelmet: {
-		DisplayName: Ice Mage Helmet
+		DisplayName: Magical Ice Crown
 		Tooltip: Please somebody do better art for this thing.
 	}
 
 	IceMageLeggings: {
-		DisplayName: Ice Mage Leggings
+		DisplayName: Magical Ice Boots
 		Tooltip: Please somebody do better art for this thing.
 	}
 
-	MagicalClub: {
-		DisplayName: Magical Club
-		Tooltip: Gets stronger the longer you hold it for! Beware of fire!
+	FlamingBullet: {
+		DisplayName: Flaming Bullet
+		Tooltip: Burns enemies on impact
 	}
 
 	ColdCuts: {
