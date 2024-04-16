@@ -15,7 +15,7 @@ namespace glacial_inferno.Items.Weapons.Magic
         public override void SetDefaults()
         {
             
-            int shotTime = 35;
+            int shotTime = 30;
             float velocity = 4f;          
             int mana = 9;
             Item.DefaultToStaff(ModContent.ProjectileType<FlareBlastProj>(), velocity, shotTime, mana);
@@ -39,25 +39,22 @@ namespace glacial_inferno.Items.Weapons.Magic
             int angle = 20;
         
             //Spawns 5 projectiles in an arc
-            for (int i = 0; i < 5; i++)
-            {
+            for (int i = 0; i < 5; i++){
                 float offset = MathHelper.ToRadians(angle);
                 Vector2 relVelo = relPos.RotatedBy(offset);
           
-                if (i == 2)
-                {
+                if (i == 2){
                     //Spawns a big projectile in the middle
                     Projectile.NewProjectile(source, position.X, position.Y, relVelo.X, relVelo.Y, ModContent.ProjectileType<BigFlareBlastProj>(), damage, knockback);
                 } else {
                     Projectile.NewProjectile(source, position.X, position.Y, relVelo.X, relVelo.Y, type, damage, knockback);
                 }
-
+                //Updates the offset
                 angle -= 10;
             }
             return false;
         }
-        public override void AddRecipes()
-        {
+        public override void AddRecipes(){
             Recipe r1 = CreateRecipe();
             r1.AddIngredient(ModContent.ItemType<LavaFragment>(),15);
             r1.AddIngredient(ItemID.HellstoneBar, 20);

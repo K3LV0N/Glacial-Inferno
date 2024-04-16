@@ -86,14 +86,14 @@ Items: {
 
 	BlizzardBlower: {
 		DisplayName: Blizzard Blower
-		Tooltip: "The Blizzard Blower: Sends enemies flying with a frosty gust, giving frostbite and a sudden craving for hot cocoa—all in one frosty breath!"
+		Tooltip: The Blizzard Blower: Sends enemies flying with a frosty gust, giving frostbite and a sudden craving for hot cocoa—all in one frosty breath!
 	}
 
 	InfernoBlower: {
 		DisplayName: Inferno Blower
-		Tooltip: "The Inferno Blower: Blasts foes with a wave of heat that's not just hot air—expect them to be blown away and left feeling oddly cozy, as if they've been wrapped in a warm, fiery hug."
-  }
-  
+		Tooltip: The Inferno Blower: Blasts foes with a wave of heat that's not just hot air—expect them to be blown away and left feeling oddly cozy, as if they've been wrapped in a warm, fiery hug.
+	}
+
 	CorruptedGlacialBow: {
 		DisplayName: Corrupted Glacial Bow
 		Tooltip: A glacial bow infected with the corruption. When shooting wooden arrows, glacial arrows are shot instead.

@@ -23,9 +23,9 @@ namespace glacial_inferno.Projectiles.Weapons.Magic
             Projectile.height = (int)(19f * Projectile.scale);
             Projectile.ai[0] = 0;
             Projectile.friendly = true;
-            
-            Projectile.timeLeft = 300;
-            
+            Projectile.timeLeft = 600;
+            Projectile.light = .35f;
+
             Projectile.aiStyle = ProjAIStyleID.Arrow;
         }
 
@@ -48,7 +48,7 @@ namespace glacial_inferno.Projectiles.Weapons.Magic
         public override void OnKill(int timeLeft)
         {
             Collision.HitTiles(Projectile.position, Projectile.velocity, Projectile.width, Projectile.height);
-            SoundEngine.PlaySound(SoundID.Item10, Projectile.position);
+            SoundEngine.PlaySound(SoundID.Item20, Projectile.position);
         }
     }
 }

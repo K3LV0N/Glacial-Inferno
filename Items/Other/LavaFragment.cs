@@ -1,4 +1,7 @@
-﻿using Terraria;
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using Mono.Cecil;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -12,5 +15,6 @@ namespace glacial_inferno.Items.Other
            Item.maxStack = 9999;
            Item.rare = ItemRarityID.LightRed; 
         }
+
     }
 }

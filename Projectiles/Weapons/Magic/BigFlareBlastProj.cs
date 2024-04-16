@@ -18,7 +18,7 @@ namespace glacial_inferno.Projectiles.Weapons.Magic
             Projectile.scale = 1.5f;
             Projectile.width = (int)(9f * Projectile.scale);
             Projectile.height = (int)(19f * Projectile.scale);
-            Projectile.timeLeft = 300;
+            Projectile.timeLeft = 600;
             Projectile.friendly = true;
             Projectile.tileCollide = false;
             Projectile.light = .5f;
@@ -29,7 +29,7 @@ namespace glacial_inferno.Projectiles.Weapons.Magic
 
         public override bool PreAI()
         {
-
+            //Spawns dusts 
             for (int i = 0; i < 2; i++)
             {
                 Random rand = new Random();
@@ -43,13 +43,11 @@ namespace glacial_inferno.Projectiles.Weapons.Magic
         public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
             target.AddBuff(BuffID.OnFire, 300);
-    
         }
         public override void OnKill(int timeLeft)
         {
-
             Collision.HitTiles(Projectile.position, Projectile.velocity, Projectile.width, Projectile.height);
-            SoundEngine.PlaySound(SoundID.Item10, Projectile.position);
+            SoundEngine.PlaySound(SoundID.Item20, Projectile.position);
         }
     }
 }
