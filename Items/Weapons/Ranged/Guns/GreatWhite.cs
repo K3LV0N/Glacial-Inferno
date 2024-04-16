@@ -6,7 +6,7 @@ using Terraria.Enums;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace glacial_inferno.glacial_inferno.Items.Weapons.Ranged.Guns
+namespace glacial_inferno.Items.Weapons.Ranged.Guns
 {
     public class GreatWhite : ModItem
     {

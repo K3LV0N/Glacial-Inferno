@@ -6,10 +6,10 @@ using Terraria.Audio;
 using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
-using glacial_inferno.glacial_inferno.Projectiles;
+using glacial_inferno.Projectiles;
 using glacial_inferno.Projectiles.Ammo.Bullets;
 
-namespace glacial_inferno.glacial_inferno.Items.Ammo.Bullets
+namespace glacial_inferno.Items.Ammo.Bullets
 {
     internal class EndlessFlaming : ModItem
     {

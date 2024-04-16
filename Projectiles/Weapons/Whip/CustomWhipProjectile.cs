@@ -8,7 +8,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace glacial_inferno.glacial_inferno.Projectiles.Weapons.Whip
+namespace glacial_inferno.Projectiles.Weapons.Whip
 {
     public class CustomWhipProjectile : ModProjectile
     {

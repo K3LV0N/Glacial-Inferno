@@ -8,6 +8,20 @@
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <ItemGroup>
+    <AdditionalFiles Remove="Items\Accessories\**" />
+    <AdditionalFiles Remove="Items\Armor\**" />
+    <AdditionalFiles Remove="Items\Vanity\**" />
+    <Compile Remove="Items\Accessories\**" />
+    <Compile Remove="Items\Armor\**" />
+    <Compile Remove="Items\Vanity\**" />
+    <EmbeddedResource Remove="Items\Accessories\**" />
+    <EmbeddedResource Remove="Items\Armor\**" />
+    <EmbeddedResource Remove="Items\Vanity\**" />
+    <None Remove="Items\Accessories\**" />
+    <None Remove="Items\Armor\**" />
+    <None Remove="Items\Vanity\**" />
+  </ItemGroup>
+  <ItemGroup>
     <None Remove="Items\Ammo\Arrows\GlacialArrow.png" />
     <None Remove="Items\Weapons\Magic\FrostBolt.png" />
     <None Remove="Items\Weapons\Melee\GlacialSword.png" />
@@ -20,10 +34,7 @@
     <PackageReference Include="tModLoader.CodeAssist" Version="0.1.*" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Items\Accessories\" />
-    <Folder Include="Items\Armor\" />
     <Folder Include="Items\Potions\" />
-    <Folder Include="Items\Vanity\" />
     <Folder Include="Buffs\" />
     <Folder Include="Dusts\" />
     <Folder Include="Items\Weapons\Summon\" />

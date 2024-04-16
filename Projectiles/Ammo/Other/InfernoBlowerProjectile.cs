@@ -6,7 +6,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 
 // Define the namespace for modded ammo and other related items
-namespace glacial_inferno.Items.Ammo.Other
+namespace glacial_inferno.Projectiles.Ammo.Other
 {
     // Declare a new class InfernoBlowerProjectile that inherits from ModProjectile to represent a custom projectile
     public class InfernoBlowerProjectile : ModProjectile
