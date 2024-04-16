@@ -74,6 +74,16 @@ Items: {
 		Tooltip: Burns enemies on impact
 	}
 
+	FlareBlast: {
+		DisplayName: Flare Blast
+		Tooltip: A powerful staff crafted from obsidian and magmatic chunks from slain underworld bats.
+	}
+
+	LavaFragment: {
+		DisplayName: Lava Fragment
+		Tooltip: ""
+	}
+
 	BlizzardBlower: {
 		DisplayName: Blizzard Blower
 		Tooltip: The Blizzard Blower: Sends enemies flying with a frosty gust, giving frostbite and a sudden craving for hot cocoa—all in one frosty breath!
@@ -105,6 +115,8 @@ Projectiles: {
 	GlacialArrowProjectile.DisplayName: Glacial Arrow
 	FlamingBulletProj.DisplayName: Flaming Bullet Proj
 	FrozenBulletProj.DisplayName: Frozen Bullet Proj
+	FlareBlastProj.DisplayName: Flare Blast Proj
+	BigFlareBlastProj.DisplayName: Big Flare Blast Proj
 	BlizzardBlowerProjectile.DisplayName: Blizzard Blower Projectile
 	InfernoBlowerProjectile.DisplayName: Inferno Blower Projectile
 }
