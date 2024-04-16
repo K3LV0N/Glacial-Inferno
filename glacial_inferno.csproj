@@ -8,11 +8,13 @@
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <ItemGroup>
-    <None Remove="Items\Ammo\Arrows\IceArrow.png" />
+    <None Remove="Items\Ammo\Arrows\GlacialArrow.png" />
     <None Remove="Items\Weapons\Magic\FrostBolt.png" />
-    <None Remove="Items\Weapons\Melee\EarlyIceSword.png" />
+    <None Remove="Items\Weapons\Melee\GlacialSword.png" />
+    <None Remove="Items\Weapons\Ranged\Bows\CorruptedGlacialBow.png" />
+    <None Remove="Items\Weapons\Ranged\Bows\CrimsonGlacialBow.png" />
     <None Remove="NPCs\Enemies\PreHardmode\Wheely.png" />
-    <None Remove="Projectiles\Weapons\Magic\IceBoltShatter.png" />
+    <None Remove="Projectiles\Weapons\Magic\GlacialBoltShatter.png" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Buffs\IceAura.png" />
@@ -47,7 +49,6 @@
     <Folder Include="Projectiles\Weapons\Ranged\" />
     <Folder Include="Projectiles\Weapons\Summon\" />
     <Folder Include="Systems\" />
-    <Folder Include="Projectiles\Weapons\Magic\" />
     <Folder Include="Projectiles\Other\" />
   </ItemGroup>
 </Project>

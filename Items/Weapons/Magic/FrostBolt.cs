@@ -12,7 +12,7 @@ namespace glacial_inferno.Items.Weapons.Magic
             int shotTime = 15;
             float velocity = 15f;
             bool autoReuse = true;
-            Item.DefaultToMagicWeapon(ModContent.ProjectileType<IceBoltShatter>(), shotTime, velocity, autoReuse);
+            Item.DefaultToMagicWeapon(ModContent.ProjectileType<GlacialBoltShatter>(), shotTime, velocity, autoReuse);
             Item.mana = 7;
             Item.UseSound = SoundID.Item1;
             Item.damage = 10;
