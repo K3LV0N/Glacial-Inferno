@@ -7,6 +7,15 @@ Buffs: {
 		Description: Slows your movement by 10%, but attacks slow enemies by 20%
 	}
 
+	IceAura: {
+		DisplayName: Ice Aura
+		Description: Your armor is exuding a powerful icy aura!
+	}
+
+	MeltedIce: {
+		DisplayName: Melted Ice
+		Description: Your weapon has melted!
+
 	LittleBluePillBuff: {
 		DisplayName: Little Blue Pill Buff
 		Description: Mods.glacial_inferno.Buffs.LittleBluePillBuff.Description
@@ -78,6 +87,40 @@ Items: {
 	UpgradedSnowballCannon: {
 		DisplayName: Upgraded Snowball Cannon
 		Tooltip: ""
+
+	MagicalClub: {
+		DisplayName: Magical Ice Club
+		Tooltip: Gets stronger the longer you hold it for! Beware of fire!
+	}
+
+	IceArmorHelmet: {
+		DisplayName: Ice Helmet
+		Tooltip: Please somebody do better art for this thing.
+	}
+
+	IceArmorBreastplate: {
+		DisplayName: Ice Breastplate
+		Tooltip: Please somebody do better art for this thing.
+	}
+
+	IceArmorLeggings: {
+		DisplayName: Ice Leggings
+		Tooltip: Please somebody do better art for this thing.
+	}
+
+	IceMageBreastplate: {
+		DisplayName: Magical Ice Cape
+		Tooltip: Please somebody do better art for this thing.
+	}
+
+	IceMageHelmet: {
+		DisplayName: Magical Ice Crown
+		Tooltip: Please somebody do better art for this thing.
+	}
+
+	IceMageLeggings: {
+		DisplayName: Magical Ice Boots
+		Tooltip: Please somebody do better art for this thing.
 	}
 
 	FlamingBullet: {
@@ -123,6 +166,16 @@ Items: {
 	FireOre: {
 		DisplayName: Fire Ore
 		Tooltip: Fire Ore
+  }
+  
+	ColdCuts: {
+		DisplayName: Cold Cuts
+		Tooltip: Safe to shoot, not to eat!
+	}
+
+	ColdCutter: {
+		DisplayName: Cold Cutter
+		Tooltip: Shoot piercing, gravity defying cold cuts at high speed!
 	}
 
 	FlareBlast: {
@@ -162,8 +215,15 @@ Items: {
 }
 
 Projectiles: {
+	IceAuraProjectile.DisplayName: Ice Aura Projectile
+	IceArrowProjectile.DisplayName: Ice Arrow Projectile
+	FlamingBulletProj.DisplayName: Flaming Bullet Proj
+	FrozenBulletProj.DisplayName: Frozen Bullet Proj
 	HeavySnowballProjectile.DisplayName: Heavy Snowball Projectile
 	IcySnowballProjectile.DisplayName: Icy Snowball Projectile
+	IceBolt.DisplayName: Ice Bolt
+	IceBoltShatter.DisplayName: Ice Bolt Shatter
+	ColdCutProjectile.DisplayName: Cold Cut Projectile
 	FrozenBullet.DisplayName: Frozen Bullet
 	FlamingBullet.DisplayName: Flaming Bullet
 	GlacialBolt.DisplayName: Glacial Bolt
