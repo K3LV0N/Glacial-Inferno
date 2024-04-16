@@ -1,12 +1,11 @@
 using System;
 using Microsoft.Xna.Framework;
-using ReLogic.Utilities;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
 // Define a namespace for the modded items, specifically other ammo types
-namespace glacial_inferno.Items.Ammo.Other
+namespace glacial_inferno.Projectiles.Ammo.Other
 {
     // Declare a new class BlizzardBlowerProjectile that inherits from ModProjectile to represent a custom projectile
     public class BlizzardBlowerProjectile : ModProjectile
