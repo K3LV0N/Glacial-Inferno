@@ -6,6 +6,7 @@ using Microsoft.Xna.Framework;
 using glacial_inferno.Projectiles.Ammo.Other;
 using System;
 
+
 // Define the namespace for the modded items, specifically ranged weapons
 namespace glacial_inferno.Items.Weapons.Ranged.Other
 {
