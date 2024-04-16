@@ -19,12 +19,11 @@ namespace glacial_inferno.Items.Weapons.Magic
             float velocity = 4f;          
             int mana = 9;
             Item.DefaultToStaff(ModContent.ProjectileType<FlareBlastProj>(), velocity, shotTime, mana);
-   
-            Item.crit = 15;
-            Item.damage = 45;
+
+            Item.crit = 25;
+            Item.damage = 50;
             Item.staff[Type] = true;
-            Item.UseSound = SoundID.Item43;
-            Item.rare = 4;
+            Item.rare = ItemRarityID.LightRed;
         }
 
         public override Vector2? HoldoutOffset()
@@ -60,11 +59,11 @@ namespace glacial_inferno.Items.Weapons.Magic
         public override void AddRecipes()
         {
             Recipe r1 = CreateRecipe();
-            r1.AddIngredient(ItemID.Book);
-            r1.AddIngredient(ModContent.ItemType<LavaFragment>(),20);
+            r1.AddIngredient(ModContent.ItemType<LavaFragment>(),15);
             r1.AddIngredient(ItemID.HellstoneBar, 20);
-            r1.AddTile(TileID.Bookcases);
-            r1.AddCondition(Condition.InUnderworld);
+            r1.AddIngredient(ItemID.Obsidian, 10);
+            r1.AddTile(TileID.Anvils);
+
             r1.Register();
         }
     }

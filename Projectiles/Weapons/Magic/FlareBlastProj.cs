@@ -39,18 +39,7 @@ namespace glacial_inferno.Projectiles.Weapons.Magic
             return true;
         }
 
-        /*
-        public override void AI()
-        {
-           
-           Projectile.ai[0] = (Projectile.ai[0] >= 360) ? 0 : Projectile.ai[0]++; 
-            
-             
-            Projectile.position.X += (float)(Math.Cos(Projectile.velocity.X)*Projectile.velocity.X);
-            Projectile.position.Y += (float)(Math.Sin(Projectile.velocity.Y)*Projectile.velocity.Y);
-            
-           // base.AI();
-        }*/
+
 
         public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {

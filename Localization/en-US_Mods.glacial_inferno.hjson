@@ -76,7 +76,7 @@ Items: {
 
 	FlareBlast: {
 		DisplayName: Flare Blast
-		Tooltip: ""
+		Tooltip: A powerful staff crafted from obsidian and magmatic chunks from slain underworld bats.
 	}
 
 	LavaFragment: {
