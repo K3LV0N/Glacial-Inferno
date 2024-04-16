@@ -3,7 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
-using glacial_inferno.Items.Ammo.Other;
+using glacial_inferno.Projectiles.Ammo.Other;
 using System;
 
 // Define the namespace for the modded items, specifically ranged weapons

@@ -11,7 +11,7 @@ using glacial_inferno.Projectiles.Enemy;
 
 namespace glacial_inferno.NPCs.Enemies.PreHardmode
 {
-    public class FireGolem : BasicNPC
+    public class FireWisp : BasicNPC
     {
         float docileSpeed;
         float aggroSpeed;
@@ -19,7 +19,7 @@ namespace glacial_inferno.NPCs.Enemies.PreHardmode
 
         public override void SetStaticDefaults()
         {
-            Main.npcFrameCount[NPC.type] = 5;
+            Main.npcFrameCount[NPC.type] = 3;
         }
         public override void SetDefaults()
         {
@@ -45,6 +45,8 @@ namespace glacial_inferno.NPCs.Enemies.PreHardmode
 
             // misc
             NPC.value = 100f;
+            NPC.buffImmune[BuffID.OnFire] = true;
+            NPC.buffImmune[BuffID.OnFire3] = true;
         }
 
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
@@ -66,9 +68,7 @@ namespace glacial_inferno.NPCs.Enemies.PreHardmode
         //AI
         //Walks around normally when docile
         //When it spots player and player is in certain range run towards the player
-        //Climb wall if necessary
         //If player is close enough spit fire projectile every 5 seconds
-        //(Code projectile for that web)
         private const int stateDocile = 0;
         private const int stateSurprised = 1;
         private const int stateAttack = 2;
@@ -101,7 +101,7 @@ namespace glacial_inferno.NPCs.Enemies.PreHardmode
 
         public override void AI()
         {
-            float distanceToShoot = 100f;
+            float distanceToShoot = 200f;
             float distanceToTrigger = 450f;
             float distanceToEscape = 800f;
 
@@ -163,7 +163,7 @@ namespace glacial_inferno.NPCs.Enemies.PreHardmode
             {
                 //attacks the player
                 NPC.TargetClosest(true);
-                if (jumping)
+                if(jumping)
                 {
                     //jump
                     if (jumpTimer == 0)
@@ -185,13 +185,14 @@ namespace glacial_inferno.NPCs.Enemies.PreHardmode
                         jumping = false;
                         stuckJumping = false;
                         AI_Timer = 0;
+                        AIPreviousXPos = NPC.position.X;
                     }
                     jumpTimer++;
                 }
                 else
                 {
                     //Check if stuck and if so jump
-                    if (AI_Timer % 15 == 0 && jumping == false)
+                    if (AI_Timer % 15 == 0) 
                     {
                         if (NPC.position.X == AIPreviousXPos)
                         {
@@ -199,6 +200,7 @@ namespace glacial_inferno.NPCs.Enemies.PreHardmode
                             stuckJumping = true;
                             jumpTimer = 0;
                         }
+                        AIPreviousXPos = NPC.position.X;
                     }
                     //jump when the player is higher up than the NPC
                     if (Main.player[NPC.target].Center.Y < NPC.position.Y && jumping == false)
@@ -242,9 +244,7 @@ namespace glacial_inferno.NPCs.Enemies.PreHardmode
 
         private const int frame1 = 0;
         private const int frame2 = 1;
-        private const int frame3 = 2;
-        private const int frame4 = 3;
-        private const int surprisedFrame = 4;
+        private const int surprisedFrame = 2;
         public override void FindFrame(int frameHeight)
         {
             NPC.spriteDirection = NPC.direction;
@@ -259,14 +259,6 @@ namespace glacial_inferno.NPCs.Enemies.PreHardmode
                 else if (NPC.frameCounter < 21)
                 {
                     NPC.frame.Y = frame2 * frameHeight;
-                }
-                else if (NPC.frameCounter < 31)
-                {
-                    NPC.frame.Y = frame3 * frameHeight;
-                }
-                else if (NPC.frameCounter < 41)
-                {
-                    NPC.frame.Y = frame4 * frameHeight;
                 }
                 else
                 {
