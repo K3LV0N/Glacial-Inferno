@@ -37,8 +37,9 @@ namespace glacial_inferno.Items.Weapons.Ranged
         public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe();
-            recipe.AddIngredient(ItemID.DirtBlock, 1);
-            recipe.AddTile(TileID.WorkBenches);
+            recipe.AddIngredient(ItemID.IronBar, 5);
+            recipe.AddIngredient(ItemID.RottenChunk, 10);
+            recipe.AddTile(TileID.Anvils);
             recipe.Register();
         }
 

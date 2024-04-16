@@ -26,7 +26,7 @@ namespace glacial_inferno.Items.Ammo.Other
         public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe();
-            recipe.AddIngredient(ItemID.DirtBlock, 1);
+            recipe.AddIngredient(ItemID.RottenChunk, 1);
             recipe.AddTile(TileID.WorkBenches);
             recipe.Register();
         }

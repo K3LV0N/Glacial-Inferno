@@ -24,7 +24,8 @@ namespace glacial_inferno.Items.Armor.BasicIceMageArmor
         public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe();
-            recipe.AddIngredient(ItemID.DirtBlock, 1);
+            recipe.AddIngredient(ItemID.IceBlock, 5);
+            recipe.AddIngredient(ItemID.Star, 1);
             recipe.AddTile(TileID.WorkBenches);
             recipe.Register();
         }

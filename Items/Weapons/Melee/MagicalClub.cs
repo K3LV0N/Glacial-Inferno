@@ -28,7 +28,8 @@ namespace glacial_inferno.Items.Weapons.Melee
         public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe();
-            recipe.AddIngredient(ItemID.DirtBlock, 1);
+            recipe.AddIngredient(ItemID.IceBlock, 10);
+            recipe.AddIngredient(ItemID.Star, 2);
             recipe.AddTile(TileID.WorkBenches);
             recipe.Register();
         }
