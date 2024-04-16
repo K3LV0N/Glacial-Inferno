@@ -15,12 +15,12 @@ Buffs: {
 	MeltedIce: {
 		DisplayName: Melted Ice
 		Description: Your weapon has melted!
+	}
 
 	LittleBluePillBuff: {
 		DisplayName: Little Blue Pill Buff
 		Description: Mods.glacial_inferno.Buffs.LittleBluePillBuff.Description
 	}
-}
 
 	FireWeaponBuff: {
 		DisplayName: Fire Weapon Buff
@@ -87,6 +87,7 @@ Items: {
 	UpgradedSnowballCannon: {
 		DisplayName: Upgraded Snowball Cannon
 		Tooltip: ""
+	}
 
 	MagicalClub: {
 		DisplayName: Magical Ice Club
@@ -166,8 +167,8 @@ Items: {
 	FireOre: {
 		DisplayName: Fire Ore
 		Tooltip: Fire Ore
-  }
-  
+	}
+
 	ColdCuts: {
 		DisplayName: Cold Cuts
 		Tooltip: Safe to shoot, not to eat!
@@ -229,8 +230,6 @@ Projectiles: {
 	GlacialBolt.DisplayName: Glacial Bolt
 	GlacialBoltShatter.DisplayName: Glacial Bolt
 	GlacialArrowProjectile.DisplayName: Glacial Arrow
-	FlamingBulletProj.DisplayName: Flaming Bullet Proj
-	FrozenBulletProj.DisplayName: Frozen Bullet Proj
 	FlareBlastProj.DisplayName: Flare Blast Proj
 	BigFlareBlastProj.DisplayName: Big Flare Blast Proj
 	BlizzardBlowerProjectile.DisplayName: Blizzard Blower Projectile
@@ -243,6 +242,7 @@ Projectiles: {
 NPCs: {
 	Wheely.DisplayName: Wheely
 	FireGolem.DisplayName: Fire Golem
+	FireWisp.DisplayName: Fire Wisp
 }
 
 Tiles.FireOre.MapEntry: Fire Ore
