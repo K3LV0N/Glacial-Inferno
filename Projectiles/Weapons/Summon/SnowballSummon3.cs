@@ -4,6 +4,7 @@ using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
 using glacial_inferno.Buffs.Summon;
 using System;
+using glacial_inferno.Items.Weapons.Magic;
 
 namespace glacial_inferno.Projectiles.Weapons.Summon
 {
@@ -26,6 +27,7 @@ namespace glacial_inferno.Projectiles.Weapons.Summon
             }
             target.AddBuff(ModContent.BuffType<FrozenBuff>(), 8 * 60);
             target.AddBuff(ModContent.BuffType<PermaFreezeBuff>(), 60 * 60);
+            target.AddBuff(BuffID.Frostburn, 8 * 60);
             Projectile.Kill();
         }
 
@@ -44,41 +46,74 @@ namespace glacial_inferno.Projectiles.Weapons.Summon
         {
             float speed = 8f;
             float inertia = 20f;
+            float gravity = 0.2f;
 
-            if (foundTarget)
+            float stopInterval = 10f * 60;
+            float resumeAfterStationary = 2f * 60;
+
+            
+            if (Projectile.velocity.Y == 0)
             {
-                if (distanceFromTarget > 40f)
-                {
-                    Vector2 direction = targetCenter - Projectile.Center;
-                    direction.Normalize();
-                    direction *= speed;
+                Projectile.ai[1]++; // Time being stationary
+            }
+            else
+            {
+                Projectile.ai[1] = 0; // Reset stationary timer if moving
+            }
 
-                    Projectile.velocity = (Projectile.velocity * (inertia - 1) + direction) / inertia;
+            Projectile.ai[0]++;
+            // Check if it needs to stop flying
+            if (Projectile.ai[0] >= stopInterval)
+            {
+                Projectile.velocity.X = 0;
+                Projectile.velocity.Y += gravity;
+
+                // Check if it should start flying again
+                if (Projectile.ai[1] >= resumeAfterStationary)
+                {
+                    Projectile.ai[0] = 0;
+                    Projectile.ai[1] = 0;
+                    Projectile.velocity.X = -0.15f;
+                    Projectile.velocity.Y = -0.05f;
                 }
             }
             else
             {
-                if (distanceToIdlePosition > 600f)
+                if (foundTarget)
                 {
-                    speed = 12f;
-                    inertia = 60f;
+                    if (distanceFromTarget > 40f)
+                    {
+                        Vector2 direction = targetCenter - Projectile.Center;
+                        direction.Normalize();
+                        direction *= speed;
+
+                        Projectile.velocity = (Projectile.velocity * (inertia - 1) + direction) / inertia;
+                    }
                 }
                 else
                 {
-                    speed = 4f;
-                    inertia = 80f;
-                }
+                    if (distanceToIdlePosition > 600f)
+                    {
+                        speed = 12f;
+                        inertia = 60f;
+                    }
+                    else
+                    {
+                        speed = 4f;
+                        inertia = 80f;
+                    }
 
-                if (distanceToIdlePosition > 20f)
-                {
-                    vectorToIdlePosition.Normalize();
-                    vectorToIdlePosition *= speed;
-                    Projectile.velocity = (Projectile.velocity * (inertia - 1) + vectorToIdlePosition) / inertia;
-                }
-                else if (Projectile.velocity == Vector2.Zero)
-                {
-                    Projectile.velocity.X = -0.15f;
-                    Projectile.velocity.Y = -0.05f;
+                    if (distanceToIdlePosition > 20f)
+                    {
+                        vectorToIdlePosition.Normalize();
+                        vectorToIdlePosition *= speed;
+                        Projectile.velocity = (Projectile.velocity * (inertia - 1) + vectorToIdlePosition) / inertia;
+                    }
+                    else if (Projectile.velocity == Vector2.Zero)
+                    {
+                        Projectile.velocity.X = -0.15f;
+                        Projectile.velocity.Y = -0.05f;
+                    }
                 }
             }
         }
