@@ -8,7 +8,7 @@ using System;
 
 
 // Define the namespace for the modded items, specifically ranged weapons
-namespace glacial_inferno.Items.Weapons.Ranged
+namespace glacial_inferno.Items.Weapons.Ranged.Other
 {
     // Declare a new class InfernoBlower that inherits from ModItem to represent a custom weapon
     public class InfernoBlower : ModItem
@@ -30,7 +30,7 @@ namespace glacial_inferno.Items.Weapons.Ranged
             Item.autoReuse = true; // Allows the item to be used repeatedly when holding down the mouse button
             Item.width = 25; // The width of the item's hitbox
             Item.height = 18; // The height of the item's hitbox
-            
+
             // Projectile settings
             Item.shoot = ProjectileID.SnowBallFriendly; // The ID of the projectile shot by this weapon
             Item.shootSpeed = 10f; // The speed at which the projectile is fired
