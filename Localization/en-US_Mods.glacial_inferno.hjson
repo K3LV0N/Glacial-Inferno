@@ -7,6 +7,12 @@ Buffs: {
 		Description: Slows your movement by 10%, but attacks slow enemies by 20%
 	}
 
+	LittleBluePillBuff: {
+		DisplayName: Little Blue Pill Buff
+		Description: Mods.glacial_inferno.Buffs.LittleBluePillBuff.Description
+	}
+}
+
 	FireWeaponBuff: {
 		DisplayName: Fire Weapon Buff
 		Description: Increases the damage of the mods fire weapons
@@ -119,6 +125,16 @@ Items: {
 		Tooltip: Fire Ore
 	}
 
+	FlareBlast: {
+		DisplayName: Flare Blast
+		Tooltip: A powerful staff crafted from obsidian and magmatic chunks from slain underworld bats.
+	}
+
+	LavaFragment: {
+		DisplayName: Lava Fragment
+		Tooltip: ""
+	}
+
 	BlizzardBlower: {
 		DisplayName: Blizzard Blower
 		Tooltip: The Blizzard Blower: Sends enemies flying with a frosty gust, giving frostbite and a sudden craving for hot cocoa—all in one frosty breath!
@@ -138,6 +154,11 @@ Items: {
 		DisplayName: Crimson Glacial Bow
 		Tooltip: A glacial bow infected with the crimson. When shooting wooden arrows, glacial arrows are shot instead.
 	}
+
+	LittleBluePill: {
+		DisplayName: Little Blue Pill
+		Tooltip: ""
+	}
 }
 
 Projectiles: {
@@ -150,6 +171,8 @@ Projectiles: {
 	GlacialArrowProjectile.DisplayName: Glacial Arrow
 	FlamingBulletProj.DisplayName: Flaming Bullet Proj
 	FrozenBulletProj.DisplayName: Frozen Bullet Proj
+	FlareBlastProj.DisplayName: Flare Blast Proj
+	BigFlareBlastProj.DisplayName: Big Flare Blast Proj
 	BlizzardBlowerProjectile.DisplayName: Blizzard Blower Projectile
 	InfernoBlowerProjectile.DisplayName: Inferno Blower Projectile
 	FireBall.DisplayName: Fire Ball
