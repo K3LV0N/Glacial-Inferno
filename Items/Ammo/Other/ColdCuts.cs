@@ -25,10 +25,15 @@ namespace glacial_inferno.Items.Ammo.Other
 
         public override void AddRecipes()
         {
-            Recipe recipe = CreateRecipe();
+            Recipe recipe = CreateRecipe(30);
             recipe.AddIngredient(ItemID.RottenChunk, 1);
             recipe.AddTile(TileID.WorkBenches);
             recipe.Register();
+
+            Recipe recipe2 = CreateRecipe(30);
+            recipe2.AddIngredient(ItemID.Vertebrae, 1);
+            recipe2.AddTile(TileID.WorkBenches);
+            recipe2.Register();
         }
     }
 }
