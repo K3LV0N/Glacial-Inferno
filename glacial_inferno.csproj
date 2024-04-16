@@ -15,6 +15,8 @@
     <None Remove="Items\Weapons\Ranged\Bows\CrimsonGlacialBow.png" />
     <None Remove="NPCs\Enemies\PreHardmode\Wheely.png" />
     <None Remove="Projectiles\Weapons\Magic\GlacialBoltShatter.png" />
+    <None Remove="Projectiles\Weapons\Summon\SnowballSummon2.png" />
+    <None Remove="Projectiles\Weapons\Summon\SnowballSummon3.png" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="tModLoader.CodeAssist" Version="0.1.*" />

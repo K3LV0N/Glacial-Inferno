@@ -2,9 +2,34 @@
 
 
 Buffs: {
+	SnowballSummonBuff: {
+		DisplayName: Snowball Summon Buff
+		Description: Mods.glacial_inferno.Buffs.SnowballSummonBuff.Description
+	}
+
+	FrozenBuff: {
+		DisplayName: Frozen Buff
+		Description: Mods.glacial_inferno.Buffs.FrozenBuff.Description
+	}
+
 	Frozen: {
 		DisplayName: Frozen
 		Description: Slows your movement by 10%, but attacks slow enemies by 20%
+	}
+
+	PermaFreezeBuff: {
+		DisplayName: Perma Freeze Buff
+		Description: Mods.glacial_inferno.Buffs.PermaFreezeBuff.Description
+	}
+
+	SnowballSummonBuff2: {
+		DisplayName: Advanced Snowball Summon Buff
+		Description: Mods.glacial_inferno.Buffs.SnowballSummonBuff2.Description
+	}
+
+	SnowballSummonBuff3: {
+		DisplayName: Jetpack Snowball Summon Buff
+		Description: Mods.glacial_inferno.Buffs.SnowballSummonBuff3.Description
 	}
 }
 
@@ -29,10 +54,46 @@ Items: {
 		Tooltip: A sword made of ice. Ice Shatters on impact.
 	}
 
+	IceSummon: {
+		DisplayName: Ice Snowball Summon
+		Tooltip: ""
+	}
+
+	FlamingBullet: {
+		DisplayName: Flaming Bullet
+		Tooltip: ""
+	}
+
+	FrozenBullet: {
+		DisplayName: Frozen Bullet
+		Tooltip: ""
+	}
+
+	FlaskOfFreezing: {
+		DisplayName: Flask Of Freezing
+		Tooltip: ""
+	}
+
 	FrostBolt: {
 		DisplayName: Frost Bolt
 		Tooltip: Shoots frost bolts. Ice Shatters on impact.
 	}
+
+	IceSummon2: {
+		DisplayName: Advanced Ice Snowball Summon
+		Tooltip: ""
+	}
+
+	IceSummon3: {
+		DisplayName: Jetpack Ice Snowball Summon
+		Tooltip: ""
+	}
+}
+
+FrostBolt: {
+	DisplayName: Frost Bolt
+	Tooltip: Shoots frost bolts. Ice Shatters on impact.
+}
 
 	GlacialBow: {
 		DisplayName: Glacial Bow
