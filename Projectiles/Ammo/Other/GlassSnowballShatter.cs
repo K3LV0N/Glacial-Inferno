@@ -16,8 +16,8 @@ namespace glacial_inferno.Projectiles.Ammo.Other
             // Copy the defaults of the parent class
             base.SetDefaults();
             // set the size to match the texture of the glass snowball shatter
-            Projectile.width = 6;
-            Projectile.height = 6;
+            Projectile.width = 11;
+            Projectile.height = 11;
         }
     }
 }

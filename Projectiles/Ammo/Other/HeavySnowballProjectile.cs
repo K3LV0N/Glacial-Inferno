@@ -12,8 +12,8 @@ namespace glacial_inferno.Projectiles.Ammo.Other
             // Copy the defaults of the parent class
             base.SetDefaults();
             // set the size to match the texture of the heavy snowball
-            Projectile.width = 24;
-            Projectile.height = 24;
+            Projectile.width = 13;
+            Projectile.height = 13;
         }
     }
 }
