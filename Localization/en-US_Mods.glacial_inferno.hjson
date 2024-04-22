@@ -6,6 +6,26 @@ Buffs: {
 		DisplayName: Frozen
 		Description: Slows your movement by 10%, but attacks slow enemies by 20%
 	}
+
+	IceAura: {
+		DisplayName: Ice Aura
+		Description: Your armor is exuding a powerful icy aura!
+	}
+
+	MeltedIce: {
+		DisplayName: Melted Ice
+		Description: Your weapon has melted!
+	}
+
+	LittleBluePillBuff: {
+		DisplayName: Little Blue Pill Buff
+		Description: Mods.glacial_inferno.Buffs.LittleBluePillBuff.Description
+	}
+
+	FireWeaponBuff: {
+		DisplayName: Fire Weapon Buff
+		Description: Increases the damage of the mods fire weapons
+	}
 }
 
 Items: {
@@ -69,9 +89,114 @@ Items: {
 		Tooltip: An upgraded snowball cannon. Has increased damage, and shoots farther and faster
 	}
 
+	MagicalClub: {
+		DisplayName: Magical Ice Club
+		Tooltip: Gets stronger the longer you hold it for! Beware of fire!
+	}
+
+	IceArmorHelmet: {
+		DisplayName: Ice Helmet
+		Tooltip: Please somebody do better art for this thing.
+	}
+
+	IceArmorBreastplate: {
+		DisplayName: Ice Breastplate
+		Tooltip: Please somebody do better art for this thing.
+	}
+
+	IceArmorLeggings: {
+		DisplayName: Ice Leggings
+		Tooltip: Please somebody do better art for this thing.
+	}
+
+	IceMageBreastplate: {
+		DisplayName: Magical Ice Cape
+		Tooltip: Please somebody do better art for this thing.
+	}
+
+	IceMageHelmet: {
+		DisplayName: Magical Ice Crown
+		Tooltip: Please somebody do better art for this thing.
+	}
+
+	IceMageLeggings: {
+		DisplayName: Magical Ice Boots
+		Tooltip: Please somebody do better art for this thing.
+	}
+
 	FlamingBullet: {
 		DisplayName: Flaming Bullet
 		Tooltip: Burns enemies on impact
+	}
+
+	FireBreastplate: {
+		DisplayName: Fire Breastplate
+		Tooltip: Fire Breastplate that makes un immune to being on fire
+	}
+
+	FireHelmet: {
+		DisplayName: Fire Helmet
+		Tooltip: ""
+	}
+
+	FireLeggings: {
+		DisplayName: Fire Leggings
+		Tooltip: Fire leggings that increase move speed by 10%
+	}
+
+	FireTome: {
+		DisplayName: Fire Tome
+		Tooltip: Summons a fireball that rotates around the player and homes to enemies. It disappears after 10 seconds
+	}
+
+	FireSword: {
+		DisplayName: Fire Sword
+		Tooltip: Fire sword that gains a charge every 5 seconds and holds up to 3 charges. Consume a charge on enemy hit to either light them on fire or do more damage.
+	}
+
+	FireBow: {
+		DisplayName: Fire Bow
+		Tooltip: Shoots fire arrows that split into 3 after a short while and set enemies on fire.
+	}
+
+	FireIngot: {
+		DisplayName: Fire Ingot
+		Tooltip: A fire ingot
+	}
+
+	FireOre: {
+		DisplayName: Fire Ore
+		Tooltip: Fire Ore
+	}
+
+	ColdCuts: {
+		DisplayName: Cold Cuts
+		Tooltip: Safe to shoot, not to eat!
+	}
+
+	ColdCutter: {
+		DisplayName: Cold Cutter
+		Tooltip: Shoot piercing, gravity defying cold cuts at high speed!
+	}
+
+	FlareBlast: {
+		DisplayName: Flare Blast
+		Tooltip: A powerful staff crafted from obsidian and magmatic chunks from slain underworld bats.
+	}
+
+	LavaFragment: {
+		DisplayName: Lava Fragment
+		Tooltip: ""
+	}
+
+	BlizzardBlower: {
+		DisplayName: Blizzard Blower
+		Tooltip: The Blizzard Blower: Sends enemies flying with a frosty gust, giving frostbite and a sudden craving for hot cocoa—all in one frosty breath!
+	}
+
+	InfernoBlower: {
+		DisplayName: Inferno Blower
+		Tooltip: The Inferno Blower: Blasts foes with a wave of heat that's not just hot air—expect them to be blown away and left feeling oddly cozy, as if they've been wrapped in a warm, fiery hug.
 	}
 
 	CorruptedGlacialBow: {
@@ -84,6 +209,11 @@ Items: {
 		Tooltip: A glacial bow infected with the crimson. When shooting wooden arrows, glacial arrows are shot instead.
 	}
 
+	LittleBluePill: {
+		DisplayName: Little Blue Pill
+		Tooltip: ""
+	}
+
 	GlassSnowball: {
 		DisplayName: Glass Snowball
 		Tooltip: Shatters on impact with enemies
@@ -91,17 +221,36 @@ Items: {
 }
 
 Projectiles: {
+	IceAuraProjectile.DisplayName: Ice Aura Projectile
+	IceArrowProjectile.DisplayName: Ice Arrow Projectile
+	FlamingBulletProj.DisplayName: Flaming Bullet Proj
+	FrozenBulletProj.DisplayName: Frozen Bullet Proj
 	HeavySnowballProjectile.DisplayName: Heavy Snowball Projectile
 	IcySnowballProjectile.DisplayName: Icy Snowball Projectile
+	IceBolt.DisplayName: Ice Bolt
+	IceBoltShatter.DisplayName: Ice Bolt Shatter
+	ColdCutProjectile.DisplayName: Cold Cut Projectile
 	FrozenBullet.DisplayName: Frozen Bullet
 	FlamingBullet.DisplayName: Flaming Bullet
 	GlacialBolt.DisplayName: Glacial Bolt
 	GlacialBoltShatter.DisplayName: Glacial Bolt
 	GlacialArrowProjectile.DisplayName: Glacial Arrow
-	FlamingBulletProj.DisplayName: Flaming Bullet Proj
-	FrozenBulletProj.DisplayName: Frozen Bullet Proj
+	FlareBlastProj.DisplayName: Flare Blast Proj
+	BigFlareBlastProj.DisplayName: Big Flare Blast Proj
+	BlizzardBlowerProjectile.DisplayName: Blizzard Blower Projectile
+	InfernoBlowerProjectile.DisplayName: Inferno Blower Projectile
+	FireBall.DisplayName: Fire Ball
+	FireArrow.DisplayName: Fire Arrow
+	HostileFireBall.DisplayName: Hostile Fire Ball
 	GlassSnowballProjectile.DisplayName: Glass Snowball Projectile
 	GlassSnowballShatter.DisplayName: Glass Snowball Shatter
 }
 
-NPCs.Wheely.DisplayName: Wheely
+NPCs: {
+	Wheely.DisplayName: Wheely
+	FireGolem.DisplayName: Fire Golem
+	FireWisp.DisplayName: Fire Wisp
+}
+
+Tiles.FireOre.MapEntry: Fire Ore
+WorldGen.FireOrePassMessage: Mods.glacial_inferno.WorldGen.FireOrePassMessage
