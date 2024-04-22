@@ -123,6 +123,11 @@ Items: {
 		DisplayName: Endless Frozen Bullet Pouch
 		Tooltip: ""
 	}
+
+	TempAccessory: {
+		DisplayName: Temp Accessory
+		Tooltip: ""
+	}
 }
 
 Projectiles: {
