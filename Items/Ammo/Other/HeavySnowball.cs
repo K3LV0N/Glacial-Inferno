@@ -5,30 +5,29 @@ using glacial_inferno.Projectiles.Ammo.Other;
 
 namespace glacial_inferno.Items.Ammo.Other
 {
-    public class HeavySnowball : ModItem
+    public class HeavySnowball : ModSnowball
     {
         // The Display Name and Tooltip of this item can be edited in the Localization/en-US_Mods.glacial_inferno.hjson file.
 
         public override void SetDefaults()
         {
+            // Clone the default properties of the parent
+            base.SetDefaults();
+            // Increase the damage of the heavy snowball
             Item.damage = 16;
-            Item.DamageType = DamageClass.Ranged;
-            Item.noUseGraphic = true;
-            Item.ammo = AmmoID.Snowball;
-            Item.consumable = true;
-            Item.noMelee = true;
-            Item.useTime = Item.useAnimation = 19;
-            Item.useStyle = ItemUseStyleID.Swing;
+            // Increase the knock back of the heavy snowball
             Item.knockBack = 9f;
-            Item.rare = ItemRarityID.White;
-            Item.UseSound = SoundID.Item1;
+            // Decrease the heavy snowball's velocity
             Item.shootSpeed = 4.25f;
+            // Increase the time needed to throw the heavy snowball
+            Item.useTime = Item.useAnimation = 27;
+            // Have the item shoot the heavy snowball
             Item.shoot = ModContent.ProjectileType<HeavySnowballProjectile>();
-            Item.maxStack = 9999;
         }
 
         public override void AddRecipes()
         {
+            // 10 crafted with 8 snow blocks and 4 iron/lead bars
             Recipe recipe = CreateRecipe(10);
             recipe.AddRecipeGroup(RecipeGroupID.IronBar, 4);
             recipe.AddIngredient(ItemID.SnowBlock, 8);

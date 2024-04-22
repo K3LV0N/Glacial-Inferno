@@ -71,12 +71,12 @@ Items: {
 
 	HeavySnowball: {
 		DisplayName: Heavy Snowball
-		Tooltip: ""
+		Tooltip: A heavy-hitting snowball. Deals high knock back
 	}
 
 	IcySnowball: {
 		DisplayName: Icy Snowball
-		Tooltip: ""
+		Tooltip: Slows enemies on impact
 	}
 
 	FlaskOfFreezing: {
@@ -86,7 +86,7 @@ Items: {
 
 	UpgradedSnowballCannon: {
 		DisplayName: Upgraded Snowball Cannon
-		Tooltip: ""
+		Tooltip: An upgraded snowball cannon. Has increased damage, and shoots farther and faster
 	}
 
 	MagicalClub: {
@@ -213,6 +213,11 @@ Items: {
 		DisplayName: Little Blue Pill
 		Tooltip: ""
 	}
+
+	GlassSnowball: {
+		DisplayName: Glass Snowball
+		Tooltip: Shatters on impact with enemies
+	}
 }
 
 Projectiles: {
@@ -237,6 +242,8 @@ Projectiles: {
 	FireBall.DisplayName: Fire Ball
 	FireArrow.DisplayName: Fire Arrow
 	HostileFireBall.DisplayName: Hostile Fire Ball
+	GlassSnowballProjectile.DisplayName: Glass Snowball Projectile
+	GlassSnowballShatter.DisplayName: Glass Snowball Shatter
 }
 
 NPCs: {

@@ -1,6 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Microsoft.Xna.Framework;
 
 namespace glacial_inferno.Items.Weapons.Ranged.Other
 {
@@ -10,22 +11,36 @@ namespace glacial_inferno.Items.Weapons.Ranged.Other
 
         public override void SetDefaults()
         {
+            // Clone the default values of the base game snowball cannon
+            Item.CloneDefaults(ItemID.SnowballCannon);
+            /* UNMODIFIED SNOWBALL CANNON DEFAULTS:
+             * Damage class = ranged, Use style = shoot, Knock back = 1
+             * Use sound = Item1, Auto reuse = true, Use ammo = Snowball
+             * No melee = true
+             * 
+             * MODIFIED DEFAULTS (see code):
+             * Damage = 10, Use time = 19, Shoot speed = 11,
+             * Sell price = 2 gold, Rarity = Blue
+             */
+            // Increase this cannons damage
             Item.damage = 22;
-            Item.DamageType = DamageClass.Ranged;
+            // Adjust the size to match its sprite
             Item.width = 26;
             Item.height = 13;
+            // Decrease the cannon's use time
             Item.useTime = Item.useAnimation = 14;
-            Item.useStyle = ItemUseStyleID.Shoot;
-            Item.knockBack = 1;
+            // Increase the cannon's value
             Item.value = Item.sellPrice(0, 4, 75, 0);
+            // Increase the cannon's rarity
             Item.rare = ItemRarityID.Orange;
-            Item.UseSound = SoundID.Item1;
-            Item.autoReuse = true;
-            Item.useAmmo = AmmoID.Snowball;
+            // Increase the cannon's shoot speed
             Item.shootSpeed = 16;
-            Item.noMelee = true;
-            // This value doesn't really matter, but must not be 0
-            Item.shoot = ProjectileID.SnowBallFriendly;
+        }
+
+        public override Vector2? HoldoutOffset()
+        {
+            // adjust offset so player holds the weapon by the handle
+            return new Vector2(5, 5);
         }
 
         public override void AddRecipes()
