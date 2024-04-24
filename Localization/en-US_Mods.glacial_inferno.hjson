@@ -213,6 +213,16 @@ Items: {
 		DisplayName: Little Blue Pill
 		Tooltip: ""
 	}
+
+	BitterfrostBar: {
+		DisplayName: Bitterfrost Bar
+		Tooltip: ""
+	}
+
+	BitterfrostBlock: {
+		DisplayName: Bitterfrost Block
+		Tooltip: ""
+	}
 }
 
 Projectiles: {
@@ -237,6 +247,8 @@ Projectiles: {
 	FireBall.DisplayName: Fire Ball
 	FireArrow.DisplayName: Fire Arrow
 	HostileFireBall.DisplayName: Hostile Fire Ball
+	CorruptedIce.DisplayName: Corrupted Ice
+	CrimsonIce.DisplayName: Crimson Ice
 }
 
 NPCs: {
@@ -245,5 +257,12 @@ NPCs: {
 	FireWisp.DisplayName: Fire Wisp
 }
 
-Tiles.FireOre.MapEntry: Fire Ore
-WorldGen.FireOrePassMessage: Mods.glacial_inferno.WorldGen.FireOrePassMessage
+Tiles: {
+	FireOre.MapEntry: Fire Ore
+	BitterfrostOre.MapEntry: Bitterfrost Ore
+}
+
+WorldGen: {
+	FireOrePassMessage: Mods.glacial_inferno.WorldGen.FireOrePassMessage
+	BitterFrostOrePassMessage: Mods.glacial_inferno.WorldGen.BitterFrostOrePassMessage
+}
